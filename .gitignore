@@ -1,0 +1,47 @@
+# Orijinal program ve kurulum dosyaları repoya girmez
+GPower.exe
+*.exe
+*.msi
+*.zip
+*.7z
+*.rar
+*.dll
+
+# Ghidra / REA proje ve döküm dosyaları
+*.gpr
+*.rep/
+ghidra_projects/
+rea_out/
+decompiled/
+decompile/
+dumps/
+
+# Ekip içi, değerlendirmeye kadar paylaşılmayan dosyalar (ör. gizli doğrulama seti)
+private/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Sanal ortamlar ve gizli anahtarlar
+venv/
+.venv/
+env/
+.env
+.env.*
+
+# Editör ve işletim sistemi
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
