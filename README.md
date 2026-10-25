@@ -37,6 +37,9 @@ gpower-clone --test t2-indep --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --po
 Her oturumun ilk prompt'u `prompts/` klasöründedir.
 
 ## Belgeler
+- [CONTRACT.md](CONTRACT.md): eğitmenin arayüz sözleşmesi (v1.0.0, değiştirilmeden)
+- [public_vectors.jsonl](public_vectors.jsonl): sözleşmenin 9. bölümündeki 25 referans vektörü
+- [eval/](eval/): ajan değerlendirme seti
 - [docs/GOREV_DAGILIMI.md](docs/GOREV_DAGILIMI.md): görev dağılımı ve çalışma protokolü
 - [docs/KURULUM.md](docs/KURULUM.md): kişi bazında kurulum ve git akışı
 - [SPEC.md](SPEC.md): kabul kriterleri (Gherkin)
