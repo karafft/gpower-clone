@@ -45,3 +45,7 @@ env/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Local dependency directories
+.deps/
+work/

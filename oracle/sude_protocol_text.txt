@@ -1,0 +1,1051 @@
+t tests ve Statistical test: Means: Difference between two independent means (two groups) seçili olacak.
+Her testin girdi parametreleri hazır; ekranda gördüğün sayıları hemen altlarındaki "Çıktı:" satırlarına yazıp geçebilirsin.
+Bölüm 1: Standart ve Asimetrik Testler (ORC-001 – ORC-020)
+ORC-001
+Girdi: Type: A priori | Tails: One | d: 0.5 | α: 0.05 | Power: 0.95 | Allocation ratio: 1
+
+[1] -- Sunday, October 25, 2026 -- 19:33:47
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.95
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=3.3166248
+Critical t=1.6536580
+Df=174
+Sample size group 1=88
+Sample size group 2=88
+Total sample size=176
+Actual power=0.951425
+
+ORC-002
+Girdi: Type: Post hoc | Tails: One | d: 0.5 | α: 0.05 | N1: 88 | N2: 88
+Çıktı: Critical t: | df: | Actual power:
+
+[2] -- Sunday, October 25, 2026 -- 19:37:34
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Post hoc: Compute achieved power 
+Input:Tail(s)=One
+Effect size d=0.5
+α err prob=0.05
+Sample size group 1=88
+Sample size group 2=88
+Output:Noncentrality parameter δ=3.3166248
+Critical t=1.6536580
+Df=174
+Power (1-β err prob)=0.9514254
+
+
+ORC-003
+Girdi: Type: Compromise | Tails: One | d: 0.5 | N1: 88 | N2: 88 | β/α ratio: 1
+[3] -- Sunday, October 25, 2026 -- 19:39:27
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Compromise: Compute implied α & power 
+Input:Tail(s)=One
+Effect size d=0.5
+β/α ratio=1
+Sample size group 1=88
+Sample size group 2=88
+Output:Noncentrality parameter δ=3.3166248
+Critical t=1.6606859
+Df=174
+α err prob=0.0492887
+β err prob=0.0492887
+Power (1-β err prob)=0.9507113
+
+ORC-004
+Girdi: Type: Criterion | Tails: One | d: 0.5 | Power: 0.95 | N1: 88 | N2: 88
+
+4] -- Sunday, October 25, 2026 -- 19:42:16
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Criterion: Compute required α 
+Input:Tail(s)=One
+Effect size d=0.5
+Power (1-β err prob)=0.95
+Sample size group 1=88
+Sample size group 2=88
+Output:Noncentrality parameter δ=3.3166248
+Critical t=1.6676050
+Df=174
+α err prob=0.0485965
+
+
+ORC-005
+Girdi: Type: Sensitivity | Tails: One | α: 0.05 | Power: 0.95 | N1: 88 | N2: 88
+
+[5] -- Sunday, October 25, 2026 -- 19:44:03
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Sensitivity: Compute required effect size 
+Input:Tail(s)=One
+α err prob=0.05
+Power (1-β err prob)=0.95
+Sample size group 1=88
+Sample size group 2=88
+Output:Noncentrality parameter δ=3.3025887
+Critical t=1.6536580
+Df=174
+Effect size d=0.4978840
+
+
+
+
+
+
+ORC-006
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+[6] -- Sunday, October 25, 2026 -- 19:45:42
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8284271
+Critical t=1.9789706
+Df=126
+Sample size group 1=64
+Sample size group 2=64
+Total sample size=128
+Actual power=0.8014596
+
+
+
+
+ORC-007
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.01 | Power: 0.95 | Allocation ratio: 1
+[7] -- Sunday, October 25, 2026 -- 19:48:33
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.01
+Power (1-β err prob)=0.95
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=4.2573466
+Critical t=2.5930077
+Df=288
+Sample size group 1=145
+Sample size group 2=145
+Total sample size=290
+Actual power=0.9512341
+
+
+
+
+
+
+
+
+
+ORC-008
+Girdi: Type: A priori | Tails: Two | d: 0.2 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+
+[8] -- Sunday, October 25, 2026 -- 19:51:11
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.2
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8071338
+Critical t=1.9629867
+Df=786
+Sample size group 1=394
+Sample size group 2=394
+Total sample size=788
+Actual power=0.8005931
+
+ORC-009
+Girdi: Type: A priori | Tails: Two | d: 0.8 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+
+[9] -- Sunday, October 25, 2026 -- 19:52:32
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.8
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8844410
+Critical t=2.0085591
+Df=50
+Sample size group 1=26
+Sample size group 2=26
+Total sample size=52
+Actual power=0.8074866
+
+
+ORC-010 (Önemli kontrol testi)
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 1.5
+
+[10] -- Sunday, October 25, 2026 -- 19:53:57
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1.5
+Output:Noncentrality parameter δ=2.8389613
+Critical t=1.9780988
+Df=132
+Sample size group 1=54
+Sample size group 2=80
+Total sample size=134
+Actual power=0.8046333
+
+
+
+ORC-011
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 0.5
+[11] -- Sunday, October 25, 2026 -- 19:55:45
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=0.5
+Output:Noncentrality parameter δ=2.8284271
+Critical t=1.9768110
+Df=142
+Sample size group 1=96
+Sample size group 2=48
+Total sample size=144
+Actual power=0.8021395
+
+
+
+
+
+
+ORC-012
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 0.67
+
+[13] -- Sunday, October 25, 2026 -- 19:57:56
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=0.67
+Output:Noncentrality parameter δ=2.8389613
+Critical t=1.9780988
+Df=132
+Sample size group 1=80
+Sample size group 2=54
+Total sample size=134
+Actual power=0.8046333
+
+
+
+
+ORC-013
+Girdi: Type: A priori | Tails: One | d: 0.4 | α: 0.05 | Power: 0.85 | Allocation ratio: 2
+
+[14] -- Sunday, October 25, 2026 -- 19:59:35
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.4
+α err prob=0.05
+Power (1-β err prob)=0.85
+Allocation ratio N2/N1=2
+Output:Noncentrality parameter δ=2.6932013
+Critical t=1.6524320
+Df=202
+Sample size group 1=68
+Sample size group 2=136
+Total sample size=204
+Actual power=0.8506699
+
+
+
+
+
+ORC-014
+Girdi: Type: A priori | Tails: Two | d: 0.15 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+
+[15] -- Sunday, October 25, 2026 -- 20:02:08
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.15
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8042379
+Critical t=1.9616648
+Df=1396
+Sample size group 1=699
+Sample size group 2=699
+Total sample size=1398
+Actual power=0.8002033
+
+ORC-015
+Girdi: Type: A priori | Tails: Two | d: 1.5 | α: 0.05 | Power: 0.90 | Allocation ratio: 1
+[16] -- Sunday, October 25, 2026 -- 20:05:45
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=1.5
+α err prob=0.05
+Power (1-β err prob)=0.90
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=3.5178118
+Critical t=2.0859634
+Df=20
+Sample size group 1=11
+Sample size group 2=11
+Total sample size=22
+Actual power=0.9168991
+
+ORC-016
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.70 | Allocation ratio: 1
+
+[17] -- Sunday, October 25, 2026 -- 20:07:13
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.70
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.5248762
+Critical t=1.9839715
+Df=100
+Sample size group 1=51
+Sample size group 2=51
+Total sample size=102
+Actual power=0.7056126
+
+
+ORC-017
+Girdi: Type: A priori | Tails: Two | d: 0.6 | α: 0.001 | Power: 0.80 | Allocation ratio: 1
+
+[18] -- Sunday, October 25, 2026 -- 20:08:38
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.6
+α err prob=0.001
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=4.2000000
+Critical t=3.3413817
+Df=194
+Sample size group 1=98
+Sample size group 2=98
+Total sample size=196
+Actual power=0.8025581
+
+ORC-018
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.10 | Power: 0.80 | Allocation ratio: 1
+
+[19] -- Sunday, October 25, 2026 -- 20:09:48
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.10
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.5248762
+Critical t=1.6602343
+Df=100
+Sample size group 1=51
+Sample size group 2=51
+Total sample size=102
+Actual power=0.8059150
+
+
+
+
+
+ORC-019
+Girdi: Type: A priori | Tails: Two | d: 0.35 | α: 0.025 | Power: 0.88 | Allocation ratio: 1.25
+
+[21] -- Sunday, October 25, 2026 -- 20:12:38
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.35
+α err prob=0.025
+Power (1-β err prob)=0.88
+Allocation ratio N2/N1=1.25
+Output:Noncentrality parameter δ=3.4339080
+Critical t=2.2501350
+Df=388
+Sample size group 1=173
+Sample size group 2=217
+Total sample size=390
+Actual power=0.8812733
+
+ORC-020
+Girdi: Type: A priori | Tails: One | d: 0.3 | α: 0.01 | Power: 0.99 | Allocation ratio: 1
+
+[22] -- Sunday, October 25, 2026 -- 20:14:49
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.3
+α err prob=0.01
+Power (1-β err prob)=0.99
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=4.6620811
+Critical t=2.3302224
+Df=964
+Sample size group 1=483
+Sample size group 2=483
+Total sample size=966
+Actual power=0.9900753
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bölüm 2: Sınır ve Uç Değerler (ORC-021 – ORC-032)
+ORC-021
+Girdi: Type: A priori | Tails: Two | d: 0.10 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+
+[23] -- Sunday, October 25, 2026 -- 20:16:48
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.10
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8026773
+Critical t=1.9607198
+Df=3140
+Sample size group 1=1571
+Sample size group 2=1571
+Total sample size=3142
+Actual power=0.8000667
+
+
+ORC-022
+Girdi: Type: A priori | Tails: Two | d: 2.0 | α: 0.05 | Power: 0.90 | Allocation ratio: 1
+[24] -- Sunday, October 25, 2026 -- 20:18:10
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=2.0
+α err prob=0.05
+Power (1-β err prob)=0.90
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=3.7416574
+Critical t=2.1788128
+Df=12
+Sample size group 1=7
+Sample size group 2=7
+Total sample size=14
+Actual power=0.9290703
+
+
+
+ORC-023
+Girdi: Type: A priori | Tails: Two | d: 0.60 | α: 0.0001 | Power: 0.80 | Allocation ratio: 1
+
+[25] -- Sunday, October 25, 2026 -- 20:20:13
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.60
+α err prob=0.0001
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=4.8187135
+Critical t=3.9527710
+Df=256
+Sample size group 1=129
+Sample size group 2=129
+Total sample size=258
+Actual power=0.8042355
+
+
+ORC-024
+Girdi: Type: A priori | Tails: Two | d: 0.50 | α: 0.05 | Power: 0.999 | Allocation ratio: 1
+[26] -- Sunday, October 25, 2026 -- 20:21:54
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.50
+α err prob=0.05
+Power (1-β err prob)=0.999
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=5.0744458
+Critical t=1.9657668
+Df=410
+Sample size group 1=206
+Sample size group 2=206
+Total sample size=412
+Actual power=0.9990407
+
+
+ORC-025
+Girdi: Type: A priori | Tails: Two | d: 0.40 | α: 0.05 | Power: 0.80 | Allocation ratio: 3
+
+[27] -- Sunday, October 25, 2026 -- 20:23:20
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.40
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=3
+Output:Noncentrality parameter δ=2.8142495
+Critical t=1.9690597
+Df=262
+Sample size group 1=66
+Sample size group 2=198
+Total sample size=264
+Actual power=0.8006538
+
+
+
+
+
+
+
+ORC-026
+Girdi: Type: A priori | Tails: Two | d: 0.40 | α: 0.05 | Power: 0.80 | Allocation ratio: 0.333333
+[28] -- Sunday, October 25, 2026 -- 20:24:47
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.40
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=0.333333
+Output:Noncentrality parameter δ=2.8142495
+Critical t=1.9690597
+Df=262
+Sample size group 1=198
+Sample size group 2=66
+Total sample size=264
+Actual power=0.8006538
+
+
+
+ORC-027
+Girdi: Type: A priori | Tails: One | d: 0.35 | α: 0.005 | Power: 0.90 | Allocation ratio: 1
+[29] -- Sunday, October 25, 2026 -- 21:15:01
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.35
+α err prob=0.005
+Power (1-β err prob)=0.90
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=3.8737901
+Critical t=2.5859414
+Df=488
+Sample size group 1=245
+Sample size group 2=245
+Total sample size=490
+Actual power=0.9005653
+
+
+
+
+
+
+ORC-028
+Girdi: Type: Post hoc | Tails: Two | d: 0.80 | α: 0.05 | N1: 10 | N2: 10
+[30] -- Sunday, October 25, 2026 -- 21:24:42
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Post hoc: Compute achieved power 
+Input:Tail(s)=Two
+Effect size d=0.80
+α err prob=0.05
+Sample size group 1=10
+Sample size group 2=10
+Output:Noncentrality parameter δ=1.7888544
+Critical t=2.1009220
+Df=18
+Power (1-β err prob)=0.3950692
+
+
+
+
+
+ORC-029
+Girdi: Type: Post hoc | Tails: Two | d: 0.20 | α: 0.01 | N1: 500 | N2: 1500
+[31] -- Sunday, October 25, 2026 -- 21:26:08
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Post hoc: Compute achieved power 
+Input:Tail(s)=Two
+Effect size d=0.20
+α err prob=0.01
+Sample size group 1=500
+Sample size group 2=1500
+Output:Noncentrality parameter δ=3.8729833
+Critical t=2.5782923
+Df=1998
+Power (1-β err prob)=0.9021566
+
+
+
+
+
+
+
+
+ORC-030
+Girdi: Type: Compromise | Tails: Two | d: 0.50 | N1: 60 | N2: 60 | β/α ratio: 2
+[32] -- Sunday, October 25, 2026 -- 21:27:58
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Compromise: Compute implied α & power 
+Input:Tail(s)=Two
+Effect size d=0.50
+β/α ratio=2
+Sample size group 1=60
+Sample size group 2=60
+Output:Noncentrality parameter δ=2.7386128
+Critical t=1.7556907
+Df=118
+α err prob=0.0817361
+β err prob=0.1634721
+Power (1-β err prob)=0.8365279
+
+
+
+ORC-031
+Girdi: Type: Sensitivity | Tails: Two | α: 0.01 | Power: 0.95 | N1: 100 | N2: 100
+[33] -- Sunday, October 25, 2026 -- 21:30:29
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Sensitivity: Compute required effect size 
+Input:Tail(s)=Two
+α err prob=0.01
+Power (1-β err prob)=0.95
+Sample size group 1=100
+Sample size group 2=100
+Output:Noncentrality parameter δ=4.2564623
+Critical t=2.6008873
+Df=198
+Effect size d=0.6019547
+
+
+ORC-032
+Girdi: Type: Criterion | Tails: Two | d: 0.50 | Power: 0.85 | N1: 75 | N2: 75
+[34] -- Sunday, October 25, 2026 -- 21:31:57
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Criterion: Compute required α 
+Input:Tail(s)=Two
+Effect size d=0.50
+Power (1-β err prob)=0.85
+Sample size group 1=75
+Sample size group 2=75
+Output:Noncentrality parameter δ=3.0618622
+Critical t=2.0217215
+Df=148
+α err prob=0.0450073
+
+
+Bölüm 3: Yuvarlama ve İnce Eşik Testleri (ORC-033 – ORC-045)
+ORC-033
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 1.3
+[35] -- Sunday, October 25, 2026 -- 21:33:29
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1.3
+Output:Noncentrality parameter δ=2.8287671
+Critical t=1.9786708
+Df=128
+Sample size group 1=57
+Sample size group 2=73
+Total sample size=130
+Actual power=0.8016480
+
+
+ORC-034
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 0.7
+[37] -- Sunday, October 25, 2026 -- 21:36:08
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=0.7
+Output:Noncentrality parameter δ=2.8244066
+Critical t=1.9783804
+Df=130
+Sample size group 1=78
+Sample size group 2=54
+Total sample size=132
+Actual power=0.8005319
+
+
+
+ORC-035
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 2.5
+[38] -- Sunday, October 25, 2026 -- 21:37:16
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=2.5
+Output:Noncentrality parameter δ=2.8292769
+Critical t=1.9754881
+Df=154
+Sample size group 1=45
+Sample size group 2=111
+Total sample size=156
+Actual power=0.8027904
+
+
+ORC-036
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 1.1
+[39] -- Sunday, October 25, 2026 -- 21:38:48
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1.1
+Output:Noncentrality parameter δ=2.8253180
+Critical t=1.9789706
+Df=126
+Sample size group 1=61
+Sample size group 2=67
+Total sample size=128
+Actual power=0.8005985
+
+
+ORC-037
+Girdi: Type: A priori | Tails: One | d: 0.5 | α: 0.05 | Power: 0.90 | Allocation ratio: 0.75
+
+[40] -- Sunday, October 25, 2026 -- 21:40:15
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.90
+Allocation ratio N2/N1=0.75
+Output:Noncentrality parameter δ=2.9493972
+Critical t=1.6558105
+Df=140
+Sample size group 1=81
+Sample size group 2=61
+Total sample size=142
+Actual power=0.9015171
+
+
+
+ORC-038
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.8014 | Allocation ratio: 1
+[41] -- Sunday, October 25, 2026 -- 21:41:28
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.8014
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8284271
+Critical t=1.9789706
+Df=126
+Sample size group 1=64
+Sample size group 2=64
+Total sample size=128
+Actual power=0.8014596
+
+
+ORC-039
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.8015 | Allocation ratio: 1
+[42] -- Sunday, October 25, 2026 -- 21:42:26
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.8015
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8504386
+Critical t=1.9786708
+Df=128
+Sample size group 1=65
+Sample size group 2=65
+Total sample size=130
+Actual power=0.8075844
+
+
+ORC-040
+Girdi: Type: A priori | Tails: One | d: 0.5 | α: 0.05 | Power: 0.9514 | Allocation ratio: 1
+[43] -- Sunday, October 25, 2026 -- 21:43:30
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.9514
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=3.3166248
+Critical t=1.6536580
+Df=174
+Sample size group 1=88
+Sample size group 2=88
+Total sample size=176
+Actual power=0.9514254
+
+
+ORC-041
+Girdi: Type: A priori | Tails: One | d: 0.5 | α: 0.05 | Power: 0.9515 | Allocation ratio: 1
+[44] -- Sunday, October 25, 2026 -- 21:45:15
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.9515
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=3.3354160
+Critical t=1.6535574
+Df=176
+Sample size group 1=89
+Sample size group 2=89
+Total sample size=178
+Actual power=0.9532972
+
+
+
+
+
+
+ORC-042
+Girdi: Type: A priori | Tails: Two | d: 0.01 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+[45] -- Sunday, October 25, 2026 -- 21:46:32
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.01
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=2.8015978
+Critical t=1.9599715
+Df=313956
+Sample size group 1=156979
+Sample size group 2=156979
+Total sample size=313958
+Actual power=0.8000021
+
+
+
+
+ORC-043
+Girdi: Type: A priori | Tails: Two | d: 3.0 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+[46] -- Sunday, October 25, 2026 -- 21:47:29
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=3.0
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=4.2426407
+Critical t=2.4469119
+Df=6
+Sample size group 1=4
+Sample size group 2=4
+Total sample size=8
+Actual power=0.9389357
+
+
+
+
+
+ORC-044
+Girdi: Type: A priori | Tails: Two | d: 5.0 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+
+[47] -- Sunday, October 25, 2026 -- 21:48:30
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=5.0
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=6.1237244
+Critical t=2.7764451
+Df=4
+Sample size group 1=3
+Sample size group 2=3
+Total sample size=6
+Actual power=0.9927759
+
+
+
+
+
+ORC-045
+Girdi: Type: A priori | Tails: One | d: 0.4 | α: 0.05 | Power: 0.80 | Allocation ratio: 0.5
+[48] -- Sunday, October 25, 2026 -- 21:49:45
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.4
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=0.5
+Output:Noncentrality parameter δ=2.5050857
+Critical t=1.6536580
+Df=174
+Sample size group 1=117
+Sample size group 2=59
+Total sample size=176
+Actual power=0.8024691
+
+
+
+
+Bölüm 4: Hata ve Geçersiz Girdi Testleri (ORC-046 – ORC-060)
+(Calculate'e basınca ekranda beliren hata penceresinin mesajını "Hata Mesajı" kısmına yazman yeterli)
+ORC-046
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.05 | Allocation ratio: 1
+Çıktı: Hata Mesajı:
+[50] -- Sunday, October 25, 2026 -- 21:52:54
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.05
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=0.5000000
+Critical t=4.3026527
+Df=2
+Sample size group 1=2
+Sample size group 2=2
+Total sample size=4
+Actual power=0.0615079
+
+
+ORC-047
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.03 | Allocation ratio: 1
+Çıktı: Hata Mesajı:
+Power must be larger than alpha
+ORC-048
+Girdi: Type: A priori | Tails: One | d: 0.5 | α: 0.05 | Power: 0.05 | Allocation ratio: 1
+Çıktı: Hata Mesajı:
+[52] -- Sunday, October 25, 2026 -- 21:57:33
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=One
+Effect size d=0.5
+α err prob=0.05
+Power (1-β err prob)=0.05
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=0.5000000
+Critical t=2.9199856
+Df=2
+Sample size group 1=2
+Sample size group 2=2
+Total sample size=4
+Actual power=0.0994117
+
+
+
+ORC-049
+Girdi: Type: A priori | Tails: Two | d: 0 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+Çıktı: Hata Mesajı: IN AN PRİORİ ANALYSİS, THE ABSOLUTE VALUE OF THE EFFECT SİZE MUST BE GREATER THAN 0.00001
+ORC-050
+Girdi: Type: A priori | Tails: Two | d: -0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+Çıktı: Hata Mesajı:[53] -- Sunday, October 25, 2026 -- 22:00:01
+t tests - Means: Difference between two independent means (two groups)
+Analysis:A priori: Compute required sample size 
+Input:Tail(s)=Two
+Effect size d=-0.5
+α err prob=0.05
+Power (1-β err prob)=0.80
+Allocation ratio N2/N1=1
+Output:Noncentrality parameter δ=-2.8284271
+Critical t=-1.9789706
+Df=126
+Sample size group 1=64
+Sample size group 2=64
+Total sample size=128
+Actual power=0.8014596
+
+
+ORC-051
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0 | Power: 0.80 | Allocation ratio: 1
+Çıktı: Hata Mesajı: ALPHA İS OUTSİDE THE ADMİSSİBLE (1e-07 ,1)
+ORC-052
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 1 | Power: 0.80 | Allocation ratio: 1
+Çıktı: Hata Mesajı: ALPHA İS OUTSİDE THE ADMİSSİBLE (1e-07 ,1)
+ORC-053
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 1.5 | Power: 0.80 | Allocation ratio: 1
+Çıktı: Hata Mesajı: ALPHA İS OUTSİDE THE ADMİSSİBLE (1e-07 ,1)
+ORC-054
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 1 | Allocation ratio: 1
+Çıktı: Hata Mesajı: POWER İS OUTSİDE THE ADMİSSİBLE (1e-07 ,1)
+ORC-055
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0 | Allocation ratio: 1
+Çıktı: Hata Mesajı: POWER İS OUTSİDE THE ADMİSSİBLE (1e-07 ,1)
+ORC-056
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: 0
+Çıktı: Hata Mesajı: THE ALLOCATİON RATİO FALLS OUTSİDE THE ADMİSSİBLE RANGE (0.01, 100)
+ORC-057
+Girdi: Type: A priori | Tails: Two | d: 0.5 | α: 0.05 | Power: 0.80 | Allocation ratio: -1
+Çıktı: Hata Mesajı: THE ALLOCATİON RATİO FALLS OUTSİDE THE ADMİSSİBLE RANGE (0.01, 100)
+
+ORC-058
+Girdi: Type: Post hoc | Tails: Two | d: 0.5 | α: 0.05 | N1: 1 | N2: 1
+Çıktı: Hata Mesajı / Sonuç: TOTALE SAMPLE SİZE İS OUTSİDE THE ADMİSSİBLE RANGE (3, 2147483646)
+ORC-059
+Girdi: Type: Post hoc | Tails: Two | d: 0.5 | α: 0.05 | N1: 2.5 | N2: 10
+Çıktı: Hata Mesajı:
+[54] -- Sunday, October 25, 2026 -- 22:08:07
+t tests - Means: Difference between two independent means (two groups)
+Analysis:Post hoc: Compute achieved power 
+Input:Tail(s)=Two
+Effect size d=0.5
+α err prob=0.05
+Sample size group 1=2.5
+Sample size group 2=10
+Output:Noncentrality parameter δ=0.7595545
+Critical t=2.2009852
+Df=11
+Power (1-β err prob)=0.1069404
+
+
+ORC-060
+Girdi: Type: A priori | Tails: Two | d: (boş bırak) | α: 0.05 | Power: 0.80 | Allocation ratio: 1
+Çıktı: Hata Mesajı: IN AN PRİORİ ANALYSİS, THE ABSLOUTE VALUE OF THE EFFECT SİZE MUST BE GREATER THAN 0.00001

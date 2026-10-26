@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-25T20:49:53.152091+00:00",
+  "python": "3.13.14",
+  "statsmodels": "0.15.0",
+  "total": 540,
+  "completed": 540,
+  "errors": 0,
+  "seconds": 1.6512977000093088,
+  "max_power_abs_difference": 4.440892098500626e-16,
+  "naive_ceil_differences": 69,
+  "interpretation": "Independent library cross-check; no GPower observation or hidden-score claim"
+}

@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-26",
+  "candidate_version": "1.1.0rc1",
+  "contract_version": "1.0.0",
+  "spec_inputs": [
+    "previous transcribed SPEC and CONTRACT",
+    "standalone work/CORRECTED_SPEC.md"
+  ],
+  "raw_oracle_access": false,
+  "source_images_access": false,
+  "allocation": "minimum valid even N; n1=floor(N/(1+ratio)+0.5), n2=N-n1; n1,n2>=2",
+  "engineering_max_total": 20000000,
+  "a_priori_equality": "power==alpha allowed",
+  "sensitivity_equality": "power<=alpha rejected, provisional",
+  "numerical_fallbacks": [
+    "right sf to 1-cdf",
+    "left cdf(-c,df,delta) to sf(c,df,-delta)"
+  ],
+  "suite": {
+    "command": "python -m unittest discover -s tests -v",
+    "methods": 17,
+    "passed": 17,
+    "unittest_seconds": 14.255
+  },
+  "actual_mcp": {
+    "rows": 33,
+    "public_rows": 25,
+    "invalid_rows": 8,
+    "exact_text_parity": 33
+  },
+  "installed_console": {
+    "candidate_install": "work/merve-install-spec11",
+    "entries": [
+      "gpower-clone",
+      "gpower-mcp",
+      "gpower-agent",
+      "gpower-agent-eval"
+    ],
+    "scenarios": 5,
+    "passed": true,
+    "evidence": "logs/installed_console_spec11.json"
+  },
+  "live_llm_calls": 0,
+  "live_agent_metrics": null,
+  "mock_tests_are_live_evidence": false,
+  "repo_writes": false,
+  "zip_rebuilt": false,
+  "fresh_performance_benchmark": null
+}

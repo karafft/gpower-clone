@@ -1,3 +1,14 @@
+> **26 Ekim2026 güncellemesi:** Beş t2-indep modu, tek hesap motoru,
+> CLI, MCP ve ajan kodu eklendi.25 yazılım testi ve33 MCP/CLI kontrolü geçti.
+> Görselle desteklenen57/57 kaynak kaydı (37/37 tam N), ayrıca motor
+> dondurulduktan sonra14/14 yeni GUI deneyi (10/10 tam N) eşleşti.
+> Toplam74 görsel var. ORC-011’in çıktıları ?; sayısal kanıt olarak sayılmadı.
+> Canlı model ve gerçek GUI/MCP token ölçümü henüz yapılmadı.
+> Gizli yarışma kapısının sonucu bilinmiyor.
+>
+> [Kurulum/kullanım](README_IMPLEMENTATION.md) · [Sonuç raporu](REPORT.md) ·
+> [Görsel kontrolü](docs/SUDE_GORSEL_KONTROLU.md) · [Şartname önerisi](SPEC_ONERI.md)
+
 # gpower-clone
 
 İki bağımsız grup ortalaması için t testi (`t2-indep`) güç analizi: a-priori örneklem büyüklüğü ve post-hoc güç. G*Power 3.1.9.7'nin bu hesabı temiz oda yöntemiyle yeniden yazılmıştır ve CLI üzerinden kullanılır.
@@ -7,12 +18,16 @@ YZM301 Teardown Sprint · Ekip: Sude, Merve, Zeliha
 > Bu proje G*Power değildir ve onun yerine sunulmaz. G*Power yalnızca resmi sayfasından indirilmelidir.
 
 ## Yapılan katmanlar
-- [ ] CLI (temel)
-- [ ] MCP sunucusu
-- [ ] AI ajanı
+- [x] CLI (temel)
+- [x] MCP sunucusu
+- [x] AI ajanı kodu (canlı model değerlendirmesi bekliyor)
 
 ## Kurulum
-_Eklenecek._
+```sh
+python -m pip install -e ".[mcp]"
+```
+
+Ayrıntılı kullanım: [README_IMPLEMENTATION.md](README_IMPLEMENTATION.md).
 
 ## Kullanım
 ```
@@ -50,7 +65,7 @@ Her oturumun ilk prompt'u `prompts/` klasöründedir.
 - `tests/`: diferansiyel test ve uyum raporu
 
 ## Demo
-_Video linki eklenecek._
+_[60 saniyelik açıklayıcı CLI demosu](demo/CLI_Demo_60s.mp4). Bu video gerçek CLI çıktılarından üretilmiştir; ekran kaydı değildir._
 
 ## Atıf
 Faul, F., Erdfelder, E., Lang, A.-G., & Buchner, A. (2007). G*Power 3: A flexible statistical power analysis program for the social, behavioral, and biomedical sciences. *Behavior Research Methods, 39*, 175–191.

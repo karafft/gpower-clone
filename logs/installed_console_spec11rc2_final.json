@@ -1,0 +1,54 @@
+[
+  {
+    "entrypoint": "gpower-clone",
+    "args": [
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"contract_version\":\"1.0.0\",\"name\":\"gpower-clone\",\"engine\":\"Python 3.13.14 / SciPy 1.18.1 / SPEC engine 1.1.0rc2\"}\n"
+  },
+  {
+    "entrypoint": "gpower-clone",
+    "args": [
+      "--test",
+      "t2-indep",
+      "--mode",
+      "sensitivity",
+      "--tails",
+      "2",
+      "--alpha",
+      ".05",
+      "--power",
+      ".05",
+      "--n1",
+      "20",
+      "--n2",
+      "31"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"ncp\":0.0,\"critical_t\":2.0095752371292397,\"df\":49,\"d\":0.0}\n"
+  },
+  {
+    "entrypoint": "gpower-agent",
+    "args": [
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: gpower-agent [-h] [--question QUESTION] [--model MODEL]\n                    [--endpoint ENDPOINT] [--log LOG] [--structured]\n                    --synthetic-case\n\nLLM + actual MCP stdio power-analysis agent; synthetic cases only\n\noptions:\n  -h, --help           show this help message and exit\n  --question QUESTION\n  --model MODEL\n  --endpoint ENDPOINT\n  --log LOG\n  --structured         Require model final JSON action/label/message; retain\n                       actual tool trace\n  --synthetic-case     Confirm only synthetic, non-identifying case data will\n                       be used\n"
+  },
+  {
+    "entrypoint": "gpower-agent-eval",
+    "args": [],
+    "exit_code": 2,
+    "stdout": "{\"status\": \"not_run\", \"reason\": \"Requires --run-live, configured API key, and model\", \"cases_executed\": 0, \"metrics\": null}\n"
+  },
+  {
+    "entrypoint": "gpower-mcp",
+    "server_version": "1.1.0rc2",
+    "tools": [
+      "power_analysis"
+    ],
+    "result": "{\"ncp\":0.0,\"critical_t\":2.0095752371292397,\"df\":49,\"d\":0.0}",
+    "actual_stdio": true
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-26",
+  "candidate_version": "1.1.0rc3",
+  "contract_version": "1.0.0",
+  "new_clean_spec": "work/SPEC_OBSERVED_RANGES.md",
+  "raw_evidence_access": false,
+  "ranges": {
+    "alpha": [
+      1e-07,
+      0.9999999
+    ],
+    "power": [
+      1e-07,
+      0.9999999
+    ],
+    "a_priori_ratio": [
+      0.01,
+      100
+    ],
+    "inclusive": true
+  },
+  "a_priori_min_d": 1e-05,
+  "max_even_total": 2147483646,
+  "sensitivity_equality": "ncp0.0,d0.0; exact equality mathematical clarification",
+  "suite": {
+    "command": "python -m unittest discover -s tests -v",
+    "methods": 21,
+    "passed": 21,
+    "unittest_seconds": 18.366
+  },
+  "actual_mcp": {
+    "rows": 33,
+    "exact_text_parity": 33,
+    "public_rows": 25,
+    "invalid_rows": 8
+  },
+  "installed_entries": [
+    "gpower-clone",
+    "gpower-mcp",
+    "gpower-agent",
+    "gpower-agent-eval"
+  ],
+  "installed_scenarios": 6,
+  "candidate_install": "work/merve-install-spec11rc3",
+  "installed_evidence": "logs/installed_console_spec11rc3.json",
+  "live_llm_calls": 0,
+  "live_llm_metrics": null,
+  "oracle_runs_by_implementation_agent": 0,
+  "repo_writes": false,
+  "zip_rebuilt": false
+}

@@ -1,0 +1,2332 @@
+{
+  "timestamp": "2026-10-26T09:04:30.587555+00:00",
+  "scope": "Only supplied external expected values; not a hidden competition score or REA proof",
+  "total": 58,
+  "passed": 58,
+  "failed": 0,
+  "skipped": 0,
+  "a_priori_n_cases": 38,
+  "a_priori_n_exact_rate": 1.0,
+  "timeout_seconds": 2.0,
+  "results": [
+    {
+      "id": "ORC-001",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.95,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 3.3166248,
+        "critical_t": 1.653658,
+        "df": 174,
+        "n1": 88,
+        "n2": 88,
+        "n_total": 176,
+        "actual_power": 0.951425
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-001",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.026021600002423,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3166247903554003,
+        "critical_t": 1.6536580165162151,
+        "df": 174,
+        "n1": 88,
+        "n2": 88,
+        "n_total": 176,
+        "actual_power": 0.9514254482775332
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-002",
+      "input": {
+        "test": "t2-indep",
+        "mode": "post-hoc",
+        "tails": 1,
+        "d": 0.5,
+        "alpha": 0.05,
+        "n1": 88,
+        "n2": 88
+      },
+      "expected": {
+        "ncp": 3.3166248,
+        "critical_t": 1.653658,
+        "df": 174,
+        "power": 0.9514254
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-002",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0048323000082746,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3166247903554003,
+        "critical_t": 1.6536580165162151,
+        "df": 174,
+        "power": 0.9514254482775332
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-003",
+      "input": {
+        "test": "t2-indep",
+        "mode": "compromise",
+        "tails": 1,
+        "d": 0.5,
+        "n1": 88,
+        "n2": 88,
+        "beta_alpha_ratio": 1.0
+      },
+      "expected": {
+        "ncp": 3.3166248,
+        "critical_t": 1.6606859,
+        "df": 174,
+        "power": 0.9507113,
+        "alpha": 0.0492887,
+        "beta": 0.0492887
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-003",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.035033000051044,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3166247903554003,
+        "critical_t": 1.6606858874423187,
+        "df": 174,
+        "alpha": 0.049288730630276334,
+        "power": 0.9507112693697237,
+        "beta": 0.04928873063027628
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-004",
+      "input": {
+        "test": "t2-indep",
+        "mode": "criterion",
+        "tails": 1,
+        "d": 0.5,
+        "power": 0.95,
+        "n1": 88,
+        "n2": 88
+      },
+      "expected": {
+        "ncp": 3.3166248,
+        "critical_t": 1.667605,
+        "df": 174,
+        "alpha": 0.0485965
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-004",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1526099999900907,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3166247903554003,
+        "critical_t": 1.6676050056187983,
+        "df": 174,
+        "alpha": 0.04859645080179521
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-005",
+      "input": {
+        "test": "t2-indep",
+        "mode": "sensitivity",
+        "tails": 1,
+        "alpha": 0.05,
+        "power": 0.95,
+        "n1": 88,
+        "n2": 88
+      },
+      "expected": {
+        "ncp": 3.3025887,
+        "critical_t": 1.653658,
+        "df": 174,
+        "d": 0.497884
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-005",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1140696000074968,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.302588673870052,
+        "critical_t": 1.6536580165162151,
+        "df": 174,
+        "d": 0.49788397582292626
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-006",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.8284271,
+        "critical_t": 1.9789706,
+        "df": 126,
+        "n1": 64,
+        "n2": 64,
+        "n_total": 128,
+        "actual_power": 0.8014596
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-006",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0493163999635726,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8284271247461903,
+        "critical_t": 1.9789706019906288,
+        "df": 126,
+        "n1": 64,
+        "n2": 64,
+        "n_total": 128,
+        "actual_power": 0.8014595579222543
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-007",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.01,
+        "power": 0.95,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 4.2573466,
+        "critical_t": 2.5930077,
+        "df": 288,
+        "n1": 145,
+        "n2": 145,
+        "n_total": 290,
+        "actual_power": 0.9512341
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-007",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.05677630007267,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 4.257346591481601,
+        "critical_t": 2.5930076743033847,
+        "df": 288,
+        "n1": 145,
+        "n2": 145,
+        "n_total": 290,
+        "actual_power": 0.9512341282174712
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-008",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.2,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.8071338,
+        "critical_t": 1.9629867,
+        "df": 786,
+        "n1": 394,
+        "n2": 394,
+        "n_total": 788,
+        "actual_power": 0.8005931
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-008",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1814871000824496,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8071337695236402,
+        "critical_t": 1.9629867152471516,
+        "df": 786,
+        "n1": 394,
+        "n2": 394,
+        "n_total": 788,
+        "actual_power": 0.8005931284024348
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-009",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.8,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.884441,
+        "critical_t": 2.0085591,
+        "df": 50,
+        "n1": 26,
+        "n2": 26,
+        "n_total": 52,
+        "actual_power": 0.8074866
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-009",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1229009999660775,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8844410203711917,
+        "critical_t": 2.008559112100761,
+        "df": 50,
+        "n1": 26,
+        "n2": 26,
+        "n_total": 52,
+        "actual_power": 0.8074866151465276
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-010",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.5
+      },
+      "expected": {
+        "ncp": 2.8389613,
+        "critical_t": 1.9780988,
+        "df": 132,
+        "n1": 54,
+        "n2": 80,
+        "n_total": 134,
+        "actual_power": 0.8046333
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-010",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0946536000119522,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.838961340444303,
+        "critical_t": 1.978098841924131,
+        "df": 132,
+        "n1": 54,
+        "n2": 80,
+        "n_total": 134,
+        "actual_power": 0.8046333260197618
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-011",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 0.5
+      },
+      "expected": {
+        "ncp": 2.8284271,
+        "critical_t": 1.976811,
+        "df": 142,
+        "n1": 96,
+        "n2": 48,
+        "n_total": 144,
+        "actual_power": 0.8021395
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-011",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1055501999799162,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.82842712474619,
+        "critical_t": 1.9768109936328604,
+        "df": 142,
+        "n1": 96,
+        "n2": 48,
+        "n_total": 144,
+        "actual_power": 0.8021395496677509
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-012",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 0.67
+      },
+      "expected": {
+        "ncp": 2.8389613,
+        "critical_t": 1.9780988,
+        "df": 132,
+        "n1": 80,
+        "n2": 54,
+        "n_total": 134,
+        "actual_power": 0.8046333
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-012",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1021211999468505,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.838961340444303,
+        "critical_t": 1.978098841924131,
+        "df": 132,
+        "n1": 80,
+        "n2": 54,
+        "n_total": 134,
+        "actual_power": 0.8046333260197618
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-013",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.4,
+        "alpha": 0.05,
+        "power": 0.85,
+        "ratio": 2.0
+      },
+      "expected": {
+        "ncp": 2.6932013,
+        "critical_t": 1.652432,
+        "df": 202,
+        "n1": 68,
+        "n2": 136,
+        "n_total": 204,
+        "actual_power": 0.8506699
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-013",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.125478900037706,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.693201316896554,
+        "critical_t": 1.6524319635800744,
+        "df": 202,
+        "n1": 68,
+        "n2": 136,
+        "n_total": 204,
+        "actual_power": 0.8506699031200895
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-014",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.15,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.8042379,
+        "critical_t": 1.9616648,
+        "df": 1396,
+        "n1": 699,
+        "n2": 699,
+        "n_total": 1398,
+        "actual_power": 0.8002033
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-014",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.104011100018397,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8042378643759878,
+        "critical_t": 1.9616647684867,
+        "df": 1396,
+        "n1": 699,
+        "n2": 699,
+        "n_total": 1398,
+        "actual_power": 0.8002033062431045
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-015",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 1.5,
+        "alpha": 0.05,
+        "power": 0.9,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 3.5178118,
+        "critical_t": 2.0859634,
+        "df": 20,
+        "n1": 11,
+        "n2": 11,
+        "n_total": 22,
+        "actual_power": 0.9168991
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-015",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1062081001000479,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.517811819867572,
+        "critical_t": 2.0859634472658652,
+        "df": 20,
+        "n1": 11,
+        "n2": 11,
+        "n_total": 22,
+        "actual_power": 0.9168991435634356
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-016",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.7,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.5248762,
+        "critical_t": 1.9839715,
+        "df": 100,
+        "n1": 51,
+        "n2": 51,
+        "n_total": 102,
+        "actual_power": 0.7056126
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-016",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0404932000674307,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.52487623459052,
+        "critical_t": 1.983971518523552,
+        "df": 100,
+        "n1": 51,
+        "n2": 51,
+        "n_total": 102,
+        "actual_power": 0.705612580760955
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-017",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.6,
+        "alpha": 0.001,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 4.2,
+        "critical_t": 3.3413817,
+        "df": 194,
+        "n1": 98,
+        "n2": 98,
+        "n_total": 196,
+        "actual_power": 0.8025581
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-017",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0366645000176504,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 4.2,
+        "critical_t": 3.3413816830007588,
+        "df": 194,
+        "n1": 98,
+        "n2": 98,
+        "n_total": 196,
+        "actual_power": 0.8025580996679117
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-018",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.1,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.5248762,
+        "critical_t": 1.6602343,
+        "df": 100,
+        "n1": 51,
+        "n2": 51,
+        "n_total": 102,
+        "actual_power": 0.805915
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-018",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.078591899946332,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.52487623459052,
+        "critical_t": 1.6602343260853396,
+        "df": 100,
+        "n1": 51,
+        "n2": 51,
+        "n_total": 102,
+        "actual_power": 0.805915018961525
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-019",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.35,
+        "alpha": 0.025,
+        "power": 0.88,
+        "ratio": 1.25
+      },
+      "expected": {
+        "ncp": 3.433908,
+        "critical_t": 2.250135,
+        "df": 388,
+        "n1": 173,
+        "n2": 217,
+        "n_total": 390,
+        "actual_power": 0.8812733
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-019",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1041773000033572,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.433908030069291,
+        "critical_t": 2.2501350377582274,
+        "df": 388,
+        "n1": 173,
+        "n2": 217,
+        "n_total": 390,
+        "actual_power": 0.8812732818959599
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-020",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.3,
+        "alpha": 0.01,
+        "power": 0.99,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 4.6620811,
+        "critical_t": 2.3302224,
+        "df": 964,
+        "n1": 483,
+        "n2": 483,
+        "n_total": 966,
+        "actual_power": 0.9900753
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-020",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.051437999936752,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 4.662081080376016,
+        "critical_t": 2.330222370749314,
+        "df": 964,
+        "n1": 483,
+        "n2": 483,
+        "n_total": 966,
+        "actual_power": 0.9900753316434852
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-021",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.1,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.8026773,
+        "critical_t": 1.9607198,
+        "df": 3140,
+        "n1": 1571,
+        "n2": 1571,
+        "n_total": 3142,
+        "actual_power": 0.8000667
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-021",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0502659000921994,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8026772914483042,
+        "critical_t": 1.9607197712835203,
+        "df": 3140,
+        "n1": 1571,
+        "n2": 1571,
+        "n_total": 3142,
+        "actual_power": 0.8000666820510532
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-022",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 2.0,
+        "alpha": 0.05,
+        "power": 0.9,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 3.7416574,
+        "critical_t": 2.1788128,
+        "df": 12,
+        "n1": 7,
+        "n2": 7,
+        "n_total": 14,
+        "actual_power": 0.9290703
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-022",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.2243869000812992,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.7416573867739418,
+        "critical_t": 2.1788128296672293,
+        "df": 12,
+        "n1": 7,
+        "n2": 7,
+        "n_total": 14,
+        "actual_power": 0.9290702736010901
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-023",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.6,
+        "alpha": 0.0001,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 4.8187135,
+        "critical_t": 3.952771,
+        "df": 256,
+        "n1": 129,
+        "n2": 129,
+        "n_total": 258,
+        "actual_power": 0.8042355
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-023",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1258439000230283,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 4.818713521262703,
+        "critical_t": 3.952770964984768,
+        "df": 256,
+        "n1": 129,
+        "n2": 129,
+        "n_total": 258,
+        "actual_power": 0.8042355028607286
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-024",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.999,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 5.0744458,
+        "critical_t": 1.9657668,
+        "df": 410,
+        "n1": 206,
+        "n2": 206,
+        "n_total": 412,
+        "actual_power": 0.9990407
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-024",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1097603000234812,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 5.07444578254611,
+        "critical_t": 1.9657668396636971,
+        "df": 410,
+        "n1": 206,
+        "n2": 206,
+        "n_total": 412,
+        "actual_power": 0.9990407386951095
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-025",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.4,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 3.0
+      },
+      "expected": {
+        "ncp": 2.8142495,
+        "critical_t": 1.9690597,
+        "df": 262,
+        "n1": 66,
+        "n2": 198,
+        "n_total": 264,
+        "actual_power": 0.8006538
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-025",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.169884900096804,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.814249455894058,
+        "critical_t": 1.9690597152565403,
+        "df": 262,
+        "n1": 66,
+        "n2": 198,
+        "n_total": 264,
+        "actual_power": 0.8006538007685753
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-026",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.4,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 0.333333
+      },
+      "expected": {
+        "ncp": 2.8142495,
+        "critical_t": 1.9690597,
+        "df": 262,
+        "n1": 198,
+        "n2": 66,
+        "n_total": 264,
+        "actual_power": 0.8006538
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-026",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1000951998867095,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.814249455894058,
+        "critical_t": 1.9690597152565403,
+        "df": 262,
+        "n1": 198,
+        "n2": 66,
+        "n_total": 264,
+        "actual_power": 0.8006538007685753
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-027",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.35,
+        "alpha": 0.005,
+        "power": 0.9,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 3.8737901,
+        "critical_t": 2.5859414,
+        "df": 488,
+        "n1": 245,
+        "n2": 245,
+        "n_total": 490,
+        "actual_power": 0.9005653
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-027",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1527729000663385,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.873790133706265,
+        "critical_t": 2.5859413992840152,
+        "df": 488,
+        "n1": 245,
+        "n2": 245,
+        "n_total": 490,
+        "actual_power": 0.9005653457522834
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-028",
+      "input": {
+        "test": "t2-indep",
+        "mode": "post-hoc",
+        "tails": 2,
+        "d": 0.8,
+        "alpha": 0.05,
+        "n1": 10,
+        "n2": 10
+      },
+      "expected": {
+        "ncp": 1.7888544,
+        "critical_t": 2.100922,
+        "df": 18,
+        "power": 0.3950692
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-028",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1089176000095904,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 1.788854381999832,
+        "critical_t": 2.1009220402410387,
+        "df": 18,
+        "power": 0.3950692121136407
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-029",
+      "input": {
+        "test": "t2-indep",
+        "mode": "post-hoc",
+        "tails": 2,
+        "d": 0.2,
+        "alpha": 0.01,
+        "n1": 500,
+        "n2": 1500
+      },
+      "expected": {
+        "ncp": 3.8729833,
+        "critical_t": 2.5782923,
+        "df": 1998,
+        "power": 0.9021566
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-029",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.093363199965097,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.872983346207417,
+        "critical_t": 2.578292252720635,
+        "df": 1998,
+        "power": 0.9021565591442542
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-030",
+      "input": {
+        "test": "t2-indep",
+        "mode": "compromise",
+        "tails": 2,
+        "d": 0.5,
+        "n1": 60,
+        "n2": 60,
+        "beta_alpha_ratio": 2.0
+      },
+      "expected": {
+        "ncp": 2.7386128,
+        "critical_t": 1.7556907,
+        "df": 118,
+        "power": 0.8365279,
+        "alpha": 0.0817361,
+        "beta": 0.1634721
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-030",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1343968000728637,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.738612787525831,
+        "critical_t": 1.7556907279371181,
+        "df": 118,
+        "alpha": 0.08173607091417519,
+        "power": 0.8365278581716492,
+        "beta": 0.1634721418283508
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-031",
+      "input": {
+        "test": "t2-indep",
+        "mode": "sensitivity",
+        "tails": 2,
+        "alpha": 0.01,
+        "power": 0.95,
+        "n1": 100,
+        "n2": 100
+      },
+      "expected": {
+        "ncp": 4.2564623,
+        "critical_t": 2.6008873,
+        "df": 198,
+        "d": 0.6019547
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-031",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1018912000581622,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 4.256462306729156,
+        "critical_t": 2.600887277990511,
+        "df": 198,
+        "d": 0.601954672190624
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-032",
+      "input": {
+        "test": "t2-indep",
+        "mode": "criterion",
+        "tails": 2,
+        "d": 0.5,
+        "power": 0.85,
+        "n1": 75,
+        "n2": 75
+      },
+      "expected": {
+        "ncp": 3.0618622,
+        "critical_t": 2.0217215,
+        "df": 148,
+        "alpha": 0.0450073
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-032",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1131963999941945,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.061862178478973,
+        "critical_t": 2.021721483592329,
+        "df": 148,
+        "alpha": 0.04500725571853075
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-033",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.3
+      },
+      "expected": {
+        "ncp": 2.8287671,
+        "critical_t": 1.9786708,
+        "df": 128,
+        "n1": 57,
+        "n2": 73,
+        "n_total": 130,
+        "actual_power": 0.801648
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-033",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1234486000612378,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.828767059501909,
+        "critical_t": 1.9786708498378354,
+        "df": 128,
+        "n1": 57,
+        "n2": 73,
+        "n_total": 130,
+        "actual_power": 0.8016479529079288
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-034",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 0.7
+      },
+      "expected": {
+        "ncp": 2.8244066,
+        "critical_t": 1.9783804,
+        "df": 130,
+        "n1": 78,
+        "n2": 54,
+        "n_total": 132,
+        "actual_power": 0.8005319
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-034",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0859901000512764,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8244066150738156,
+        "critical_t": 1.9783804054470224,
+        "df": 130,
+        "n1": 78,
+        "n2": 54,
+        "n_total": 132,
+        "actual_power": 0.8005319187121462
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-035",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 2.5
+      },
+      "expected": {
+        "ncp": 2.8292769,
+        "critical_t": 1.9754881,
+        "df": 154,
+        "n1": 45,
+        "n2": 111,
+        "n_total": 156,
+        "actual_power": 0.8027904
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-035",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1287057999288663,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8292768850552066,
+        "critical_t": 1.9754880582343406,
+        "df": 154,
+        "n1": 45,
+        "n2": 111,
+        "n_total": 156,
+        "actual_power": 0.8027904034606447
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-036",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.1
+      },
+      "expected": {
+        "ncp": 2.825318,
+        "critical_t": 1.9789706,
+        "df": 126,
+        "n1": 61,
+        "n2": 67,
+        "n_total": 128,
+        "actual_power": 0.8005985
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-036",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1864861999638379,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.825318013073926,
+        "critical_t": 1.9789706019906288,
+        "df": 126,
+        "n1": 61,
+        "n2": 67,
+        "n_total": 128,
+        "actual_power": 0.8005985173957324
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-037",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.9,
+        "ratio": 0.75
+      },
+      "expected": {
+        "ncp": 2.9493972,
+        "critical_t": 1.6558105,
+        "df": 140,
+        "n1": 81,
+        "n2": 61,
+        "n_total": 142,
+        "actual_power": 0.9015171
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-037",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.162584700039588,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.9493971692486296,
+        "critical_t": 1.6558105109968817,
+        "df": 140,
+        "n1": 81,
+        "n2": 61,
+        "n_total": 142,
+        "actual_power": 0.901517053026278
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-038",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8014,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.8284271,
+        "critical_t": 1.9789706,
+        "df": 126,
+        "n1": 64,
+        "n2": 64,
+        "n_total": 128,
+        "actual_power": 0.8014596
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-038",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0932136999908835,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8284271247461903,
+        "critical_t": 1.9789706019906288,
+        "df": 126,
+        "n1": 64,
+        "n2": 64,
+        "n_total": 128,
+        "actual_power": 0.8014595579222543
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-039",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8015,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.8504386,
+        "critical_t": 1.9786708,
+        "df": 128,
+        "n1": 65,
+        "n2": 65,
+        "n_total": 130,
+        "actual_power": 0.8075844
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-039",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1035852999193594,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.850438562747845,
+        "critical_t": 1.9786708498378354,
+        "df": 128,
+        "n1": 65,
+        "n2": 65,
+        "n_total": 130,
+        "actual_power": 0.8075844281216786
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-040",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.9514,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 3.3166248,
+        "critical_t": 1.653658,
+        "df": 174,
+        "n1": 88,
+        "n2": 88,
+        "n_total": 176,
+        "actual_power": 0.9514254
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-040",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1376153000164777,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3166247903554003,
+        "critical_t": 1.6536580165162151,
+        "df": 174,
+        "n1": 88,
+        "n2": 88,
+        "n_total": 176,
+        "actual_power": 0.9514254482775332
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-041",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.9515,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 3.335416,
+        "critical_t": 1.6535574,
+        "df": 176,
+        "n1": 89,
+        "n2": 89,
+        "n_total": 178,
+        "actual_power": 0.9532972
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-041",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.1610733999405056,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3354160160315836,
+        "critical_t": 1.6535574354559304,
+        "df": 176,
+        "n1": 89,
+        "n2": 89,
+        "n_total": 178,
+        "actual_power": 0.9532972187102324
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-042",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.01,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 2.8015978,
+        "critical_t": 1.9599715,
+        "df": 313956,
+        "n1": 156979,
+        "n2": 156979,
+        "n_total": 313958,
+        "actual_power": 0.8000021
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-042",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0740113999927416,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.8015977584228615,
+        "critical_t": 1.9599715406314189,
+        "df": 313956,
+        "n1": 156979,
+        "n2": 156979,
+        "n_total": 313958,
+        "actual_power": 0.8000020721164528
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-043",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 3.0,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 4.2426407,
+        "critical_t": 2.4469119,
+        "df": 6,
+        "n1": 4,
+        "n2": 4,
+        "n_total": 8,
+        "actual_power": 0.9389357
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-043",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0789870999287814,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 4.242640687119286,
+        "critical_t": 2.4469118511449794,
+        "df": 6,
+        "n1": 4,
+        "n2": 4,
+        "n_total": 8,
+        "actual_power": 0.9389357455090207
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-044",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 5.0,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 6.1237244,
+        "critical_t": 2.7764451,
+        "df": 4,
+        "n1": 3,
+        "n2": 3,
+        "n_total": 6,
+        "actual_power": 0.9927759
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-044",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.086960899992846,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 6.123724356957946,
+        "critical_t": 2.7764451051977943,
+        "df": 4,
+        "n1": 3,
+        "n2": 3,
+        "n_total": 6,
+        "actual_power": 0.9927759136279908
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-045",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.4,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 0.5
+      },
+      "expected": {
+        "ncp": 2.5050857,
+        "critical_t": 1.653658,
+        "df": 174,
+        "n1": 117,
+        "n2": 59,
+        "n_total": 176,
+        "actual_power": 0.8024691
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-045",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.2009260000195354,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.505085736148475,
+        "critical_t": 1.6536580165162151,
+        "df": 174,
+        "n1": 117,
+        "n2": 59,
+        "n_total": 176,
+        "actual_power": 0.8024690507685047
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-046",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.05,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 0.5,
+        "critical_t": 4.3026527,
+        "df": 2,
+        "n1": 2,
+        "n2": 2,
+        "n_total": 4,
+        "actual_power": 0.0615079
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-046",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0757318000542,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 0.5000000000000001,
+        "critical_t": 4.302652729749464,
+        "df": 2,
+        "n1": 2,
+        "n2": 2,
+        "n_total": 4,
+        "actual_power": 0.06150785655602505
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-047",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.03,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-047",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.17056219989899546,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Target power must be at least alpha",
+        "code": "INCONSISTENT",
+        "field": "power"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-048",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.05,
+        "ratio": 1.0
+      },
+      "expected": {
+        "ncp": 0.5,
+        "critical_t": 2.9199856,
+        "df": 2,
+        "n1": 2,
+        "n2": 2,
+        "n_total": 4,
+        "actual_power": 0.0994117
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-048",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 1.0398690999718383,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 0.5000000000000001,
+        "critical_t": 2.9199855803537256,
+        "df": 2,
+        "n1": 2,
+        "n2": 2,
+        "n_total": 4,
+        "actual_power": 0.09941167237950835
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "ORC-049",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.0,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-049",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.17291580000892282,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected positive value",
+        "code": "OUT_OF_RANGE",
+        "field": "d"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-051",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.0,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-051",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.18417050002608448,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected value strictly between 0 and 1",
+        "code": "OUT_OF_RANGE",
+        "field": "alpha"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-052",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 1.0,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-052",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.1711832000873983,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected value strictly between 0 and 1",
+        "code": "OUT_OF_RANGE",
+        "field": "alpha"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-053",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 1.5,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-053",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.1698796000564471,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected value strictly between 0 and 1",
+        "code": "OUT_OF_RANGE",
+        "field": "alpha"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-054",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 1.0,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-054",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.17252069991081953,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected value strictly between 0 and 1",
+        "code": "OUT_OF_RANGE",
+        "field": "power"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-055",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.0,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-055",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.18103119998704642,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected value strictly between 0 and 1",
+        "code": "OUT_OF_RANGE",
+        "field": "power"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-056",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 0.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-056",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.1835084999911487,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected ratio in inclusive range [0.01, 100]",
+        "code": "OUT_OF_RANGE",
+        "field": "ratio"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-057",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": -1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-057",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.19286249997094274,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Expected ratio in inclusive range [0.01, 100]",
+        "code": "OUT_OF_RANGE",
+        "field": "ratio"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-058",
+      "input": {
+        "test": "t2-indep",
+        "mode": "post-hoc",
+        "tails": 2,
+        "d": 0.5,
+        "alpha": 0.05,
+        "n1": 1,
+        "n2": 1
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-058",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.19095940003171563,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Sample size must be at least 2",
+        "code": "OUT_OF_RANGE",
+        "field": "n1"
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "ORC-060",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "alpha": 0.05,
+        "power": 0.8,
+        "ratio": 1.0
+      },
+      "expected": {
+        "error": "Source reports an error"
+      },
+      "evidence": {
+        "source": "sude 60 görüntü.docx",
+        "kind": "user-supplied textual protocol; no embedded screenshots",
+        "source_sha256": "d65d739d7a924e3418d5de752362bee11600b42287e062deb5882982a75002a7",
+        "record": "ORC-060",
+        "extracted_text": "oracle/sude_protocol_text.txt"
+      },
+      "seconds": 0.1844578000018373,
+      "exit_code": 2,
+      "stderr": "",
+      "actual": {
+        "error": "Required parameter missing",
+        "code": "MISSING_PARAM",
+        "field": "d"
+      },
+      "status": "passed",
+      "differences": []
+    }
+  ],
+  "vectors_sha256": "142aad15a24289428e30d4f635a549f1f359f576b2dbd962d9df69d306883628",
+  "source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1"
+}

@@ -1,0 +1,63 @@
+{
+  "version": "1.1.0rc4",
+  "original_records": 60,
+  "source_protocol_cases": 58,
+  "source_protocol_passed": 58,
+  "source_protocol_failed": 0,
+  "a_priori_n_cases": 38,
+  "a_priori_n_exact": 38,
+  "validation_role": "development regression, not fresh held-out or competition hidden gate",
+  "contract_override_cases": [
+    {
+      "id": "ORC-050",
+      "gui_expected": {
+        "ncp": -2.8284271,
+        "critical_t": -1.9789706,
+        "df": 126,
+        "n1": 64,
+        "n2": 64,
+        "n_total": 128,
+        "actual_power": 0.8014596
+      },
+      "contract_expected": {
+        "code": "OUT_OF_RANGE",
+        "field": "d",
+        "exit_code": 2
+      },
+      "actual": {
+        "error": "Expected positive value",
+        "code": "OUT_OF_RANGE",
+        "field": "d"
+      },
+      "exit_code": 2,
+      "passed_contract": true,
+      "classification": "GUI success outside CONTRACT domain; not a GUI numerical match"
+    },
+    {
+      "id": "ORC-059",
+      "gui_expected": {
+        "ncp": 0.7595545,
+        "critical_t": 2.2009852,
+        "df": 11,
+        "power": 0.1069404
+      },
+      "contract_expected": {
+        "code": "INVALID_VALUE",
+        "field": "n1",
+        "exit_code": 2
+      },
+      "actual": {
+        "error": "Expected integer",
+        "code": "INVALID_VALUE",
+        "field": "n1"
+      },
+      "exit_code": 2,
+      "passed_contract": true,
+      "classification": "GUI success outside CONTRACT domain; not a GUI numerical match"
+    }
+  ],
+  "source_report": "tests/reports/sude_final_rc4_58.json",
+  "max_cli_seconds": 1.2243869000812992,
+  "source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1",
+  "live_llm_calls": 0
+}

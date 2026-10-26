@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Sürüm",
+    "display_command": "python -m gpower_clone --version",
+    "stdout": "{\"contract_version\":\"1.0.0\",\"name\":\"gpower-clone\",\"engine\":\"Python 3.13.14 / SciPy 1.18.1 / SPEC engine 1.1.0rc4\"}\n",
+    "stderr": "",
+    "exit_code": 0,
+    "seconds": 0.179267100058496,
+    "kind": "actual installed Python module execution; launcher exe not used"
+  },
+  {
+    "title": "Örneklem büyüklüğü",
+    "display_command": "python -m gpower_clone --test t2-indep --mode a-priori --tails 1 --d 0.5 --alpha 0.05 --power 0.95 --ratio 1",
+    "stdout": "{\"ncp\":3.3166247903554003,\"critical_t\":1.6536580165162151,\"df\":174,\"n1\":88,\"n2\":88,\"n_total\":176,\"actual_power\":0.9514254482775332}\n",
+    "stderr": "",
+    "exit_code": 0,
+    "seconds": 1.1926730999257416,
+    "kind": "actual installed Python module execution; launcher exe not used"
+  },
+  {
+    "title": "Eşit olmayan gruplar",
+    "display_command": "python -m gpower_clone --test t2-indep --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --power 0.8 --ratio 1.3",
+    "stdout": "{\"ncp\":2.828767059501909,\"critical_t\":1.9786708498378354,\"df\":128,\"n1\":57,\"n2\":73,\"n_total\":130,\"actual_power\":0.8016479529079288}\n",
+    "stderr": "",
+    "exit_code": 0,
+    "seconds": 1.042762800003402,
+    "kind": "actual installed Python module execution; launcher exe not used"
+  },
+  {
+    "title": "Ulaşılan güç",
+    "display_command": "python -m gpower_clone --test t2-indep --mode post-hoc --tails 1 --d 0.5 --alpha 0.05 --n1 88 --n2 88",
+    "stdout": "{\"ncp\":3.3166247903554003,\"critical_t\":1.6536580165162151,\"df\":174,\"power\":0.9514254482775332}\n",
+    "stderr": "",
+    "exit_code": 0,
+    "seconds": 1.1492132999701425,
+    "kind": "actual installed Python module execution; launcher exe not used"
+  },
+  {
+    "title": "Eksik girdi kontrolü",
+    "display_command": "python -m gpower_clone --test t2-indep --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --power 0.8",
+    "stdout": "{\"error\":\"Required parameter missing\",\"code\":\"MISSING_PARAM\",\"field\":\"ratio\"}\n",
+    "stderr": "",
+    "exit_code": 2,
+    "seconds": 0.18873430008534342,
+    "kind": "actual installed Python module execution; launcher exe not used"
+  }
+]

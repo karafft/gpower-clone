@@ -1,0 +1,15 @@
+{
+  "retrieved_on": "2026-10-26",
+  "source_url": "https://www.psychologie.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerWin_3.1.9.7.zip",
+  "archive_sha256": "3bb7f1f2478d74ee5ba701ae7f849373cf2b8a11f6b6216c7c6b236db7861199",
+  "binary_name": "GPowerNT.exe",
+  "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+  "file_version": "3.1.9.7",
+  "product_version": "3.1.9.7",
+  "version_method": "Windows FileVersionInfo read without executing binary",
+  "binary_executed": true,
+  "binary_distributed": false,
+  "note": "Official source specimen; equivalence to Sude executable hash not verified.",
+  "gui_execution_date": "2026-10-26",
+  "gui_evidence": "oracle/new_validation/vectors.jsonl"
+}

@@ -1,0 +1,439 @@
+{
+  "archive_name": "screenshots.zip",
+  "archive_sha256": "ba75d293878333be5d851e3615429e3f1e4f83742636b6b6925f0579bc17d16e",
+  "received_date": "2026-10-26",
+  "files": 60,
+  "review_method": "Human-readable visual inspection by assistant, six contact sheets and original image; no OCR confidence claim",
+  "outputs_confirmed": 59,
+  "output_missing": [
+    "ORC-011"
+  ],
+  "contract_exceptions": [
+    "ORC-050",
+    "ORC-059"
+  ],
+  "screenshot_backed_cli_cases": 57,
+  "new_validation_screenshots_separate": 14,
+  "records": [
+    {
+      "id": "ORC-001",
+      "file": "oracle/sude_screenshots/ORC-001.png",
+      "sha256": "9e83d66cedabf3859ce776782e33c1c677f62cd7a9aa77a0248a40415b97a59a",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-002",
+      "file": "oracle/sude_screenshots/ORC-002.png",
+      "sha256": "fe808d805a9d4ef00684b9b9f051ef2a0bb4270f418ddcb4a3db4df1e25b1954",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-003",
+      "file": "oracle/sude_screenshots/ORC-003.png",
+      "sha256": "36335a62a1848f124d65287fa773749ab0c6470f8cae88d343303e6466c86e0e",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-004",
+      "file": "oracle/sude_screenshots/ORC-004.png",
+      "sha256": "540cd9bc74c15e201527b4b6140397e4932787f4c97a46aab75972bcfda0fdb2",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-005",
+      "file": "oracle/sude_screenshots/ORC-005.png",
+      "sha256": "a526ed31e652436af83d8ed9a579b9f2722636cd8c8a4090761b162fb0918efb",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-006",
+      "file": "oracle/sude_screenshots/ORC-006.png",
+      "sha256": "6edf97484a920cb717101b67775f1ffd1652616c655dd0b4d3fc7b3e15a78cfc",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-007",
+      "file": "oracle/sude_screenshots/ORC-007.png",
+      "sha256": "e1b3fc7a15ac966ee20a31cfd858595962566a594a88fb0f028523936c934f45",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-008",
+      "file": "oracle/sude_screenshots/ORC-008.png",
+      "sha256": "89f9e2d045cca6500a1d520939b90d2c32790eb9d6446f3a40ca1b3a787e7730",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-009",
+      "file": "oracle/sude_screenshots/ORC-009.png",
+      "sha256": "a774b1a02a1ab1ffe0b1b9d545df33ccce9e2bced16fcbb8199d58b51fd91216",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-010",
+      "file": "oracle/sude_screenshots/ORC-010.png",
+      "sha256": "143d90b4be3fdff6affa2141a7402f0f0c2c5261cffcf60b2d06a98ee1033a98",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-011",
+      "file": "oracle/sude_screenshots/ORC-011.png",
+      "sha256": "9e9192b3ebdfa7551020498820808b972109aa85df3e32cb392cf1f5e4c3c5ef",
+      "review_status": "inputs_visible_output_not_acquired",
+      "note": "All output fields show ?. Screenshot does not substantiate numerical expected values. Original protocol retained unchanged; excluded from screenshot-backed differential set."
+    },
+    {
+      "id": "ORC-012",
+      "file": "oracle/sude_screenshots/ORC-012.png",
+      "sha256": "7aca7ce53a6864711f934f931a5c2bdd1b051cb8461378b7087741e539bc313a",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-013",
+      "file": "oracle/sude_screenshots/ORC-013.png",
+      "sha256": "7b3b3bd27fd0968ff8501b2bfa1f18fe5d0790c63f6548174b291f2781a312d8",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-014",
+      "file": "oracle/sude_screenshots/ORC-014.png",
+      "sha256": "6f0c9f1d26299344bf45c3c01ca2f2d5f2e04d1a18ecd34a5905a8638e5f3fac",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-015",
+      "file": "oracle/sude_screenshots/ORC-015.png",
+      "sha256": "b4d34952df67a437cb307eb9273457296d5f7bac033df2e2cdf8790c8dda1816",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-016",
+      "file": "oracle/sude_screenshots/ORC-016.png",
+      "sha256": "06ed66a998e7a716e27d3910f3555b9a39371185a1c6f1f588f29d93fd04bed2",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-017",
+      "file": "oracle/sude_screenshots/ORC-017.png",
+      "sha256": "a86c76124e930d28a5134992e7432beda97a7ee6441c88d53138bca550779956",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-018",
+      "file": "oracle/sude_screenshots/ORC-018.png",
+      "sha256": "631003e844a5234d12551e760df80e7782d74cb8abc6296536eb692ef6d8daf4",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-019",
+      "file": "oracle/sude_screenshots/ORC-019.png",
+      "sha256": "2a413ffe50320971cf9acb372c4906c2e82b2053163278019b574f9fd8a75df1",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-020",
+      "file": "oracle/sude_screenshots/ORC-020.png",
+      "sha256": "6430780095b3dc34924a5bebb8bfa57485de040c4960ed4c803efc68a3ed00f4",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-021",
+      "file": "oracle/sude_screenshots/ORC-021.png",
+      "sha256": "a82a43da0768637bfa706d19d1f44c5943119d694909e70aa8b3bef1708db3ee",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-022",
+      "file": "oracle/sude_screenshots/ORC-022.png",
+      "sha256": "1911057a2a76745dbcf1bbd0ea5e7f1e4fff7fa45396e76c38c1484f0d3c4daf",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-023",
+      "file": "oracle/sude_screenshots/ORC-023.png",
+      "sha256": "6d8c6389dde02ef56cf5cffad7a261b08594987fba569a76fa0583f0a3a114e2",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-024",
+      "file": "oracle/sude_screenshots/ORC-024.png",
+      "sha256": "ae36bb1e9c5173a254047f25e9b9cf07251a440fe534def9f2c113a885529b0d",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-025",
+      "file": "oracle/sude_screenshots/ORC-025.png",
+      "sha256": "717b1d252d72dc88228be9a32bfae47f1c60e068ea273b68c9fce6ca2cb1ff72",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-026",
+      "file": "oracle/sude_screenshots/ORC-026.png",
+      "sha256": "97cb46aaaff19ae48e13a11b46af7f4d4c10d691c300e4c292a62fb143787b8f",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-027",
+      "file": "oracle/sude_screenshots/ORC-027.png",
+      "sha256": "9e8c551ae3534cc14a87a591e4f194e4c9db767913c11d735841e3446c5e9817",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-028",
+      "file": "oracle/sude_screenshots/ORC-028.png",
+      "sha256": "f9266f039e7cf528ad6002c37e31371c404588fbd5e5b3a40904d32854f4e99f",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-029",
+      "file": "oracle/sude_screenshots/ORC-029.png",
+      "sha256": "faf8c591ca62ebec62e6ff61941a1e9a45dfab5b6933a0b37130c7b9a0f31195",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-030",
+      "file": "oracle/sude_screenshots/ORC-030.png",
+      "sha256": "8b8365510495f8a04dc7e53b6349d3110287e6fdb708c3cf5a3c0f37e5d3d3db",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-031",
+      "file": "oracle/sude_screenshots/ORC-031.png",
+      "sha256": "797b3a166f2d370357595f915be75b26ecbcee75a465f128f493ce358bdf0d84",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-032",
+      "file": "oracle/sude_screenshots/ORC-032.png",
+      "sha256": "0bc20903332b35cb41d394091846bca654c7c7b4085ca7353f6b8f92fc7d0009",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-033",
+      "file": "oracle/sude_screenshots/ORC-033.png",
+      "sha256": "1d6d6b489d78fa4eac24e62897e9dc75e186c73fab3a4d8567df170f4d8aae74",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-034",
+      "file": "oracle/sude_screenshots/ORC-034.png",
+      "sha256": "020e5ec5c8bef7bb7e27b07b45b9fd97706a2ed3fa279b74d19ee4698eabfac6",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-035",
+      "file": "oracle/sude_screenshots/ORC-035.png",
+      "sha256": "4b359757ffce9d10ea13d2333f1e0fd3e7c4e2a76e14b7646b5d5c0cfad9b62a",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-036",
+      "file": "oracle/sude_screenshots/ORC-036.png",
+      "sha256": "b0bda2967cb827a4dd6ceb58bec8c78f48e0b28c5cfdfedacff256e642d4d936",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-037",
+      "file": "oracle/sude_screenshots/ORC-037.png",
+      "sha256": "34800d99b8a9115097893bba7aadfffcb07e3cb81ea678b291e4eb2e26d8d823",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-038",
+      "file": "oracle/sude_screenshots/ORC-038.png",
+      "sha256": "8fee213cce42605ed8d617d18aa7a99733e8ae62db376e9210f477c130383927",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-039",
+      "file": "oracle/sude_screenshots/ORC-039.png",
+      "sha256": "7e0a86719b20b40476cd2d6361f4242994b0877934a2e6306102492e23bee5bb",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-040",
+      "file": "oracle/sude_screenshots/ORC-040.png",
+      "sha256": "96b2299a35ade865c037386289a3262ad22174f29146236cdba7c176cb7205cc",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-041",
+      "file": "oracle/sude_screenshots/ORC-041.png",
+      "sha256": "baea8136da71c6ada4dcf656fdaa256bf5c97ede2530b531d2c8d538612ec2f7",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-042",
+      "file": "oracle/sude_screenshots/ORC-042.png",
+      "sha256": "268d7dd999080dac71942d237bc5cd7c4926088d35090bce96d2b9c82ee032c7",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-043",
+      "file": "oracle/sude_screenshots/ORC-043.png",
+      "sha256": "2156d1bef1b09da751fcf9a4ceed7c53fb044c5128c63c4c709e70a54c9dfe80",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-044",
+      "file": "oracle/sude_screenshots/ORC-044.png",
+      "sha256": "fb02b688d08a51dded75f0ea6b58d00524a7f085b30fe304869c59b7305ccfa8",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-045",
+      "file": "oracle/sude_screenshots/ORC-045.png",
+      "sha256": "2da064a61dfe16e94ace9de20453ee238827c89a72ed8759ca99ad84d3b96ceb",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-046",
+      "file": "oracle/sude_screenshots/ORC-046.png",
+      "sha256": "802ea05d99258a9507cde5622a079e7537b21f2e6bada67723aa80a507cbca81",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-047",
+      "file": "oracle/sude_screenshots/ORC-047.png",
+      "sha256": "3e74b802cd243e5fc768c2961d189c6f9b2282e46a8db52c510dc9742387b948",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-048",
+      "file": "oracle/sude_screenshots/ORC-048.png",
+      "sha256": "67199ce79ff90228996c4a7e13f2cdc908ff70b185151dfdc4c0183cd11712a4",
+      "review_status": "input_and_output_visually_consistent_with_protocol",
+      "note": "Visual comparison of supplied screenshot with protocol; no new GUI execution."
+    },
+    {
+      "id": "ORC-049",
+      "file": "oracle/sude_screenshots/ORC-049.png",
+      "sha256": "e24e61ce1bc1842b1d16e58d5bda526b2998c32bbbdc2f784184c302ad8ab2e9",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-050",
+      "file": "oracle/sude_screenshots/ORC-050.png",
+      "sha256": "9635cde661ac2a4f7f704a2c5058b3fafe109f0c50bb043c3aaf7d145c8ea861",
+      "review_status": "gui_success_confirmed_contract_disallows_input",
+      "note": "Visible GUI success; CONTRACT rejects negative d or fractional group size. Excluded from CLI-equivalence denominator."
+    },
+    {
+      "id": "ORC-051",
+      "file": "oracle/sude_screenshots/ORC-051.png",
+      "sha256": "45cb6c2921882e18e79e4aa5f87632dc44f3ac735e5807423c6e240e09d0f81c",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-052",
+      "file": "oracle/sude_screenshots/ORC-052.png",
+      "sha256": "43f7fae64e430839f97ce5069cf94d165a2c5b3985e266de54f56f60f00faaf1",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-053",
+      "file": "oracle/sude_screenshots/ORC-053.png",
+      "sha256": "ccbfbb6b832d2132f10651c2c1f97127cc37a86aa85c54ef38744ac91c9a4e02",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-054",
+      "file": "oracle/sude_screenshots/ORC-054.png",
+      "sha256": "f76977659a353a51f551ccbf8275f09f9b6bd8938320fa4eb3dd85f4585bc5dd",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-055",
+      "file": "oracle/sude_screenshots/ORC-055.png",
+      "sha256": "f5727dd8d5686783276ff16129c2955cd3ddccf9c3edb59614bd15d3c9e45b18",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-056",
+      "file": "oracle/sude_screenshots/ORC-056.png",
+      "sha256": "a20a43a85b3bf19b12f0c024e0f4beac2e9863ac674c39d7af413f293a59bae1",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-057",
+      "file": "oracle/sude_screenshots/ORC-057.png",
+      "sha256": "03d748111c4f28b5e24abf02b15de492405118638898b6ec142379d90196d231",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-058",
+      "file": "oracle/sude_screenshots/ORC-058.png",
+      "sha256": "f5f2afcee37cc2d95847ca5b06a0371b654f832808a0654e9bbca5176ca85ffa",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    },
+    {
+      "id": "ORC-059",
+      "file": "oracle/sude_screenshots/ORC-059.png",
+      "sha256": "b88ad2b4f51c3468bd82a5afb0967e490b19f30632985e549386784aed11f05f",
+      "review_status": "gui_success_confirmed_contract_disallows_input",
+      "note": "Visible GUI success; CONTRACT rejects negative d or fractional group size. Excluded from CLI-equivalence denominator."
+    },
+    {
+      "id": "ORC-060",
+      "file": "oracle/sude_screenshots/ORC-060.png",
+      "sha256": "144c4631b92a2c6312f8dd58db6cac93c386dc6f1fba68a74c7c8215ec64d6ce",
+      "review_status": "input_error_dialog_visually_confirmed",
+      "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
+    }
+  ]
+}

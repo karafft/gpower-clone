@@ -1,0 +1,30 @@
+test_mock_provider_real_mcp_loop (test_agent.AgentTests.test_mock_provider_real_mcp_loop) ... ok
+test_no_key_no_provider_call (test_agent.AgentTests.test_no_key_no_provider_call) ... ok
+test_missing_config_produces_no_metrics (test_agent_evaluation.AgentEvaluationTests.test_missing_config_produces_no_metrics) ... ok
+test_mock_scoring_all_public_synthetic_questions (test_agent_evaluation.AgentEvaluationTests.test_mock_scoring_all_public_synthetic_questions) ... ok
+test_null_oracle_is_unknown_not_success (test_agent_evaluation.AgentEvaluationTests.test_null_oracle_is_unknown_not_success) ... ok
+test_scalar_expected_total (test_agent_evaluation.AgentEvaluationTests.test_scalar_expected_total) ... ok
+test_cli (test_cli_contract.CliContractTests.test_cli) ... ok
+test_integer_type_is_exact (test_differential_runner.ComparisonTests.test_integer_type_is_exact) ... ok
+test_tolerances_and_missing (test_differential_runner.ComparisonTests.test_tolerances_and_missing) ... ok
+test_a_priori_effect_domain_boundary (test_engine.EngineTests.test_a_priori_effect_domain_boundary) ... ok
+test_central_t_independent_identity (test_engine.EngineTests.test_central_t_independent_identity) ... ok
+test_continuous_solve_then_round_pipeline (test_engine.EngineTests.test_continuous_solve_then_round_pipeline) ... ok
+test_corrected_spec_allocations (test_engine.EngineTests.test_corrected_spec_allocations) ... ok
+test_equality_and_below_alpha (test_engine.EngineTests.test_equality_and_below_alpha) ... ok
+test_inverse_and_compromise (test_engine.EngineTests.test_inverse_and_compromise) ... ok
+test_large_feasible_continuous_pipeline (test_engine.EngineTests.test_large_feasible_continuous_pipeline) ... ok
+test_no_post_round_power_optimization (test_engine.EngineTests.test_no_post_round_power_optimization) ... ok
+test_nonfinite_sf_fallback (test_engine.EngineTests.test_nonfinite_sf_fallback) ... ok
+test_observed_inclusive_ranges_and_neighbors (test_engine.EngineTests.test_observed_inclusive_ranges_and_neighbors) ... ok
+test_observed_pre_round_and_once_only_correction (test_engine.EngineTests.test_observed_pre_round_and_once_only_correction) ... ok
+test_public_vectors (test_engine.EngineTests.test_public_vectors) ... ok
+test_sensitivity_mathematical_equality (test_engine.EngineTests.test_sensitivity_mathematical_equality) ... ok
+test_serializer (test_engine.EngineTests.test_serializer) ... ok
+test_validation (test_engine.EngineTests.test_validation) ... ok
+test_real_stdio_handshake_list_call_cli_parity (test_mcp_contract.MCPContractTests.test_real_stdio_handshake_list_call_cli_parity) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 19.832s
+
+OK

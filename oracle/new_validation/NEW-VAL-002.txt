@@ -1,0 +1,63 @@
+Window: "G*Power 3.1.9.7", App: GPowerNT.exe.
+	0 pencere G*Power 3.1.9.7 Secondary Actions: Raise
+		1 düzenle (settable, string) Value: 0.95 ID: 1021
+		2 düzenle (settable, string) Value: 0.02 ID: 1022
+		3 düzenle (settable, string) Value: 0.93 ID: 1023
+		69 düzenle (settable, string) Value: 0.4 ID: 1024
+		4 grup Output Parameters
+		5 grup Input Parameters
+		6 metin Tail(s) ID: 1004
+		7 metin Effect size d ID: 1005
+		8 metin α err prob ID: 1006
+		9 metin Power (1-β err prob) ID: 1007
+		70 metin Allocation ratio N2/N1 ID: 1008
+		10 düğme Determine => ID: 1031
+		11 metin Noncentrality parameter δ ID: 1060
+		12 metin Critical t ID: 1061
+		13 metin Df ID: 1062
+		14 metin Sample size group 1 ID: 1063
+		15 metin Sample size group 2 ID: 1064
+		71 metin Total sample size ID: 1065
+		72 metin Actual power ID: 1066
+		16 düzenle Parameter 11 Value: 3.8646183 ID: 1050
+		17 düzenle Value: 2.3738683 ID: 1051
+		18 düzenle Value: 80 ID: 1052
+		19 düzenle Value: 59 ID: 1053
+		20 düzenle Value: 23 ID: 1054
+		73 düzenle Value: 82 ID: 1055
+		74 düzenle Value: 0.9295480 ID: 1056
+		21 birleşik giriş kutusu (settable, string) Value: Two ID: 1040
+			22 metin (settable, string) Value: Two
+			23 düğme Aç ID: DropDown
+		24 düğme Calculate ID: 1009
+		25 düğme X-Y plot for a range of values ID: 1020
+		26 grup Test family
+		27 grup Type of power analysis
+		28 grup Statistical test
+		29 birleşik giriş kutusu (settable, string) Statistical test Value: t tests ID: 1000
+			30 metin (settable, string) Statistical test Value: t tests
+			31 düğme Aç ID: DropDown
+		32 birleşik giriş kutusu (settable, string) Value: Means: Difference between two independent means (two groups) ID: 1001
+			33 metin (settable, string) Value: Means: Difference between two independent means (two groups)
+			34 düğme Aç ID: DropDown
+		35 birleşik giriş kutusu (settable, string) Value: A priori: Compute required sample size - given α, power, and effect size ID: 1002
+			36 metin (settable, string) Value: A priori: Compute required sample size - given α, power, and effect size
+			37 düğme Aç ID: DropDown
+		38 sek. ID: 1041
+			39 sekme öğesi (selectable) Central and noncentral distributions
+			40 sekme öğesi (selectable) Protocol of power analyses
+		41 resim ID: 1042
+			42 bölme
+		43 başlık çubuğu (settable, string) Value: G*Power 3.1.9.7
+			44 menü çubuğu Sistem ID: MenuBar
+				45 menü öğesi Sistem
+			46 düğme Simge Durumuna Küçült
+			47 düğme (disabled) Ekranı Kapla
+			48 düğme Kapat
+		49 menü çubuğu Uygulama ID: MenuBar
+			50 menü öğesi File
+			51 menü öğesi Edit
+			52 menü öğesi View
+			53 menü öğesi Tests
+			54 menü öğesi Calculator
+			55 menü öğesi Help

@@ -1,0 +1,12 @@
+{
+  "version": "1.1.0rc4",
+  "tests": 25,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "seconds": 20.992491699988022,
+  "actual_mcp_protocol": true,
+  "provider_tests": "explicit mock fixtures; no live provider calls",
+  "live_llm_calls": 0
+}

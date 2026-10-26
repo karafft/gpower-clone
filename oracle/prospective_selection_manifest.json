@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-26",
+  "seed": 20261026,
+  "requests": 14,
+  "a_priori_requests": 10,
+  "expected_values_generated": false,
+  "source_frozen": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1",
+  "requests_sha256": "dc52270f3741be76abdb7b84f4688735d84febe22ee2637206ca34f9527d6f93",
+  "status": "Acquired from actual GUI; frozen-source comparison passed 14/14",
+  "report": "tests/reports/prospective_gui_validation.json",
+  "selection_blinded": false
+}

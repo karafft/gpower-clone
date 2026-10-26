@@ -1,0 +1,621 @@
+{
+  "timestamp": "2026-10-26T10:06:30.003114+00:00",
+  "scope": "Only supplied external expected values; not a hidden competition score or REA proof",
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "skipped": 0,
+  "a_priori_n_cases": 10,
+  "a_priori_n_exact_rate": 1.0,
+  "timeout_seconds": 2.0,
+  "results": [
+    {
+      "id": "NEW-VAL-001",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.27,
+        "alpha": 0.005,
+        "power": 0.93,
+        "ratio": 0.8
+      },
+      "expected": {
+        "ncp": 4.0604309,
+        "critical_t": 2.581219,
+        "df": 914,
+        "n1": 509,
+        "n2": 407,
+        "n_total": 916,
+        "actual_power": 0.9301927
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-001.jpg",
+        "screenshot_sha256": "1d547be53b38f252a20310dd3b071b9f2cd5820108b642a96d62b20f3856a7d6",
+        "accessibility": "oracle/new_validation/NEW-VAL-001.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:45:08.394Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 2.009286299929954,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 4.060430890615828,
+        "critical_t": 2.5812190499310077,
+        "df": 914,
+        "n1": 509,
+        "n2": 407,
+        "n_total": 916,
+        "actual_power": 0.9301927134167195
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-002",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.95,
+        "alpha": 0.02,
+        "power": 0.93,
+        "ratio": 0.4
+      },
+      "expected": {
+        "ncp": 3.8646183,
+        "critical_t": 2.3738683,
+        "df": 80,
+        "n1": 59,
+        "n2": 23,
+        "n_total": 82,
+        "actual_power": 0.929548
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-002.jpg",
+        "screenshot_sha256": "df449e2d2b64f5db474c6043509740fb7fa3e68f2d689aaad40e586077ebac44",
+        "accessibility": "oracle/new_validation/NEW-VAL-002.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:48:43.301Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8513120000716299,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.8646182722545697,
+        "critical_t": 2.373868272967343,
+        "df": 80,
+        "n1": 59,
+        "n2": 23,
+        "n_total": 82,
+        "actual_power": 0.9295479684393889
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-003",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.27,
+        "alpha": 0.02,
+        "power": 0.93,
+        "ratio": 1.2
+      },
+      "expected": {
+        "ncp": 3.5370131,
+        "critical_t": 2.0576388,
+        "df": 690,
+        "n1": 315,
+        "n2": 377,
+        "n_total": 692,
+        "actual_power": 0.9302766
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-003.jpg",
+        "screenshot_sha256": "3fcbae563696fb8e6d91bfa0f08f7da739bd6904f39728db980c1b7d48497626",
+        "accessibility": "oracle/new_validation/NEW-VAL-003.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:50:04.491Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8655622999649495,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.5370131050368356,
+        "critical_t": 2.057638775148514,
+        "df": 690,
+        "n1": 315,
+        "n2": 377,
+        "n_total": 692,
+        "actual_power": 0.9302766128680374
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-004",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.62,
+        "alpha": 0.02,
+        "power": 0.82,
+        "ratio": 2.3
+      },
+      "expected": {
+        "ncp": 3.3072932,
+        "critical_t": 2.3549296,
+        "df": 132,
+        "n1": 41,
+        "n2": 93,
+        "n_total": 134,
+        "actual_power": 0.8281671
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-004.jpg",
+        "screenshot_sha256": "7b6f2e3cb543b3dc27df191ef8cb2d3a0d1e487dd8dd2e691e6f34890985d67a",
+        "accessibility": "oracle/new_validation/NEW-VAL-004.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:50:52.962Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8738447000505403,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3072931620437718,
+        "critical_t": 2.3549296445173,
+        "df": 132,
+        "n1": 41,
+        "n2": 93,
+        "n_total": 134,
+        "actual_power": 0.8281671008344714
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-005",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.62,
+        "alpha": 0.02,
+        "power": 0.87,
+        "ratio": 1.2
+      },
+      "expected": {
+        "ncp": 3.2378444,
+        "critical_t": 2.0788501,
+        "df": 108,
+        "n1": 50,
+        "n2": 60,
+        "n_total": 110,
+        "actual_power": 0.8754106
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-005.jpg",
+        "screenshot_sha256": "c4905e4ca632698697c0ecc79b6f031146037a03ac4f6f5ad707c9cb7220fbf6",
+        "accessibility": "oracle/new_validation/NEW-VAL-005.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:51:31.420Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8921548000071198,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.23784440077598,
+        "critical_t": 2.078850065365095,
+        "df": 108,
+        "n1": 50,
+        "n2": 60,
+        "n_total": 110,
+        "actual_power": 0.8754106147023633
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-006",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.27,
+        "alpha": 0.005,
+        "power": 0.87,
+        "ratio": 1.8
+      },
+      "expected": {
+        "ncp": 3.9449538,
+        "critical_t": 2.8137634,
+        "df": 928,
+        "n1": 332,
+        "n2": 598,
+        "n_total": 930,
+        "actual_power": 0.8706654
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-006.jpg",
+        "screenshot_sha256": "9ac56542a013d7b18144a0a696be0fe806972b8818ed60d7bb6871b3a4cb7ad9",
+        "accessibility": "oracle/new_validation/NEW-VAL-006.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:52:37.248Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.858475900022313,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.9449538204092196,
+        "critical_t": 2.813763393840343,
+        "df": 928,
+        "n1": 332,
+        "n2": 598,
+        "n_total": 930,
+        "actual_power": 0.8706653848725084
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-007",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.43,
+        "alpha": 0.02,
+        "power": 0.82,
+        "ratio": 1.8
+      },
+      "expected": {
+        "ncp": 2.9857698,
+        "critical_t": 2.0667082,
+        "df": 208,
+        "n1": 75,
+        "n2": 135,
+        "n_total": 210,
+        "actual_power": 0.820391
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-007.jpg",
+        "screenshot_sha256": "56292140a066bfa128ed1adddd6b75af1adafc2c18449872adf2596364185ad3",
+        "accessibility": "oracle/new_validation/NEW-VAL-007.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:53:31.582Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8728954999241978,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.9857698217664788,
+        "critical_t": 2.0667081975697763,
+        "df": 208,
+        "n1": 75,
+        "n2": 135,
+        "n_total": 210,
+        "actual_power": 0.8203910107892407
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-008",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.95,
+        "alpha": 0.02,
+        "power": 0.82,
+        "ratio": 2.3
+      },
+      "expected": {
+        "ncp": 3.3471553,
+        "critical_t": 2.3948012,
+        "df": 56,
+        "n1": 18,
+        "n2": 40,
+        "n_total": 58,
+        "actual_power": 0.8262362
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-008.jpg",
+        "screenshot_sha256": "e43324c9b00ad1886f92a77846cf89b2adf2f79f2306e2f27f5962388d98060c",
+        "accessibility": "oracle/new_validation/NEW-VAL-008.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:54:31.551Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8623174999374896,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3471552512338096,
+        "critical_t": 2.3948012193865678,
+        "df": 56,
+        "n1": 18,
+        "n2": 40,
+        "n_total": 58,
+        "actual_power": 0.8262362032964058
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-009",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 1,
+        "d": 0.95,
+        "alpha": 0.02,
+        "power": 0.87,
+        "ratio": 1.2
+      },
+      "expected": {
+        "ncp": 3.2794499,
+        "critical_t": 2.1136358,
+        "df": 46,
+        "n1": 22,
+        "n2": 26,
+        "n_total": 48,
+        "actual_power": 0.874882
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-009.jpg",
+        "screenshot_sha256": "74b7962e22ebab87396eb00e33a3ecda435272e1e99fa1e3c66c6fbeea64374a",
+        "accessibility": "oracle/new_validation/NEW-VAL-009.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:55:08.962Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.845953300013207,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.27944990305793,
+        "critical_t": 2.1136357886818224,
+        "df": 46,
+        "n1": 22,
+        "n2": 26,
+        "n_total": 48,
+        "actual_power": 0.8748819774794834
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-010",
+      "input": {
+        "test": "t2-indep",
+        "mode": "a-priori",
+        "tails": 2,
+        "d": 0.27,
+        "alpha": 0.02,
+        "power": 0.87,
+        "ratio": 0.8
+      },
+      "expected": {
+        "ncp": 3.4623691,
+        "critical_t": 2.3319769,
+        "df": 664,
+        "n1": 370,
+        "n2": 296,
+        "n_total": 666,
+        "actual_power": 0.8705429
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-010.jpg",
+        "screenshot_sha256": "17922c4eadb7eaed08973622361254b4a602a4019d86358ad40a29640d5fae40",
+        "accessibility": "oracle/new_validation/NEW-VAL-010.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T09:56:13.568Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.954329900094308,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.4623691311008415,
+        "critical_t": 2.33197694569357,
+        "df": 664,
+        "n1": 370,
+        "n2": 296,
+        "n_total": 666,
+        "actual_power": 0.8705429442165508
+      },
+      "status": "passed",
+      "differences": [],
+      "n_exact": true
+    },
+    {
+      "id": "NEW-VAL-011",
+      "input": {
+        "test": "t2-indep",
+        "mode": "post-hoc",
+        "tails": 2,
+        "d": 0.43,
+        "alpha": 0.02,
+        "n1": 47,
+        "n2": 83
+      },
+      "expected": {
+        "ncp": 2.3555089,
+        "critical_t": 2.3558336,
+        "df": 128,
+        "power": 0.5017006
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-011.jpg",
+        "screenshot_sha256": "459483791fe7de04075a5df60a3a525006631d36aa992f6fe6380c44ea9b385d",
+        "accessibility": "oracle/new_validation/NEW-VAL-011.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T10:02:51.131Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.81294049997814,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.3555089275339856,
+        "critical_t": 2.3558335968807205,
+        "df": 128,
+        "power": 0.5017006175394302
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "NEW-VAL-012",
+      "input": {
+        "test": "t2-indep",
+        "mode": "compromise",
+        "tails": 2,
+        "d": 0.62,
+        "beta_alpha_ratio": 3,
+        "n1": 47,
+        "n2": 83
+      },
+      "expected": {
+        "ncp": 3.3963152,
+        "critical_t": 2.133022,
+        "df": 128,
+        "alpha": 0.0348316,
+        "beta": 0.1044949,
+        "power": 0.8955051
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-012.jpg",
+        "screenshot_sha256": "e899f14a00a26b79d54737eede0568436439c6891d5d0b013f9aee37567b2e21",
+        "accessibility": "oracle/new_validation/NEW-VAL-012.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T10:04:04.866Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.9510243999538943,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.3963151978397006,
+        "critical_t": 2.1330219965930812,
+        "df": 128,
+        "alpha": 0.03483164933639239,
+        "power": 0.8955050519908226,
+        "beta": 0.10449494800917736
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "NEW-VAL-013",
+      "input": {
+        "test": "t2-indep",
+        "mode": "criterion",
+        "tails": 1,
+        "d": 0.43,
+        "power": 0.87,
+        "n1": 47,
+        "n2": 83
+      },
+      "expected": {
+        "ncp": 2.3555089,
+        "critical_t": 1.2282057,
+        "df": 128,
+        "alpha": 0.1108117
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-013.jpg",
+        "screenshot_sha256": "cd83795f2b8452b064070837ea7e8029291a7c902e2406f90b19cde266ea71f6",
+        "accessibility": "oracle/new_validation/NEW-VAL-013.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T10:04:45.196Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8643100999761373,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 2.3555089275339856,
+        "critical_t": 1.2282057230439334,
+        "df": 128,
+        "alpha": 0.11081167319007397
+      },
+      "status": "passed",
+      "differences": []
+    },
+    {
+      "id": "NEW-VAL-014",
+      "input": {
+        "test": "t2-indep",
+        "mode": "sensitivity",
+        "tails": 2,
+        "alpha": 0.02,
+        "power": 0.87,
+        "n1": 47,
+        "n2": 83
+      },
+      "expected": {
+        "ncp": 3.4897574,
+        "critical_t": 2.3558336,
+        "df": 128,
+        "d": 0.637058
+      },
+      "evidence": {
+        "kind": "actual GPower GUI output and original window screenshot",
+        "screenshot": "oracle/new_validation/screenshots/NEW-VAL-014.jpg",
+        "screenshot_sha256": "3cdd1c23f285013788ad5aa2aaae6e6b35c8170dfefbfda10a4b0456ac8121be",
+        "accessibility": "oracle/new_validation/NEW-VAL-014.txt",
+        "binary_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+        "captured_at": "2026-10-26T10:05:19.260Z",
+        "source_version": "3.1.9.7"
+      },
+      "seconds": 1.8747387999901548,
+      "exit_code": 0,
+      "stderr": "",
+      "actual": {
+        "ncp": 3.489757419613863,
+        "critical_t": 2.3558335968807205,
+        "df": 128,
+        "d": 0.637057950786438
+      },
+      "status": "passed",
+      "differences": []
+    }
+  ],
+  "vectors_sha256": "191cac79f44102258a8b6efcf1cc9aa22d075501c4c6ad65a4fbf1862cb5fb87",
+  "source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1"
+}

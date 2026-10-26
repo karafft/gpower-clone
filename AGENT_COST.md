@@ -1,3 +1,5 @@
+> Güncel uygulama kayıtları: [AGENT_COST_IMPLEMENTATION.md](AGENT_COST_IMPLEMENTATION.md). Aşağıdaki ekip notları korunmuştur.
+
 # Ajan maliyet ve süreç günlüğü
 
 Her oturum için kullanılan ajan, yaklaşık token ve maliyet, iterasyon sayısı ve "neyi farklı yapardık" notu. Herkes kendi oturumunun satırını doldurur.

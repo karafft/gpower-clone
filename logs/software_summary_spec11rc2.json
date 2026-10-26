@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-26",
+  "candidate_version": "1.1.0rc2",
+  "contract_version": "1.0.0",
+  "new_clean_spec": "work/SPEC_BOUNDARY_ADDENDUM.md",
+  "raw_evidence_access": false,
+  "a_priori_min_d": 1e-05,
+  "threshold_other_modes": false,
+  "max_even_total": 2147483646,
+  "engineering_search_behavior_candidate": true,
+  "suite": {
+    "command": "python -m unittest discover -s tests -v",
+    "methods": 20,
+    "passed": 20,
+    "unittest_seconds": 17.426
+  },
+  "boundary_tests": [
+    "immediately below threshold rejected",
+    "endpoint domain accepted",
+    "immediately above accepted",
+    "endpoint target infeasible NO_SOLUTION",
+    "post-hoc threshold not generalized",
+    "large feasible design target attained and preceding even total fails"
+  ],
+  "large_case_computed_not_oracle": {
+    "n1": 62790886,
+    "n2": 62790886,
+    "n_total": 125581772,
+    "actual_power": 0.8000000060271003
+  },
+  "actual_mcp": {
+    "rows": 33,
+    "exact_text_parity": 33,
+    "public_rows": 25,
+    "invalid_rows": 8
+  },
+  "installed_entries": [
+    "gpower-clone",
+    "gpower-mcp",
+    "gpower-agent",
+    "gpower-agent-eval"
+  ],
+  "installed_scenarios": 5,
+  "installed_evidence": "logs/installed_console_spec11rc2_final.json",
+  "live_llm_calls": 0,
+  "live_llm_metrics": null,
+  "oracle_runs_by_implementation_agent": 0,
+  "repo_writes": false,
+  "zip_rebuilt": false,
+  "additional_clean_spec": "work/SPEC_SENSITIVITY_EQUALITY.md",
+  "sensitivity_equality": {
+    "power==alpha": "ncp=0.0,d=0.0; exact comparison",
+    "power<alpha": "INCONSISTENT",
+    "basis": "mathematical original SPEC clarification; not GUI observation",
+    "endpoint_external_validation": "pending"
+  },
+  "candidate_install": "work/merve-install-spec11rc2-final"
+}

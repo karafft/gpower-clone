@@ -1,0 +1,202 @@
+{
+  "binary_name": "GPowerNT.exe",
+  "sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+  "bytes": 2287616,
+  "pe_machine": "0x14c",
+  "image_base": "0x400000",
+  "method": "Read-only PE parsing and Capstone 5.0.7 static instruction references",
+  "limitations": "Preferred image addresses; ASLR may relocate. No executable run, GUI, Ghidra, decompiler, or control-flow proof. String xrefs alone do not establish test-specific algorithm semantics.",
+  "findings": [
+    {
+      "id": "REA-STATIC-001",
+      "text": "Power must be greater than or equal to alpha.",
+      "file_offset": "0x1c5220",
+      "rva": "0x1c6220",
+      "preferred_va": "0x5c6220",
+      "section": ".rdata",
+      "code_references": [
+        {
+          "preferred_va": "0x4880f9",
+          "file_offset": "0x874f9",
+          "instruction": "push 0x5c6220"
+        }
+      ]
+    },
+    {
+      "id": "REA-STATIC-002",
+      "text": "The allocation ratio falls outside",
+      "file_offset": "0x1c579c",
+      "rva": "0x1c679c",
+      "preferred_va": "0x5c679c",
+      "section": ".rdata",
+      "code_references": [
+        {
+          "preferred_va": "0x487394",
+          "file_offset": "0x86794",
+          "instruction": "push 0x5c679c"
+        }
+      ]
+    },
+    {
+      "id": "REA-STATIC-003",
+      "text": "In an a priori analysis, the absolute value of the",
+      "file_offset": "0x1ca24c",
+      "rva": "0x1cb24c",
+      "preferred_va": "0x5cb24c",
+      "section": ".rdata",
+      "code_references": [
+        {
+          "preferred_va": "0x4d4c02",
+          "file_offset": "0xd4002",
+          "instruction": "push 0x5cb24c"
+        },
+        {
+          "preferred_va": "0x4d9292",
+          "file_offset": "0xd8692",
+          "instruction": "push 0x5cb24c"
+        },
+        {
+          "preferred_va": "0x4da602",
+          "file_offset": "0xd9a02",
+          "instruction": "push 0x5cb24c"
+        },
+        {
+          "preferred_va": "0x4db9c2",
+          "file_offset": "0xdadc2",
+          "instruction": "push 0x5cb24c"
+        },
+        {
+          "preferred_va": "0x4dd1db",
+          "file_offset": "0xdc5db",
+          "instruction": "push 0x5cb24c"
+        },
+        {
+          "preferred_va": "0x4df7ec",
+          "file_offset": "0xdebec",
+          "instruction": "push 0x5cb24c"
+        }
+      ]
+    },
+    {
+      "id": "REA-STATIC-004",
+      "text": "Means: Difference between two independent means (two groups)",
+      "file_offset": "0x1ca418",
+      "rva": "0x1cb418",
+      "preferred_va": "0x5cb418",
+      "section": ".rdata",
+      "code_references": [
+        {
+          "preferred_va": "0x4d9a3a",
+          "file_offset": "0xd8e3a",
+          "instruction": "movups xmm0, xmmword ptr [0x5cb418]"
+        }
+      ]
+    },
+    {
+      "id": "REA-STATIC-005",
+      "text": "Alpha is outside the admissible range (",
+      "file_offset": "0x1c5100",
+      "rva": "0x1c6100",
+      "preferred_va": "0x5c6100",
+      "section": ".rdata",
+      "code_references": [
+        {
+          "preferred_va": "0x4874ec",
+          "file_offset": "0x868ec",
+          "instruction": "push 0x5c6100"
+        },
+        {
+          "preferred_va": "0x4875b4",
+          "file_offset": "0x869b4",
+          "instruction": "push 0x5c6100"
+        }
+      ]
+    },
+    {
+      "id": "REA-STATIC-006",
+      "text": "Total sample size is outside the admissible range (",
+      "file_offset": "0x1c5524",
+      "rva": "0x1c6524",
+      "preferred_va": "0x5c6524",
+      "section": ".rdata",
+      "code_references": [
+        {
+          "preferred_va": "0x488a3c",
+          "file_offset": "0x87e3c",
+          "instruction": "push 0x5c6524"
+        }
+      ]
+    },
+    {
+      "id": "REA-STATIC-007",
+      "text": "Power is outside the admissible range (",
+      "file_offset": "0x1c50d8",
+      "rva": "0x1c60d8",
+      "preferred_va": "0x5c60d8",
+      "section": ".rdata",
+      "code_references": [
+        {
+          "preferred_va": "0x48809c",
+          "file_offset": "0x8749c",
+          "instruction": "push 0x5c60d8"
+        },
+        {
+          "preferred_va": "0x488194",
+          "file_offset": "0x87594",
+          "instruction": "push 0x5c60d8"
+        }
+      ]
+    }
+  ],
+  "known_binary_anchors": {
+    "applicable_only_to_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+    "constant_va": "0x5c7ed8",
+    "absolute_effect_threshold": 1e-05,
+    "table_va": "0x5ca40c",
+    "validator_slot": "0x104",
+    "validator_va": "0x4d9260",
+    "label_slot": "0x78",
+    "label_path_va": "0x4d9a00",
+    "acceptance_branch_va": "0x4d9285",
+    "acceptance_branch": "jbe 0x4d92ae",
+    "alpha_power_bounds": {
+      "minimum": 1e-07,
+      "maximum": 0.9999999,
+      "minimum_constant_va": "0x5c4398",
+      "maximum_constant_va": "0x5c6860",
+      "alpha_validator_va": "0x487460",
+      "power_validator_va": "0x488010",
+      "comparison": "strict-below/above reject branches; endpoints accepted"
+    },
+    "allocation_bounds": {
+      "minimum": 0.01,
+      "maximum": 100.0,
+      "minimum_constant_va": "0x5c3b50",
+      "t2_indep_callsite_va": "0x4d9c3c",
+      "validator_va": "0x487300",
+      "comparison": "inclusive bounds"
+    },
+    "allocation_pipeline": {
+      "solver_vtable_slot": "0x48",
+      "solver_wrapper_va": "0x496aa0",
+      "rounding_vtable_slot": "0x74",
+      "rounding_wrapper_va": "0x4d64c0",
+      "preceil_scale_va": "0x5c4328",
+      "preceil_scale": 10000000000.0,
+      "solver_tolerance_va": "0x5c3f48",
+      "solver_tolerance_argument": 1e-10,
+      "near_equal_tolerance_va": "0x5c4198",
+      "near_equal_tolerance": 1e-08,
+      "first_group_round_call_va": "0x4d9d55",
+      "second_group_ceil_call_va": "0x4d9d88",
+      "final_power_call_va": "0x4d9e3c",
+      "return_va": "0x4d9e4c",
+      "floor_thunk_va": "0x5ac023",
+      "floor_iat_va": "0x5be5b8",
+      "ceil_thunk_va": "0x5ac047",
+      "ceil_iat_va": "0x5be590",
+      "semantics_source": "docs/REA_STATIC_FINDINGS.md REA-STATIC-008/009"
+    },
+    "status": "Static anchors confirmed; semantic interpretation in docs/REA_STATIC_FINDINGS.md"
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "entrypoint": "gpower-clone",
+    "args": [
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"contract_version\":\"1.0.0\",\"name\":\"gpower-clone\",\"engine\":\"Python 3.13.14 / SciPy 1.18.1 / SPEC engine 1.1.0rc2\"}\n"
+  },
+  {
+    "entrypoint": "gpower-clone",
+    "args": [
+      "--test",
+      "t2-indep",
+      "--mode",
+      "a-priori",
+      "--tails",
+      "2",
+      "--d",
+      ".0005",
+      "--alpha",
+      ".05",
+      "--power",
+      ".8",
+      "--ratio",
+      "1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"ncp\":2.801581829966778,\"critical_t\":1.9599640034303063,\"df\":125581770,\"n1\":62790886,\"n2\":62790886,\"n_total\":125581772,\"actual_power\":0.8000000060271003}\n"
+  },
+  {
+    "entrypoint": "gpower-agent",
+    "args": [
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: gpower-agent [-h] [--question QUESTION] [--model MODEL]\n                    [--endpoint ENDPOINT] [--log LOG] [--structured]\n                    --synthetic-case\n\nLLM + actual MCP stdio power-analysis agent; synthetic cases only\n\noptions:\n  -h, --help           show this help message and exit\n  --question QUESTION\n  --model MODEL\n  --endpoint ENDPOINT\n  --log LOG\n  --structured         Require model final JSON action/label/message; retain\n                       actual tool trace\n  --synthetic-case     Confirm only synthetic, non-identifying case data will\n                       be used\n"
+  },
+  {
+    "entrypoint": "gpower-agent-eval",
+    "args": [],
+    "exit_code": 2,
+    "stdout": "{\"status\": \"not_run\", \"reason\": \"Requires --run-live, configured API key, and model\", \"cases_executed\": 0, \"metrics\": null}\n"
+  },
+  {
+    "entrypoint": "gpower-mcp",
+    "server_version": "1.1.0rc2",
+    "tools": [
+      "power_analysis"
+    ],
+    "result": "{\"ncp\":3.3166247903554003,\"critical_t\":1.6536580165162151,\"df\":174,\"power\":0.9514254482775332}",
+    "actual_stdio": true
+  }
+]

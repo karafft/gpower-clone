@@ -1,3 +1,5 @@
+> **YAYIN GÜNCELLEMESİ — 26 Ekim2026:** Kullanıcının talebiyle kaynaklar ve kanıtlar repoya eklendi. Aşağıdaki yüklenmedi/onay bekliyor notları yerel hazırlık aşamasının tarihsel kaydıdır.
+
 > **GÜNCEL — 26 Ekim, ekran görüntüleri alındı:** Sude’nin60 PNG’si
 > pakete eklendi ve kayıtlarla karşılaştırıldı.59 görüntüde sonuç/hata mevcut;
 > ORC-011’in çıktıları ? olduğu için bu görsel sayısal sonucu kanıtlamıyor.

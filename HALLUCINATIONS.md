@@ -1,3 +1,5 @@
+> Güncel uygulama kayıtları: [HALLUCINATIONS_IMPLEMENTATION.md](HALLUCINATIONS_IMPLEMENTATION.md). Aşağıdaki ekip notları korunmuştur.
+
 # Halüsinasyon günlüğü
 
 AI oturumlarının yanlış çıkardığı ya da kanıtsız ileri sürdüğü şeyler. Her kayıtta iddia, nasıl fark edildiği ve onu yakalayan deney ya da test yer alır.

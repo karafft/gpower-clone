@@ -1,0 +1,9 @@
+{
+  "observed_error": "WinError4551 Application Control blocked newly generated pip exe launcher",
+  "security_policy_changed": false,
+  "verified_alternatives": [
+    "installed trusted Python module",
+    "source text gpower-clone.cmd wrapper"
+  ],
+  "note": "Older launcher success records remain historical; current exe launch is not claimed successful."
+}
