@@ -55,3 +55,12 @@ model başarısı değildir. [Maliyet kaydı](AGENT_COST_IMPLEMENTATION.md).
 [Sonuçlar](REPORT.md), [teslim durumu](TESLIM_DURUMU.md),
 [temiz oda kaydı](docs/CLEAN_ROOM_PROVENANCE.md), [demo](demo/CLI_Demo_60s.mp4).
 G*Power binary’si, bağımlılıklar, kurulum arşivi ve decompile çıktısı teslim edilmez.
+
+## Windows’ta canlı testi başlatma
+
+Proje kökündeki CANLI_AJAN_TESTI.cmd dosyasını çift tıklayın. Model adını,
+Chat Completions servis adresini ve ekranda görünmeyen anahtar girişini
+yerelde tamamlayın. Anahtar diske yazılmaz.10 sentetik soru gerçek serviste
+çalışır; kullanım ücretine tabi olabilir. Sonuç logs/agent_evaluation.json
+ve logs/agent_calls.jsonl dosyalarında oluşur. Bu kayıtlar incelenmeden
+canlı başarı veya GUI’ye göre token kazancı ilan edilmez.
