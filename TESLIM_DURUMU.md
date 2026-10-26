@@ -6,7 +6,7 @@ son denetim revizyonu2026-10-26-final. CONTRACT1.0.0 değiştirilmedi.
 Tamamlananlar:
 
 - Beş t2-indep modu; tek hesap motoru, JSON CLI, gerçek stdio MCP ve ajan kodu.
--25 yazılım testi ve33 gerçek MCP/CLI eşdeğerlik kontrolü.
+-26 yazılım testi ve33 gerçek MCP/CLI eşdeğerlik kontrolü.
 - Sude’nin60 PNG’si korundu. ORC-011’in eksik çıktısı yeni gerçek G*Power
   koşumuyla ayrıca tamamlandı:96+48=144. Eski görsel değiştirilmedi.
 - Görselle desteklenen58 sözleşme-uyumlu kayıt:47 sayısal+11 hata,38 N hesabı.

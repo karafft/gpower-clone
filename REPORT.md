@@ -4,7 +4,7 @@
 
 | Kontrol | Sonuç | Kayıt |
 |---|---|---|
-| Yazılım, gerçek MCP dahil |25/25 test geçti |tests/reports/final_audit_unit.txt |
+| Yazılım, gerçek MCP dahil |26/26 test geçti |tests/reports/final_audit_unit.txt |
 | MCP/CLI |33/33 tam metin eşdeğerliği |logs/mcp_parity.jsonl |
 | Açık sayısal vektörler |5/5 t2-indep;20 başka aile dışlandı |tests/reports/final_audit_public.json |
 | Sude özgün görsel destekli set |57/57;37/37 N |tests/reports/final_audit_screenshots57.json |

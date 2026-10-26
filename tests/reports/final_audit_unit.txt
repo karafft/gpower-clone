@@ -8,6 +8,7 @@ test_missing_config_produces_no_metrics (test_agent_evaluation.AgentEvaluationTe
 test_mock_scoring_all_public_synthetic_questions (test_agent_evaluation.AgentEvaluationTests.test_mock_scoring_all_public_synthetic_questions) ... ok
 test_null_oracle_is_unknown_not_success (test_agent_evaluation.AgentEvaluationTests.test_null_oracle_is_unknown_not_success) ... ok
 test_scalar_expected_total (test_agent_evaluation.AgentEvaluationTests.test_scalar_expected_total) ... ok
+test_transport_failure_is_unknown_and_http_status_is_safe (test_agent_evaluation.AgentEvaluationTests.test_transport_failure_is_unknown_and_http_status_is_safe) ... ok
 test_cli (test_cli_contract.CliContractTests.test_cli) ... ok
 test_integer_type_is_exact (test_differential_runner.ComparisonTests.test_integer_type_is_exact) ... ok
 test_tolerances_and_missing (test_differential_runner.ComparisonTests.test_tolerances_and_missing) ... ok
@@ -29,6 +30,6 @@ test_validation (test_engine.EngineTests.test_validation) ... ok
 test_real_stdio_handshake_list_call_cli_parity (test_mcp_contract.MCPContractTests.test_real_stdio_handshake_list_call_cli_parity) ... ok
 
 ----------------------------------------------------------------------
-Ran 25 tests in 16.222s
+Ran 26 tests in 16.960s
 
 OK

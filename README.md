@@ -1,5 +1,5 @@
 > **26 Ekim2026 son denetimi:** Beş t2-indep modu, tek hesap motoru,
-> CLI, MCP ve ajan kodu eklendi.25 yazılım testi ve33 MCP/CLI kontrolü geçti.
+> CLI, MCP ve ajan kodu eklendi.26 yazılım testi ve33 MCP/CLI kontrolü geçti.
 > Görselle desteklenen57/57 kaynak kaydı (37/37 tam N), ayrıca motor
 > dondurulduktan sonra14/14 yeni GUI deneyi (10/10 tam N) eşleşti.
 > Toplam75 görsel var. ORC-011 yeni gerçek koşumla tamamlandı;58/58 kayıt ve38/38 N eşleşti.

@@ -8,6 +8,17 @@ import math
 import os
 from pathlib import Path
 from .agent import chat
+from urllib.error import HTTPError
+
+
+def safe_errors(exc):
+    """Report error classes/status only, never keys, headers or provider bodies."""
+    nested=getattr(exc,"exceptions",None)
+    if nested:
+        return [item for child in nested for item in safe_errors(child)]
+    detail={"type":type(exc).__name__}
+    if isinstance(exc,HTTPError): detail["http_status"]=exc.code
+    return [detail]
 
 def score_case(case, result):
     decision=result["decision"]
@@ -37,12 +48,15 @@ async def evaluate_cases(cases, args, key, run_one=chat):
             rows.append({"id":case["id"],"status":"completed","result":result,"scores":score_case(case,result)})
         except Exception as exc:
             availability=score_case(case,{"decision":{},"tool_calls":[]})
-            rows.append({"id":case["id"],"status":"failed","error_type":type(exc).__name__,"scores":{k:False if v is not None else None for k,v in availability.items()}})
+            rows.append({"id":case["id"],"status":"failed","error_type":type(exc).__name__,"errors":safe_errors(exc),"scores":{k:False if v is not None else None for k,v in availability.items()}})
     done=[r for r in rows if r["status"]=="completed"]
     keys=("label_correct","action_correct","tool_input_correct","output_correct")
     denominators={k:sum(r["scores"][k] is not None for r in rows) for k in keys}
     metrics={k:sum(bool(r["scores"][k]) for r in rows if r["scores"][k] is not None)/denominators[k] if denominators[k] else None for k in keys}
-    return {"status":"live_completed","cases":len(rows),"completed":len(done),"failed":len(rows)-len(done),"metrics":metrics,"metric_denominators":denominators,"rows":rows}
+    if not done:
+        metrics={k:None for k in keys}
+        denominators={k:0 for k in keys}
+    return {"status":"live_completed" if len(done)==len(rows) else "live_partial" if done else "live_failed","cases":len(rows),"completed":len(done),"failed":len(rows)-len(done),"metrics":metrics,"metric_denominators":denominators,"rows":rows}
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description="Explicitly opt-in live LLM plus MCP evaluation on synthetic/public cases")

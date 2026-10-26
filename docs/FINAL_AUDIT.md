@@ -30,3 +30,13 @@ teslimi yapmak. Gizli%90 N kapısı yalnız hocanın değerlendirmesiyle bilinir
 
 6. ground_truth.json aslında JSONL içeriyordu; aynı kayıtlar geçerli JSON dizisine
    dönüştürüldü. İlk dosya docs/history/ground_truth_original.jsonl içinde korunur.
+
+## Canlı deneme bağlantı düzeltmesi
+
+Kullanıcı ilk gerçek denemeyi çalıştırdı;10/10 kayıt ExceptionGroup ile
+sonuçlandı, tamamlanan model yanıtı yok. Bu sonuç model doğruluğu%0 diye
+yorumlanamaz. Anahtarsız tanı denemesinde Python varsayılan istemcisiyle
+HTTP403/1010, uygulama User-Agent başlığıyla beklenen HTTP401 alındı.
+Standart uygulama başlığı eklendi; iç HTTP durumları sırları açmadan
+raporlanır. Tamamlanmış yanıt yoksa doğruluk metrikleri artık null olur.
+Gerçek anahtarla tekrar koşum hâlâ gereklidir. Sayısal motor değişmedi.

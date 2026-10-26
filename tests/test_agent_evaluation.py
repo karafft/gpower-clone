@@ -6,9 +6,21 @@ import json
 from pathlib import Path
 import unittest
 from unittest.mock import patch
+from urllib.error import HTTPError
 from gpower_clone.agent.evaluate import evaluate_cases, main, score_case
 
 class AgentEvaluationTests(unittest.TestCase):
+    def test_transport_failure_is_unknown_and_http_status_is_safe(self):
+        case={"id":"transport","question":"synthetic","expected_label":"ambiguous","expected_action":"ask_user","expected_tool_input":None}
+        class TransportGroup(Exception):
+            exceptions=[HTTPError("https://example.invalid",403,"private provider text",{},None)]
+        async def unavailable(request,key):
+            raise TransportGroup("not for logging")
+        result=asyncio.run(evaluate_cases([case],argparse.Namespace(model="mock",endpoint="unused",log="unused"),"mock-key",run_one=unavailable))
+        self.assertEqual(result["status"],"live_failed")
+        self.assertTrue(all(v is None for v in result["metrics"].values()))
+        self.assertEqual(result["rows"][0]["errors"],[{"type":"HTTPError","http_status":403}])
+        self.assertNotIn("private provider text",json.dumps(result))
     def test_scalar_expected_total(self):
         case={"expected_label":"t2-indep","expected_action":"call_tool","expected_tool_input":{"test":"t2-indep"},"expected_n":128,"expected_power":None}
         result={"decision":{"label":"t2-indep","action":"call_tool"},"tool_calls":[{"tool_input":{"test":"t2-indep"},"tool_output":{"n_total":128}}]}

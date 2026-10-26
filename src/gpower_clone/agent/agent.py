@@ -22,7 +22,7 @@ Hasta kimlikleri veya gerçek kişi verileri isteme; yalnız sentetik/kimliksiz 
 
 def complete(messages, tools, endpoint, model, key):
     body = {"model": model, "messages": messages, "tools": tools, "tool_choice": "auto"}
-    request = Request(endpoint, data=json.dumps(body).encode(), headers={"Content-Type":"application/json", "Authorization":"Bearer "+key}, method="POST")
+    request = Request(endpoint, data=json.dumps(body).encode(), headers={"Content-Type":"application/json", "Authorization":"Bearer "+key, "User-Agent":"gpower-clone/1.1.0rc4"}, method="POST")
     with urlopen(request, timeout=60) as response: return json.load(response)
 
 def log_record(path, **fields):

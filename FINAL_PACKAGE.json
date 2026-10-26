@@ -2,7 +2,7 @@
   "date": "2026-10-26",
   "version": "1.1.0rc4",
   "contract_version": "1.0.0",
-  "software_tests": 25,
+  "software_tests": 26,
   "software_tests_failed": 0,
   "mcp_parity": {
     "passed": 33,
@@ -22,7 +22,7 @@
   "original_screenshots_supplied": true,
   "binary_shipped": false,
   "github_written": true,
-  "source_sha256": "dd64b6107669765d6f6bc82df14ffd1ac68173cf535558903f5a426efbd490b0",
+  "source_sha256": "2b862ad4ed603bfe4de57cb44cc329d0d84e80ac6241a2c0f209b6bcc69a6d9f",
   "demo_seconds": 60,
   "demo_is_screen_recording": false,
   "windows_exe_launcher": "Blocked by AppControl4551; security settings unchanged",
@@ -57,5 +57,10 @@
   "publication_note": "Original source freeze and historical local reports retain pre-publication state.",
   "audit_revision": "2026-10-26-final",
   "orc011_replayed": true,
-  "final_audit_report": "docs/FINAL_AUDIT.md"
+  "final_audit_report": "docs/FINAL_AUDIT.md",
+  "live_evaluation_attempt": {
+    "completed": 0,
+    "failed": 10,
+    "classification": "Transport/setup failure; no valid model-accuracy estimate"
+  }
 }
