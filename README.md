@@ -62,6 +62,10 @@ python -m unittest discover -s tests
 
 MCP sunucusu (stdio): `python -m gpower_clone.mcp_server`. Araç şeması ve ajan kurulumu: [README_IMPLEMENTATION.md](README_IMPLEMENTATION.md), [docs/ZELIHA_KURULUM.md](docs/ZELIHA_KURULUM.md).
 
+## Demo
+
+▶️ **[60 saniyelik CLI demosu (YouTube)](https://youtu.be/vt77iAK14kM)**: sürüm bilgisi, a-priori, eşit olmayan grup oranı, post-hoc, sensitivity ve iki geçersiz girdi. Aynı adımlar `powershell -ExecutionPolicy Bypass -File demo\run_demo.ps1` ile yeniden çalıştırılabilir.
+
 ## MCP aracı: `power_analysis`
 
 | | |
@@ -93,7 +97,7 @@ GPower.exe ve decompile çıktısı repoda yoktur.
 | G*Power vektörleri (CSV) ve ekran görüntüleri | [oracle/vectors.csv](oracle/vectors.csv), `oracle/sude_screenshots/`, `oracle/new_validation/` |
 | Yeniden yazım | `src/gpower_clone/` (motor `engine/`, `cli.py`, `mcp_server.py`, `agent/`) |
 | Diferansiyel test ve uyum raporu | `tests/`, [REPORT.md](REPORT.md) |
-| Demo | [demo/CLI_Demo_60s.mp4](demo/CLI_Demo_60s.mp4) (gerçek CLI çıktılarından üretilmiş açıklayıcı video; ekran kaydı değildir) |
+| Demo (60 saniyelik CLI videosu) | [YouTube](https://youtu.be/vt77iAK14kM), [demo/CLI_Demo_ekran_kaydi.mp4](demo/CLI_Demo_ekran_kaydi.mp4) (gerçek terminal kaydı); ayrıntı [demo/README.md](demo/README.md) |
 | Ajan değerlendirme seti | [eval/agent_questions.jsonl](eval/agent_questions.jsonl) |
 
 ## Temiz oda
