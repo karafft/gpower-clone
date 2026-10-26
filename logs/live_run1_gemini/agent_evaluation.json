@@ -1,0 +1,336 @@
+{
+  "status": "live_completed",
+  "cases": 10,
+  "completed": 10,
+  "failed": 0,
+  "metrics": {
+    "label_correct": 0.7,
+    "action_correct": 0.4,
+    "tool_input_correct": 0.3,
+    "output_correct": 0.3
+  },
+  "metric_denominators": {
+    "label_correct": 10,
+    "action_correct": 10,
+    "tool_input_correct": 10,
+    "output_correct": 10
+  },
+  "rows": [
+    {
+      "id": "R01",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "t2-indep",
+          "message": "Sağladığınız 't-indep' test türü desteklenmiyor."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "tails": 1,
+              "ratio": 1,
+              "power": 0.95,
+              "d": 0.5,
+              "mode": "n",
+              "alpha": 0.05,
+              "test": "t-indep"
+            },
+            "tool_output": {
+              "error": "Unsupported test",
+              "code": "UNSUPPORTED",
+              "field": "test"
+            },
+            "is_error": true
+          }
+        ],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"t2-indep\",\"message\":\"Sağladığınız 't-indep' test türü desteklenmiyor.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R02",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "t2-indep",
+          "message": "Sağladığınız 't' test türü desteklenmiyor."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "d": 0.5,
+              "alpha": 0.05,
+              "n1": 88,
+              "tails": 1,
+              "n2": 88,
+              "test": "t",
+              "mode": "post-hoc"
+            },
+            "tool_output": {
+              "error": "Unsupported test",
+              "code": "UNSUPPORTED",
+              "field": "test"
+            },
+            "is_error": true
+          }
+        ],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"t2-indep\",\"message\":\"Sağladığınız 't' test türü desteklenmiyor.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R03",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "t2-indep",
+          "message": "'iki-bağımsız-grup t' testi desteklenmiyor. Lütfen desteklenen bir test tipi girin."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "test": "two-independent-groups t",
+              "beta_alpha_ratio": 1,
+              "n2": 88,
+              "n1": 88,
+              "tails": 1,
+              "d": 0.5,
+              "mode": "compromise"
+            },
+            "tool_output": {
+              "error": "Unsupported test",
+              "code": "UNSUPPORTED",
+              "field": "test"
+            },
+            "is_error": true
+          }
+        ],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"t2-indep\",\"message\":\"'iki-bağımsız-grup t' testi desteklenmiyor. Lütfen desteklenen bir test tipi girin.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R04",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "t2-indep",
+          "message": "İstenen 'iki bağımsız grupta' test için, aracın kabul ettiği belirli test adı desteklenmemektedir."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "test": "t-indep",
+              "n2": 88,
+              "tails": 1,
+              "mode": "alpha",
+              "d": 0.5,
+              "n1": 88,
+              "power": 0.95
+            },
+            "tool_output": {
+              "error": "Unsupported test",
+              "code": "UNSUPPORTED",
+              "field": "test"
+            },
+            "is_error": true
+          }
+        ],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"t2-indep\",\"message\":\"İstenen 'iki bağımsız grupta' test için, aracın kabul ettiği belirli test adı desteklenmemektedir.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R05",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "t",
+          "message": "Üzgünüm, 't' testi şu anda desteklenmiyor."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "tails": 1,
+              "power": 0.95,
+              "test": "t",
+              "alpha": 0.05,
+              "n2": 88,
+              "mode": "sensitivity",
+              "n1": 88
+            },
+            "tool_output": {
+              "error": "Unsupported test",
+              "code": "UNSUPPORTED",
+              "field": "test"
+            },
+            "is_error": true
+          }
+        ],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"t\",\"message\":\"Üzgünüm, 't' testi şu anda desteklenmiyor.\"}"
+      },
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R06",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "ask_user",
+          "label": "t2-indep",
+          "message": "Sağladığınız 'solve_for_n' modu desteklenmiyor. Lütfen desteklenen bir modu belirtin veya hangi modları kullanabileceğimi açıklayın."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "ratio": 1,
+              "tails": 2,
+              "test": "t2-indep",
+              "power": 0.8,
+              "mode": "solve_for_n",
+              "alpha": 0.05,
+              "d": 0.5
+            },
+            "tool_output": {
+              "error": "Unsupported mode",
+              "code": "UNSUPPORTED",
+              "field": "mode"
+            },
+            "is_error": true
+          }
+        ],
+        "final_text": "{\"action\":\"ask_user\",\"label\":\"t2-indep\",\"message\":\"Sağladığınız 'solve_for_n' modu desteklenmiyor. Lütfen desteklenen bir modu belirtin veya hangi modları kullanabileceğimi açıklayın.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": true,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R07",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "t2-indep",
+          "message": "'t' testi desteklenmiyor."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "power": 0.8,
+              "ratio": 1,
+              "alpha": 0.05,
+              "tails": 2,
+              "test": "t",
+              "d": 0.5,
+              "mode": "n"
+            },
+            "tool_output": {
+              "error": "Unsupported test",
+              "code": "UNSUPPORTED",
+              "field": "test"
+            },
+            "is_error": true
+          }
+        ],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"t2-indep\",\"message\":\"'t' testi desteklenmiyor.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R08",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "t-test (paired)",
+          "message": "Desteklenmeyen test ailesi."
+        },
+        "tool_calls": [],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"t-test (paired)\",\"message\":\"Desteklenmeyen test ailesi.\"}"
+      },
+      "scores": {
+        "label_correct": false,
+        "action_correct": true,
+        "tool_input_correct": true,
+        "output_correct": true
+      }
+    },
+    {
+      "id": "R09",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "report_unsupported",
+          "label": "ANOVA",
+          "message": "ANOVA testi için güç analizi şu an desteklenmemektedir. Yalnız iki bağımsız örneklem t-testi için güç analizi yapabilirim."
+        },
+        "tool_calls": [],
+        "final_text": "{\"action\":\"report_unsupported\",\"label\":\"ANOVA\",\"message\":\"ANOVA testi için güç analizi şu an desteklenmemektedir. Yalnız iki bağımsız örneklem t-testi için güç analizi yapabilirim.\"}"
+      },
+      "scores": {
+        "label_correct": false,
+        "action_correct": true,
+        "tool_input_correct": true,
+        "output_correct": true
+      }
+    },
+    {
+      "id": "R10",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "ask_user",
+          "label": "ambiguous",
+          "message": "Kaç kişi gerektiğini hesaplayabilmem için, lütfen aşağıdaki bilgileri sağlayın:\n\n*   Kullanılacak istatistiksel testin türü (örneğin, iki bağımsız örneklem t-testi).\n*   İstenen istatistiksel güç (genellikle %80 veya %90).\n*   Anlamlılık düzeyi (alfa, genellikle 0.05).\n*   Beklenen etki büyüklüğü (Cohen'in d'si gibi).\n*   Testin tek yönlü mü yoksa çift yönlü mü olacağı."
+        },
+        "tool_calls": [],
+        "final_text": "{\"action\":\"ask_user\",\"label\":\"ambiguous\",\"message\":\"Kaç kişi gerektiğini hesaplayabilmem için, lütfen aşağıdaki bilgileri sağlayın:\\n\\n*   Kullanılacak istatistiksel testin türü (örneğin, iki bağımsız örneklem t-testi).\\n*   İstenen istatistiksel güç (genellikle %80 veya %90).\\n*   Anlamlılık düzeyi (alfa, genellikle 0.05).\\n*   Beklenen etki büyüklüğü (Cohen'in d'si gibi).\\n*   Testin tek yönlü mü yoksa çift yönlü mü olacağı.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": true,
+        "tool_input_correct": true,
+        "output_correct": true
+      }
+    }
+  ]
+}

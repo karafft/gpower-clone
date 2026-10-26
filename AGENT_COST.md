@@ -14,8 +14,9 @@ Her oturum için kullanılan ajan, yaklaşık token ve maliyet, iterasyon sayıs
 | İnceleme ve SPEC | Sude | | | | | sürüyor |
 | Motor ve CLI (temiz oda) | Merve | | | | | başlamadı |
 | Repo, MCP ve ajan | Zeliha | Claude Code (masaüstü), Claude Opus 5.5 | bağlam ≈ 260 bin (2026-10-26); toplam: kullanım ekranından eklenecek | abonelik planı; eklenecek | ≈ 27 | sürüyor |
-| Ajan değerlendirmesi (MCP) | Zeliha | | | | | başlamadı |
-| Ajan değerlendirmesi (GUI) | Zeliha | | | | | başlamadı |
+| Ajan değerlendirmesi (MCP), 1. koşum | Zeliha | Gemini 2.5 Flash (Google AI Studio, ücretsiz katman) | 6.689 giriş / 883 çıkış (17 model yanıtı, 7 araç çağrısı) | 0 (ücretsiz katman) | 10 soru, yaklaşık 4 dakika | tamamlandı |
+| Ajan değerlendirmesi (MCP), 2. koşum | Zeliha | Gemini 2.5 Flash | 2.797 giriş / 288 çıkış (5 model yanıtı, 3 araç çağrısı) | 0 (ücretsiz katman) | 10 sorudan 2'si tamamlandı | kota sınırında kaldı |
+| Ajan değerlendirmesi (GUI) | Zeliha | | | | | yapılmadı |
 
 ---
 

@@ -44,6 +44,17 @@ Herkes kendi oturumundaki kayıtları ekler. Kimlik sırası: H-001, H-002 …
 - **Durum:** düzeltildi (geri bildirim notunda)
 - **Ders:** Kural ile kâhin verisi çeliştiğinde önce kâhin yeniden ölçülür. Veriyi değil, kuralı şüpheli saymak gerekir.
 
+### H-004 Canlı modelin araç girdisi uydurması
+- **Oturum / kişi:** Canlı ajan değerlendirmesi, Gemini 2.5 Flash (Zeliha)
+- **Tarih:** 2026-10-26
+- **İddia:** Model `power_analysis` aracını `test: "t-indep"` ve `mode: "n"` gibi sözleşmede olmayan değerlerle çağırdı, ardından aracın verdiği `UNSUPPORTED` hatasına dayanarak bir t2-indep sorusunu "desteklenmiyor" diye yanıtladı.
+- **Neden inandırıcıydı:** "t-indep" doğru kimliğe çok yakın; yanıt akıcı Türkçeydi ve araç gerçekten çağrılmıştı.
+- **Nasıl fark edildi:** Değerlendirme betiği beklenen araç girdisini gerçek çağrıyla karşılaştırdı; 10 sorudan yalnız 3'ünde girdi doğruydu.
+- **Yakalayan test:** `gpower-agent-eval --run-live` ve `logs/live_run1_gemini/agent_calls.jsonl` (R01).
+- **Doğrusu:** Ajanın modele gösterdiği araç şemasında `test` ve `mode` için izin verilen değerler yazmıyordu. Şema `t2-indep` ve beş mod adıyla sınırlandı (`agent.py`, `model_schema`). MCP sunucusu ve motor değişmedi.
+- **Durum:** düzeltildi, ikinci canlı koşumla ölçülecek
+- **Ders:** Tip güvenliği doğruluk değildir; ama serbest metin alanı bırakmak da modeli tahmine iter. Sabit değer kümesi olan alanlar şemada sabitlenmeli.
+
 ### H-003 Çıktı alanlarının her modda zorunlu sanılması
 - **Oturum / kişi:** Repo ve entegrasyon oturumu (Zeliha, Claude Code)
 - **Tarih:** 2026-10-25

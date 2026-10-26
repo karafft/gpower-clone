@@ -1,0 +1,59 @@
+id,in_mode,in_tails,in_d,in_alpha,in_power,in_ratio,in_n1,in_n2,in_beta_alpha_ratio,exp_n1,exp_n2,exp_n_total,exp_df,exp_ncp,exp_critical_t,exp_actual_power,exp_power,exp_alpha,exp_beta,exp_d,exp_error,exp_code,screenshot
+ORC-001,a-priori,1,0.5,0.05,0.95,1.0,,,,88,88,176,174,3.3166248,1.653658,0.951425,,,,,,,oracle/sude_screenshots/ORC-001.png
+ORC-002,post-hoc,1,0.5,0.05,,,88,88,,,,,174,3.3166248,1.653658,,0.9514254,,,,,,oracle/sude_screenshots/ORC-002.png
+ORC-003,compromise,1,0.5,,,,88,88,1.0,,,,174,3.3166248,1.6606859,,0.9507113,0.0492887,0.0492887,,,,oracle/sude_screenshots/ORC-003.png
+ORC-004,criterion,1,0.5,,0.95,,88,88,,,,,174,3.3166248,1.667605,,,0.0485965,,,,,oracle/sude_screenshots/ORC-004.png
+ORC-005,sensitivity,1,,0.05,0.95,,88,88,,,,,174,3.3025887,1.653658,,,,,0.497884,,,oracle/sude_screenshots/ORC-005.png
+ORC-006,a-priori,2,0.5,0.05,0.8,1.0,,,,64,64,128,126,2.8284271,1.9789706,0.8014596,,,,,,,oracle/sude_screenshots/ORC-006.png
+ORC-007,a-priori,2,0.5,0.01,0.95,1.0,,,,145,145,290,288,4.2573466,2.5930077,0.9512341,,,,,,,oracle/sude_screenshots/ORC-007.png
+ORC-008,a-priori,2,0.2,0.05,0.8,1.0,,,,394,394,788,786,2.8071338,1.9629867,0.8005931,,,,,,,oracle/sude_screenshots/ORC-008.png
+ORC-009,a-priori,2,0.8,0.05,0.8,1.0,,,,26,26,52,50,2.884441,2.0085591,0.8074866,,,,,,,oracle/sude_screenshots/ORC-009.png
+ORC-010,a-priori,2,0.5,0.05,0.8,1.5,,,,54,80,134,132,2.8389613,1.9780988,0.8046333,,,,,,,oracle/sude_screenshots/ORC-010.png
+ORC-012,a-priori,2,0.5,0.05,0.8,0.67,,,,80,54,134,132,2.8389613,1.9780988,0.8046333,,,,,,,oracle/sude_screenshots/ORC-012.png
+ORC-013,a-priori,1,0.4,0.05,0.85,2.0,,,,68,136,204,202,2.6932013,1.652432,0.8506699,,,,,,,oracle/sude_screenshots/ORC-013.png
+ORC-014,a-priori,2,0.15,0.05,0.8,1.0,,,,699,699,1398,1396,2.8042379,1.9616648,0.8002033,,,,,,,oracle/sude_screenshots/ORC-014.png
+ORC-015,a-priori,2,1.5,0.05,0.9,1.0,,,,11,11,22,20,3.5178118,2.0859634,0.9168991,,,,,,,oracle/sude_screenshots/ORC-015.png
+ORC-016,a-priori,2,0.5,0.05,0.7,1.0,,,,51,51,102,100,2.5248762,1.9839715,0.7056126,,,,,,,oracle/sude_screenshots/ORC-016.png
+ORC-017,a-priori,2,0.6,0.001,0.8,1.0,,,,98,98,196,194,4.2,3.3413817,0.8025581,,,,,,,oracle/sude_screenshots/ORC-017.png
+ORC-018,a-priori,2,0.5,0.1,0.8,1.0,,,,51,51,102,100,2.5248762,1.6602343,0.805915,,,,,,,oracle/sude_screenshots/ORC-018.png
+ORC-019,a-priori,2,0.35,0.025,0.88,1.25,,,,173,217,390,388,3.433908,2.250135,0.8812733,,,,,,,oracle/sude_screenshots/ORC-019.png
+ORC-020,a-priori,1,0.3,0.01,0.99,1.0,,,,483,483,966,964,4.6620811,2.3302224,0.9900753,,,,,,,oracle/sude_screenshots/ORC-020.png
+ORC-021,a-priori,2,0.1,0.05,0.8,1.0,,,,1571,1571,3142,3140,2.8026773,1.9607198,0.8000667,,,,,,,oracle/sude_screenshots/ORC-021.png
+ORC-022,a-priori,2,2.0,0.05,0.9,1.0,,,,7,7,14,12,3.7416574,2.1788128,0.9290703,,,,,,,oracle/sude_screenshots/ORC-022.png
+ORC-023,a-priori,2,0.6,0.0001,0.8,1.0,,,,129,129,258,256,4.8187135,3.952771,0.8042355,,,,,,,oracle/sude_screenshots/ORC-023.png
+ORC-024,a-priori,2,0.5,0.05,0.999,1.0,,,,206,206,412,410,5.0744458,1.9657668,0.9990407,,,,,,,oracle/sude_screenshots/ORC-024.png
+ORC-025,a-priori,2,0.4,0.05,0.8,3.0,,,,66,198,264,262,2.8142495,1.9690597,0.8006538,,,,,,,oracle/sude_screenshots/ORC-025.png
+ORC-026,a-priori,2,0.4,0.05,0.8,0.333333,,,,198,66,264,262,2.8142495,1.9690597,0.8006538,,,,,,,oracle/sude_screenshots/ORC-026.png
+ORC-027,a-priori,1,0.35,0.005,0.9,1.0,,,,245,245,490,488,3.8737901,2.5859414,0.9005653,,,,,,,oracle/sude_screenshots/ORC-027.png
+ORC-028,post-hoc,2,0.8,0.05,,,10,10,,,,,18,1.7888544,2.100922,,0.3950692,,,,,,oracle/sude_screenshots/ORC-028.png
+ORC-029,post-hoc,2,0.2,0.01,,,500,1500,,,,,1998,3.8729833,2.5782923,,0.9021566,,,,,,oracle/sude_screenshots/ORC-029.png
+ORC-030,compromise,2,0.5,,,,60,60,2.0,,,,118,2.7386128,1.7556907,,0.8365279,0.0817361,0.1634721,,,,oracle/sude_screenshots/ORC-030.png
+ORC-031,sensitivity,2,,0.01,0.95,,100,100,,,,,198,4.2564623,2.6008873,,,,,0.6019547,,,oracle/sude_screenshots/ORC-031.png
+ORC-032,criterion,2,0.5,,0.85,,75,75,,,,,148,3.0618622,2.0217215,,,0.0450073,,,,,oracle/sude_screenshots/ORC-032.png
+ORC-033,a-priori,2,0.5,0.05,0.8,1.3,,,,57,73,130,128,2.8287671,1.9786708,0.801648,,,,,,,oracle/sude_screenshots/ORC-033.png
+ORC-034,a-priori,2,0.5,0.05,0.8,0.7,,,,78,54,132,130,2.8244066,1.9783804,0.8005319,,,,,,,oracle/sude_screenshots/ORC-034.png
+ORC-035,a-priori,2,0.5,0.05,0.8,2.5,,,,45,111,156,154,2.8292769,1.9754881,0.8027904,,,,,,,oracle/sude_screenshots/ORC-035.png
+ORC-036,a-priori,2,0.5,0.05,0.8,1.1,,,,61,67,128,126,2.825318,1.9789706,0.8005985,,,,,,,oracle/sude_screenshots/ORC-036.png
+ORC-037,a-priori,1,0.5,0.05,0.9,0.75,,,,81,61,142,140,2.9493972,1.6558105,0.9015171,,,,,,,oracle/sude_screenshots/ORC-037.png
+ORC-038,a-priori,2,0.5,0.05,0.8014,1.0,,,,64,64,128,126,2.8284271,1.9789706,0.8014596,,,,,,,oracle/sude_screenshots/ORC-038.png
+ORC-039,a-priori,2,0.5,0.05,0.8015,1.0,,,,65,65,130,128,2.8504386,1.9786708,0.8075844,,,,,,,oracle/sude_screenshots/ORC-039.png
+ORC-040,a-priori,1,0.5,0.05,0.9514,1.0,,,,88,88,176,174,3.3166248,1.653658,0.9514254,,,,,,,oracle/sude_screenshots/ORC-040.png
+ORC-041,a-priori,1,0.5,0.05,0.9515,1.0,,,,89,89,178,176,3.335416,1.6535574,0.9532972,,,,,,,oracle/sude_screenshots/ORC-041.png
+ORC-042,a-priori,2,0.01,0.05,0.8,1.0,,,,156979,156979,313958,313956,2.8015978,1.9599715,0.8000021,,,,,,,oracle/sude_screenshots/ORC-042.png
+ORC-043,a-priori,2,3.0,0.05,0.8,1.0,,,,4,4,8,6,4.2426407,2.4469119,0.9389357,,,,,,,oracle/sude_screenshots/ORC-043.png
+ORC-044,a-priori,2,5.0,0.05,0.8,1.0,,,,3,3,6,4,6.1237244,2.7764451,0.9927759,,,,,,,oracle/sude_screenshots/ORC-044.png
+ORC-045,a-priori,1,0.4,0.05,0.8,0.5,,,,117,59,176,174,2.5050857,1.653658,0.8024691,,,,,,,oracle/sude_screenshots/ORC-045.png
+ORC-046,a-priori,2,0.5,0.05,0.05,1.0,,,,2,2,4,2,0.5,4.3026527,0.0615079,,,,,,,oracle/sude_screenshots/ORC-046.png
+ORC-047,a-priori,2,0.5,0.05,0.03,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-047.png
+ORC-048,a-priori,1,0.5,0.05,0.05,1.0,,,,2,2,4,2,0.5,2.9199856,0.0994117,,,,,,,oracle/sude_screenshots/ORC-048.png
+ORC-049,a-priori,2,0.0,0.05,0.8,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-049.png
+ORC-051,a-priori,2,0.5,0.0,0.8,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-051.png
+ORC-052,a-priori,2,0.5,1.0,0.8,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-052.png
+ORC-053,a-priori,2,0.5,1.5,0.8,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-053.png
+ORC-054,a-priori,2,0.5,0.05,1.0,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-054.png
+ORC-055,a-priori,2,0.5,0.05,0.0,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-055.png
+ORC-056,a-priori,2,0.5,0.05,0.8,0.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-056.png
+ORC-057,a-priori,2,0.5,0.05,0.8,-1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-057.png
+ORC-058,post-hoc,2,0.5,0.05,,,1,1,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-058.png
+ORC-060,a-priori,2,,0.05,0.8,1.0,,,,,,,,,,,,,,,Source reports an error,,oracle/sude_screenshots/ORC-060.png
+ORC-011-REPLAY,a-priori,2,0.5,0.05,0.8,0.5,,,,96,48,144,142,2.8284271,1.976811,0.8021395,,,,,,,oracle/replays/ORC-011-REPLAY.jpg
