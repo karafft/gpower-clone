@@ -1,3 +1,5 @@
+> **Takım birleştirme güncellemesi:** Gemini canlı koşumları, güncel Gherkin ve gerçek terminal videosu eklendi. Tamamlanmış10 yanıt başarı demek değildir: ilk koşumda araç girdisi/çıktı doğruluğu%30. Güncel özet TESLIM_NOTU.md ve REPORT.md içindedir.
+
 # Son teslim durumu — 26 Ekim2026
 
 Kod ve kanıtlar karafft/gpower-clone main dalına yüklendi. Sürüm1.1.0rc4,

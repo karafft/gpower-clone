@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "files": 230,
+  "files": 241,
   "python": 23,
-  "json": 42,
-  "jsonl": 15,
+  "json": 44,
+  "jsonl": 20,
   "evidence_images": 75,
-  "file_hashes_checked": 228
+  "file_hashes_checked": 239
 }

@@ -33,3 +33,14 @@ Gerçek kullanıcı koşumunda3 tamamlanan ve7 başarısız deneme kaydedildi;
 başarılı canlı ajan sertifikası değildir. Ayrıntı logs/live_partial_attempt_summary.json
 içindedir. Araç niyeti/native çağrı ayrımı ve429 beklemesi düzeltildi;
 yeniden canlı koşum bekleniyor. Gerçek GUI karşılaştırması yapılmadı. [Kalan gerçek ölçümler](docs/FINAL_AUDIT.md).
+
+## Takımın eklediği gerçek canlı kayıtlar
+
+Gemini ilk koşum10/10 tamamlandı; aile etiketi doğruluğu%70, action%40,
+araç girdisi ve çıktı doğruluğu%30. İkinci koşum2/10 tamamlandı;8 kota
+hatası var. Bunlar başarılı ajan bonusu gibi sunulamaz. Kanıtlar
+logs/live_run1_gemini ve logs/live_run2_gemini_partial altındadır.
+İlk Gemini koşumunun kaydedilen token toplamı7.572, ikinci koşum3.085;
+Groq kısmi koşumu9.474 token. GUI karşılaştırması ve ücret ölçümü yoktur.
+Takımın gerçek60 saniyelik terminal kaydı demo/CLI_Demo_ekran_kaydi.mp4
+altında; önceki açıklayıcı video ayrıca korunur.

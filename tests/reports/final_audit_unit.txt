@@ -32,6 +32,6 @@ test_validation (test_engine.EngineTests.test_validation) ... ok
 test_real_stdio_handshake_list_call_cli_parity (test_mcp_contract.MCPContractTests.test_real_stdio_handshake_list_call_cli_parity) ... ok
 
 ----------------------------------------------------------------------
-Ran 28 tests in 17.514s
+Ran 28 tests in 17.951s
 
 OK

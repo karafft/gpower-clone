@@ -18,18 +18,19 @@
   },
   "contract_exceptions_separately_checked": 2,
   "scale_cases": 540,
-  "live_llm_calls": 0,
+  "live_llm_calls": 29,
   "original_screenshots_supplied": true,
   "binary_shipped": false,
   "github_written": true,
-  "source_sha256": "b87d7be6f3d89d63d74b505b555881dd6502d73ca9c3a2cbbb5946919e475214",
+  "source_sha256": "e63fa3a3022136ce959223b0ecc5a39ee43cbbccc4739fc0093edd6943c684f2",
   "demo_seconds": 60,
-  "demo_is_screen_recording": false,
+  "demo_is_screen_recording": true,
   "windows_exe_launcher": "Blocked by AppControl4551; security settings unchanged",
   "verified_windows_alternative": "Python module and gpower-clone.cmd",
   "pending": [
-    "Live provider evaluation and actual GUI/MCP token comparison",
-    "Team final review and instructor hidden competition gate"
+    "Agent end-to-end accuracy improvement and new live validation",
+    "Measured GUI-agent/MCP token and time comparison",
+    "Team final review and instructor hidden gate"
   ],
   "read_first": "TESLIM_DURUMU.md",
   "prospective_gui_validation": {
@@ -63,5 +64,26 @@
     "failed": 7,
     "classification": "Four non-native textual tool intents; three HTTP429 failures; completed responses also require correctness review",
     "successful_certification": false
-  }
+  },
+  "live_llm_calls_scope": "Recorded provider responses: 7 local Groq +17 Gemini run1 +5 Gemini run2; not successful-case count",
+  "live_evaluation_attempts": [
+    {
+      "provider": "Groq",
+      "completed": 3,
+      "failed": 7
+    },
+    {
+      "provider": "Gemini run1",
+      "completed": 10,
+      "failed": 0,
+      "tool_input_accuracy": 0.3,
+      "output_accuracy": 0.3
+    },
+    {
+      "provider": "Gemini run2",
+      "completed": 2,
+      "failed": 8
+    }
+  ],
+  "demo_file": "demo/CLI_Demo_ekran_kaydi.mp4"
 }
