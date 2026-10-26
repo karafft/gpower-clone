@@ -1,0 +1,9 @@
+{
+  "version": "1.1.0rc4",
+  "contract_version": "1.0.0",
+  "source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1",
+  "source_algorithm": "sorted src/**/*.py then pyproject.toml; relative path bytes+NUL+file bytes",
+  "validation_role": "development/regression; not hidden-gate certificate",
+  "repo_written": false,
+  "live_llm_calls": 0
+}

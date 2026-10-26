@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpower-clone-engine"
+version = "1.1.0rc4"
+description = "SPEC-based independent two-sample t power engine"
+requires-python = ">=3.10"
+dependencies = ["scipy>=1.11,<2"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.12,<2"]
+scale = ["statsmodels>=0.14,<1"]
+
+[project.scripts]
+gpower-clone = "gpower_clone.cli:main"
+gpower-mcp = "gpower_clone.mcp_server:main"
+gpower-agent = "gpower_clone.agent:main"
+gpower-agent-eval = "gpower_clone.agent.evaluate:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gpower_clone*"]

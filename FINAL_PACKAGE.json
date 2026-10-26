@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-26",
+  "version": "1.1.0rc4",
+  "contract_version": "1.0.0",
+  "software_tests": 25,
+  "software_tests_failed": 0,
+  "mcp_parity": {
+    "passed": 33,
+    "total": 33
+  },
+  "source_cases": {
+    "passed": 58,
+    "total": 58
+  },
+  "N_exact": {
+    "passed": 38,
+    "total": 38
+  },
+  "contract_exceptions_separately_checked": 2,
+  "scale_cases": 540,
+  "live_llm_calls": 0,
+  "original_screenshots_supplied": true,
+  "binary_shipped": false,
+  "github_written": false,
+  "source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1",
+  "demo_seconds": 60,
+  "demo_is_screen_recording": false,
+  "windows_exe_launcher": "Blocked by AppControl4551; security settings unchanged",
+  "verified_windows_alternative": "Python module and gpower-clone.cmd",
+  "pending": [
+    "Live provider evaluation and actual GUI/MCP token comparison",
+    "External hidden competition gate result"
+  ],
+  "read_first": "TESLIM_DURUMU.md",
+  "prospective_gui_validation": {
+    "passed": 14,
+    "total": 14,
+    "N_exact": {
+      "passed": 10,
+      "total": 10
+    },
+    "screenshots": 14,
+    "source_unchanged": true,
+    "blinded": false
+  },
+  "sude_screenshots": 60,
+  "total_screenshots": 74,
+  "screenshot_target_met": true,
+  "screenshot_backed_validation": {
+    "passed": 57,
+    "total": 57,
+    "N_exact": 37,
+    "N_cases": 37,
+    "incomplete_output": [
+      "ORC-011"
+    ],
+    "contract_exceptions": [
+      "ORC-050",
+      "ORC-059"
+    ]
+  },
+  "optional_evidence_improvement": "Replace ORC-011 with a screenshot showing calculated output; retain original file and provenance."
+}
