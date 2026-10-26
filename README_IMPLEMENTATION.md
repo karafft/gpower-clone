@@ -64,3 +64,11 @@ yerelde tamamlayın. Anahtar diske yazılmaz.10 sentetik soru gerçek serviste
 çalışır; kullanım ücretine tabi olabilir. Sonuç logs/agent_evaluation.json
 ve logs/agent_calls.jsonl dosyalarında oluşur. Bu kayıtlar incelenmeden
 canlı başarı veya GUI’ye göre token kazancı ilan edilmez.
+
+Groq için yalnız anahtar isteyen kısa yol:
+
+```powershell
+.\.venv\Scripts\python.exe tools\run_live_local.py --groq
+```
+
+Model ve servis adresi projede seçilen Groq değerleriyle doldurulur.

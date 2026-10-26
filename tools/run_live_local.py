@@ -1,5 +1,6 @@
 """Collect provider configuration locally and run the real MCP agent evaluation."""
 import getpass
+import argparse
 import os
 from pathlib import Path
 import subprocess
@@ -8,10 +9,19 @@ from urllib.parse import urlparse
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--groq",action="store_true",help="Use the project's selected Groq model and endpoint; ask only for the local key")
+    args=parser.parse_args()
     root=Path(__file__).resolve().parents[1]
-    model=input("Model adi: ").strip() or os.environ.get("GPOWER_MODEL","")
-    default=os.environ.get("GPOWER_ENDPOINT","https://api.openai.com/v1/chat/completions")
-    endpoint=input(f"Chat Completions URL [{default}]: ").strip() or default
+    if args.groq:
+        model="openai/gpt-oss-20b"
+        endpoint="https://api.groq.com/openai/v1/chat/completions"
+        print("Groq modeli: "+model)
+        print("Servis: "+endpoint)
+    else:
+        model=input("Model adi: ").strip() or os.environ.get("GPOWER_MODEL","")
+        default=os.environ.get("GPOWER_ENDPOINT","https://api.openai.com/v1/chat/completions")
+        endpoint=input(f"Chat Completions URL [{default}]: ").strip() or default
     parsed=urlparse(endpoint)
     if not model or parsed.scheme!="https" or not parsed.netloc or parsed.username or parsed.password:
         print("Model adi ve kullanici/parola icermeyen HTTPS servis URL'si gerekli.")

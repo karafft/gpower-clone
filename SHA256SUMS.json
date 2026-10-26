@@ -2,7 +2,7 @@
   ".gitattributes": "f468ea96cb1c2aef18c405b6243a6a75a80b06dfb920231af9c70dbe0fe32f52",
   ".gitignore": "b51aa3384d8dca1d7a5c2ff90298bc8d3e471a55efa076ecdb10deec1cffd1b7",
   "AGENT_COST.md": "3405c8311c614cd8aefd29011328e34d976632f331f137daae4d5c988820530e",
-  "AGENT_COST_IMPLEMENTATION.md": "07d192a99dc78fc5d391849b81270884b90be398282ed1252f529e02bb626c4c",
+  "AGENT_COST_IMPLEMENTATION.md": "1e6335ddd5c9631895dbbe00b9cf3fd0d985455c3870c7763f4242c3119cd118",
   "CANLI_AJAN_TESTI.cmd": "5714253708a0a40835ebf91daaccb1bd9b4b98784c44fa410b546c2fdf2f2427",
   "CONTRACT.md": "2f7bbf91f809b8a5abc558409e1acd77d82781e6356d1ca13018381b354a83c9",
   "EKIP_TAMAMLANANLAR.md": "4ddfd940ea226d7aaf47fabadc1eb9b4764bd79e9e2ab8bae3487e285c301691",
@@ -11,7 +11,7 @@
   "HALLUCINATIONS_IMPLEMENTATION.md": "6a879646b5ce362fb8877da87f4ed0b28e82134f1cfcee9fe0db3a3e4db87498",
   "LEDGER.md": "7bb3c59d9c4953e26ea3542c5c7a9cf34bb5a8e0eaedc8eeb2d368524838f212",
   "README.md": "cca5dc77a9257b6089b04e3186b6699935b9f1f06eded8bef2acba5db5304c71",
-  "README_IMPLEMENTATION.md": "d9653c56df57a510dd77873a953feceb9036f5c3e5071d279954f4eb43b5159e",
+  "README_IMPLEMENTATION.md": "ccb3eea0c18253d9fcd1c910ca4b6a71554b1946263be450eb521c609e6321f9",
   "REPORT.md": "17a84cf852172edd432a009468c347e9114397cc9995e858adfd0d9441a4a0c6",
   "SOURCE_FREEZE.json": "d2dd432ab5d7c710b362dd0a0d9387926fa31d99704ba591c11a226657b73075",
   "SPEC.md": "af291e83f51435ff734c8d6b37700dec5208383d16357db848170ef193671498",
@@ -60,6 +60,7 @@
   "logs/installed_final_rc4.json": "c74bb9ca4e25df7a480f31e3a197ae60fdea7efa7bef6b3e842efda62a7ba6d3",
   "logs/live_partial_attempt_summary.json": "4b812282ccc49d9f84338a9bf750848aaf56895cf37fd5bf353b39919829a7b8",
   "logs/mcp_parity.jsonl": "0c58f74f57a516f510c79dcb14f072adf52b074f58ec573df839654fd44baf02",
+  "logs/measured_partial_usage.json": "5b36445e199a53c5f1f6ab073b0aebffa3885b57149d42021895ff99417f5b2c",
   "logs/software_summary_final_rc4.json": "bb857a73de63051f22f20b666607176e4cde4efc78c409aeac7b0ebd416dd1ef",
   "logs/software_summary_spec11.json": "2ed197c8345f823a87b2ffd43bf16ecc5428d8f27b4711af5c29979469ecc388",
   "logs/software_summary_spec11rc2.json": "c80c808d2f46f19cb5d8118926a3e5652bd9ed9ea569732f36fd1ec5fc1b9a33",
@@ -225,5 +226,5 @@
   "tools/check_all.py": "b1ac2bc4362f8010cc094c6381722a8d4468eaa6acd53f38f07aa3db2d863837",
   "tools/collect_pe_evidence.py": "466235cd7b96243dd3fc4bdcddf8609ab9cadea350e6a39a3df0a88b20f531d8",
   "tools/generate_scale.py": "fd03c3f7a39b7a0f55799bd2212d8602710b4402b749d275f272595ae3d93047",
-  "tools/run_live_local.py": "ed28d3b0f481a2f8ec291b01440cb939a5fa0fa5628625c42546d4d02796b646"
+  "tools/run_live_local.py": "456b0061d270494ddf81a1ff9a150b8428dbf4e59ecf96d881b82b18b673e37c"
 }

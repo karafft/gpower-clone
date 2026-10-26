@@ -1,3 +1,5 @@
+> **Gerçek kullanım güncellemesi:** Önceki kısmi canlı koşumda7 model yanıtı,4.299 girdi+5.175 çıktı=9.474 toplam token raporlandı. Başarılı canlı MCP çağrısı0; GUI karşılaştırması ve doğrulanmış ücret yok. Kaynak logs/measured_partial_usage.json. Aşağıdaki ilk aşama tablosu tarihsel kayıttır.
+
 # Ajan kullanım ve maliyet kaydı
 
 Tarih: 25 Ekim 2026. Kaynak: bu sohbet ve ayrı temiz uygulama alt oturumu.

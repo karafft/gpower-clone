@@ -1,0 +1,12 @@
+{
+  "scope": "Actual earlier partial live run; not successful end-to-end agent evaluation or GUI comparison",
+  "provider_responses": 7,
+  "responses_with_usage": 7,
+  "input_tokens": 4299,
+  "output_tokens": 5175,
+  "total_tokens": 9474,
+  "successful_live_mcp_calls": 0,
+  "gui_comparison": null,
+  "monetary_cost": null,
+  "reason": "No measured GUI-agent baseline; no verified billing record; raw provider reasoning excluded."
+}
