@@ -38,11 +38,16 @@ gpower-clone --test t2-indep --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --po
 | | |
 |---|---|
 | İncelenen program | G*Power 3.1.9.7 (Windows) |
-| GPower.exe SHA-256 | _eklenecek_ |
+| Resmî GPowerNT.exe SHA-256 | `c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812` |
 | Sözleşme | CONTRACT.md, gpower-clone v1.0.0 |
-| Değerlendirilen sürüm | _eklenecek_ |
+| Değerlendirilen sürüm | 1.1.0rc4 |
 
-## Çalışma düzeni
+## Ekip planındaki çalışma düzeni
+
+Aşağıdaki tablo başlangıç görev planıdır. Gerçek AI oturum ayrımı ve ek katkılar
+[temiz oda kaydında](docs/CLEAN_ROOM_PROVENANCE.md) açıklanır. Bu çalışmadaki statik
+inceleme PE/Capstone ile yapıldı; Ghidra kullanıldığı iddia edilmez.
+
 | Oturum | Kim | Gördüğü kaynaklar | Ürettiği |
 |---|---|---|---|
 | İnceleme | Sude | GPower.exe, REA, Ghidra, G*Power arayüzü | LEDGER.md, SPEC.md, oracle/ |
