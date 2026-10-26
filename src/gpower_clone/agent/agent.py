@@ -27,6 +27,29 @@ Desteklenmeyen ama tanımlanabilen aileye ambiguous deme; yalnız gerçekten bel
 Hesap için gerçek API tool_calls/function çağrısı üret. Metin içinde tool/arguments yazmak araç çağrısı değildir.
 Araç sonucu gelmeden sayı hesaplama veya sonuç onayı isteme. Açık sayısal girdiler tekrar onay gerektirmez."""
 
+MODES = ["a-priori", "post-hoc", "compromise", "criterion", "sensitivity"]
+FIELD_HINTS = {
+    "tails": "1 = tek yönlü, 2 = çift yönlü",
+    "d": "Cohen d etki büyüklüğü (> 0)",
+    "ratio": "Grup oranı N2/N1 (birinci grup kaç kişiyse ikinci grup onun kaç katı)",
+    "n1": "Birinci gruptaki kişi sayısı", "n2": "İkinci gruptaki kişi sayısı",
+    "beta_alpha_ratio": "Yalnız compromise modunda β/α oranı",
+}
+
+def model_schema(schema):
+    """Copy of the MCP input schema with the allowed test and mode values spelled out
+    for the model. The MCP server and its validation stay unchanged."""
+    schema = json.loads(json.dumps(schema))
+    props = schema.get("properties", {})
+    if "test" in props:
+        props["test"].update(enum=["t2-indep"], description="Test kimliği; bu araç yalnız t2-indep hesaplar")
+    if "mode" in props:
+        props["mode"].update(enum=MODES, description="a-priori: N hesapla; post-hoc: güç hesapla; compromise, criterion, sensitivity")
+    for name, hint in FIELD_HINTS.items():
+        if name in props:
+            props[name]["description"] = hint
+    return schema
+
 def complete(messages, tools, endpoint, model, key, tool_choice="auto"):
     body = {"model": model, "messages": messages, "tools": tools, "tool_choice": tool_choice}
     request = Request(endpoint, data=json.dumps(body).encode(), headers={"Content-Type":"application/json", "Authorization":"Bearer "+key, "User-Agent":"gpower-clone/1.1.0rc4"}, method="POST")
@@ -52,7 +75,7 @@ async def chat(args, key):
         async with ClientSession(read, write, read_timeout_seconds=timedelta(seconds=30)) as session:
             await session.initialize()
             listed = await session.list_tools()
-            tools = [{"type":"function", "function":{"name": t.name, "description":t.description, "parameters":t.inputSchema}} for t in listed.tools]
+            tools = [{"type":"function", "function":{"name": t.name, "description":t.description, "parameters":model_schema(t.inputSchema)}} for t in listed.tools]
             messages = [{"role":"system", "content":SYSTEM}]
             if getattr(args,"structured",False):
                 messages.append({"role":"system","content":"Son yanıtın yalnız JSON olsun: {\"action\":\"call_tool|ask_user|report_unsupported\",\"label\":\"t2-indep veya tanımladığın test ailesi veya ambiguous\",\"message\":\"Türkçe açıklama/soru\"}. call_tool yalnız gerçek araç çağrısı yaptığında kullanılabilir. Desteklenmeyen aileyi adıyla sınıflandır; belirsiz aile ambiguous. Eksik bilgi için action=ask_user kullan; label bilinen test ailesi olsun, aile belirsizse ambiguous olsun."})
