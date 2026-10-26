@@ -1,0 +1,237 @@
+{
+  "status": "live_partial",
+  "cases": 10,
+  "completed": 2,
+  "failed": 8,
+  "metrics": {
+    "label_correct": 0.2,
+    "action_correct": 0.2,
+    "tool_input_correct": 0.2,
+    "output_correct": 0.2
+  },
+  "metric_denominators": {
+    "label_correct": 10,
+    "action_correct": 10,
+    "tool_input_correct": 10,
+    "output_correct": 10
+  },
+  "rows": [
+    {
+      "id": "R01",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "call_tool",
+          "label": "t2-indep",
+          "message": "Her gruba 88 kişi gerekir."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "tails": 1,
+              "test": "t2-indep",
+              "d": 0.5,
+              "mode": "a-priori",
+              "alpha": 0.05,
+              "power": 0.95,
+              "ratio": 1
+            },
+            "tool_output": {
+              "ncp": 3.3166247903554003,
+              "critical_t": 1.6536580165162151,
+              "df": 174,
+              "n1": 88,
+              "n2": 88,
+              "n_total": 176,
+              "actual_power": 0.9514254482775332
+            },
+            "is_error": false
+          }
+        ],
+        "final_text": "{\"action\":\"call_tool\",\"label\":\"t2-indep\",\"message\":\"Her gruba 88 kişi gerekir.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": true,
+        "tool_input_correct": true,
+        "output_correct": true
+      }
+    },
+    {
+      "id": "R02",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R03",
+      "status": "completed",
+      "result": {
+        "decision": {
+          "action": "call_tool",
+          "label": "t2-indep",
+          "message": "İki bağımsız grupta, n1=88, n2=88, d=0.5 ve tek yönlü compromise analizinde beta/alpha oranı 1 olduğunda, alpha 0.0493 ve güç 0.9507 olarak hesaplanmıştır."
+        },
+        "tool_calls": [
+          {
+            "tool_input": {
+              "tails": 1,
+              "n1": 88,
+              "test": "t2-indep",
+              "mode": "compromise",
+              "n2": 88,
+              "beta_alpha_ratio": 1,
+              "d": 0.5
+            },
+            "tool_output": {
+              "ncp": 3.3166247903554003,
+              "critical_t": 1.6606858874423187,
+              "df": 174,
+              "alpha": 0.049288730630276334,
+              "power": 0.9507112693697237,
+              "beta": 0.04928873063027628
+            },
+            "is_error": false
+          }
+        ],
+        "final_text": "{\"action\":\"call_tool\",\"label\":\"t2-indep\",\"message\":\"İki bağımsız grupta, n1=88, n2=88, d=0.5 ve tek yönlü compromise analizinde beta/alpha oranı 1 olduğunda, alpha 0.0493 ve güç 0.9507 olarak hesaplanmıştır.\"}"
+      },
+      "scores": {
+        "label_correct": true,
+        "action_correct": true,
+        "tool_input_correct": true,
+        "output_correct": true
+      }
+    },
+    {
+      "id": "R04",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R05",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R06",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R07",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R08",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R09",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R10",
+      "status": "failed",
+      "error_type": "ExceptionGroup",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    }
+  ]
+}

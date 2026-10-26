@@ -12,7 +12,7 @@ YZM301 Teardown Sprint · Aile: t2-indep (K1) · Ekip: Sude Naz Öztoprak, Merve
 |---|---|
 | CLI (temel) | ✅ Beş mod: a-priori, post-hoc, compromise, criterion, sensitivity |
 | MCP sunucusu | ✅ `power_analysis` aracı; CLI ile eşdeğerlik testi geçiyor |
-| AI ajanı | ⚠️ Kod ve testler hazır. Canlı model değerlendirmesi ve GUI ile token karşılaştırması **yapılmadı** (bkz. Bilinen sınırlar) |
+| AI ajanı | ⚠️ Gerçek model (Gemini 2.5 Flash) ile MCP üzerinden canlı değerlendirme yapıldı; sonuçlar aşağıda. GUI ile token karşılaştırması **yapılmadı** |
 
 ## Sonuçlar
 
@@ -66,6 +66,21 @@ MCP sunucusu (stdio): `python -m gpower_clone.mcp_server`. Araç şeması ve aja
 
 ▶️ **[60 saniyelik CLI demosu (YouTube)](https://youtu.be/vt77iAK14kM)**: sürüm bilgisi, a-priori, eşit olmayan grup oranı, post-hoc, sensitivity ve iki geçersiz girdi. Aynı adımlar `powershell -ExecutionPolicy Bypass -File demo\run_demo.ps1` ile yeniden çalıştırılabilir.
 
+## Ajan değerlendirmesi (canlı)
+
+Ajan, Türkçe ve kurgusal 10 klinik soruyu gerçek bir LLM ile yanıtladı. Hesabı model yapmadı; her sayı `power_analysis` MCP aracından, yani motordan geldi. Model: Gemini 2.5 Flash (Google AI Studio, OpenAI uyumlu uç nokta). Sorular arasında 30 saniye beklendi.
+
+| Koşum | Tamamlanan | Aile doğru | Davranış doğru | Araç girdisi doğru | Sonuç doğru | Token (giriş / çıkış) |
+|---|---|---|---|---|---|---|
+| 1. koşum | 10/10 | 7/10 | 4/10 | 3/10 | 3/10 | 6.689 / 883 |
+| 2. koşum (şema düzeltmesinden sonra) | 2/10 | 2/10 | 2/10 | 2/10 | 2/10 | 2.797 / 288 |
+
+- **1. koşum:** Model aracı `test: "t-indep"` ve `mode: "n"` gibi sözleşmede olmayan değerlerle çağırdı. Neden: ajanın modele gösterdiği araç şemasında bu alanların izin verilen değerleri yazmıyordu ([HALLUCINATIONS.md](HALLUCINATIONS.md), H-004).
+- **Düzeltme:** Modele gösterilen şemada `test` yalnızca `t2-indep`, `mode` yalnızca beş mod adı olacak şekilde sınırlandı. MCP sunucusu ve motor değişmedi.
+- **2. koşum:** Tamamlanan iki soru (R01, R03), 1. koşumda başarısız olan sorulardı ve dört ölçütte de doğru çıktı. Kalan 8 soru başarısız oldu: model istekleri hata verdi, aynı gün yapılan ilk koşumdan sonra ücretsiz kota sınırıyla uyumlu bir zamanlama var. Bu 8 soru ölçülemediği için düzeltmenin toplam etkisi bilinmiyor.
+
+Kayıtlar: `logs/agent_calls.jsonl` (iki koşumun araç çağrıları), `logs/live_run1_gemini/`, `logs/live_run2_gemini_partial/` (rapor, çağrılar, model yanıtları). Log'larda API anahtarı yoktur.
+
 ## MCP aracı: `power_analysis`
 
 | | |
@@ -118,7 +133,7 @@ Kod AI oturumlarıyla üretildi; bu, temiz oda kaydında ve maliyet günlüğün
 
 ## Bilinen sınırlar
 
-- **Canlı ajan değerlendirmesi yapılmadı.** Ajan kodu ve sahte sağlayıcıyla MCP döngüsü testleri geçiyor. Gerçek bir LLM ile 10 soruluk değerlendirme ve GUI ile token karşılaştırması bir API anahtarı gerektiriyor. Ölçülmemiş sonuç yazılmadı.
+- **Ajan değerlendirmesi eksik.** Düzeltilmiş ajanın 10 sorunun yalnızca 2'sinde ölçümü var (kota sınırı). Aynı soruların G*Power arayüzünden ekran görüntüsüyle çözülüp token ve süre karşılaştırması yapılmadı. Ölçülmemiş sonuç yazılmadı.
 - **REA ve Ghidra araçları kullanılmadı.** Statik binary incelemesi Python PE okuması ve Capstone ile yapıldı. [REA] kayıtları gerçek adres ve dize referanslarına dayanıyor, ama ders aracının kullanılabilirlik ekran görüntüsü yok.
 - Eski ara raporlar `tests/reports/`, `logs/` ve `docs/history/` altında tarihsel kayıt olarak duruyor. Güncel sonuçlar `final_audit` önekli dosyalardadır.
 
