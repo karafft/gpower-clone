@@ -1,0 +1,146 @@
+{
+  "kind": "Actual user-run live evaluation before tool-intent and rate-limit fixes",
+  "completed": 3,
+  "failed": 7,
+  "rows": [
+    {
+      "id": "R01",
+      "status": "failed",
+      "errors": [
+        {
+          "type": "ValueError"
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R02",
+      "status": "failed",
+      "errors": [
+        {
+          "type": "ValueError"
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R03",
+      "status": "failed",
+      "errors": [
+        {
+          "type": "ValueError"
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R04",
+      "status": "completed",
+      "scores": {
+        "label_correct": true,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R05",
+      "status": "failed",
+      "errors": [
+        {
+          "type": "ValueError"
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R06",
+      "status": "completed",
+      "scores": {
+        "label_correct": true,
+        "action_correct": true,
+        "tool_input_correct": true,
+        "output_correct": true
+      }
+    },
+    {
+      "id": "R07",
+      "status": "failed",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R08",
+      "status": "completed",
+      "scores": {
+        "label_correct": false,
+        "action_correct": true,
+        "tool_input_correct": true,
+        "output_correct": true
+      }
+    },
+    {
+      "id": "R09",
+      "status": "failed",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    },
+    {
+      "id": "R10",
+      "status": "failed",
+      "errors": [
+        {
+          "type": "HTTPError",
+          "http_status": 429
+        }
+      ],
+      "scores": {
+        "label_correct": false,
+        "action_correct": false,
+        "tool_input_correct": false,
+        "output_correct": false
+      }
+    }
+  ],
+  "interpretation": "Not a successful live-agent certification; model responses, formatting failures, and 429 failures distinguished."
+}

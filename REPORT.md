@@ -4,7 +4,7 @@
 
 | Kontrol | Sonuç | Kayıt |
 |---|---|---|
-| Yazılım, gerçek MCP dahil |26/26 test geçti |tests/reports/final_audit_unit.txt |
+| Yazılım, gerçek MCP dahil |28/28 test geçti |tests/reports/final_audit_unit.txt |
 | MCP/CLI |33/33 tam metin eşdeğerliği |logs/mcp_parity.jsonl |
 | Açık sayısal vektörler |5/5 t2-indep;20 başka aile dışlandı |tests/reports/final_audit_public.json |
 | Sude özgün görsel destekli set |57/57;37/37 N |tests/reports/final_audit_screenshots57.json |
@@ -29,5 +29,7 @@ yarışma testi değildir.540 karşılaştırma ortak SciPy altyapısı kullanab
 Mevcut kanıtlar tüm girdilerde doğruluk veya tüm makinelerde2s garantisi vermez.
 Eski raporlar tarihsel dosyalardır; güncel koşumlar final_audit öneklidir.
 
-Canlı model çağrısı0; doğal dil anlama başarısı ve gerçek token maliyeti
-ölçülmedi. [Kalan gerçek ölçümler](docs/FINAL_AUDIT.md).
+Gerçek kullanıcı koşumunda3 tamamlanan ve7 başarısız deneme kaydedildi;
+başarılı canlı ajan sertifikası değildir. Ayrıntı logs/live_partial_attempt_summary.json
+içindedir. Araç niyeti/native çağrı ayrımı ve429 beklemesi düzeltildi;
+yeniden canlı koşum bekleniyor. Gerçek GUI karşılaştırması yapılmadı. [Kalan gerçek ölçümler](docs/FINAL_AUDIT.md).

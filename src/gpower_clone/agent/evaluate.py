@@ -41,7 +41,8 @@ def score_case(case, result):
 
 async def evaluate_cases(cases, args, key, run_one=chat):
     rows=[]
-    for case in cases:
+    for index,case in enumerate(cases):
+        if index and getattr(args,"delay",0): await asyncio.sleep(args.delay)
         request=argparse.Namespace(question=case["question"],model=args.model,endpoint=args.endpoint,log=args.log,structured=True)
         try:
             with redirect_stdout(io.StringIO()): result=await run_one(request,key)
@@ -66,7 +67,9 @@ def main(argv=None):
     parser.add_argument("--model",default=os.environ.get("GPOWER_MODEL"))
     parser.add_argument("--endpoint",default=os.environ.get("GPOWER_ENDPOINT","https://api.openai.com/v1/chat/completions"))
     parser.add_argument("--run-live",action="store_true")
+    parser.add_argument("--delay",type=float,default=0,help="Seconds between cases, 0 to 60; useful for free-tier limits")
     args=parser.parse_args(argv)
+    if not math.isfinite(args.delay) or not 0 <= args.delay <= 60: parser.error("delay must be between 0 and 60 seconds")
     key=os.environ.get("GPOWER_API_KEY") or os.environ.get("OPENAI_API_KEY")
     if not args.run_live or not key or not args.model:
         print(json.dumps({"status":"not_run","reason":"Requires --run-live, configured API key, and model", "cases_executed":0,"metrics":None}))

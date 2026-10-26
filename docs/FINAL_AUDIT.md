@@ -40,3 +40,15 @@ HTTP403/1010, uygulama User-Agent başlığıyla beklenen HTTP401 alındı.
 Standart uygulama başlığı eklendi; iç HTTP durumları sırları açmadan
 raporlanır. Tamamlanmış yanıt yoksa doğruluk metrikleri artık null olur.
 Gerçek anahtarla tekrar koşum hâlâ gereklidir. Sayısal motor değişmedi.
+
+## İkinci canlı deneme
+
+Gerçek model3/10 son yanıt üretti; dört kayıt gerçek tool_calls yerine
+metinsel call_tool niyeti, üç kayıt HTTP429 nedeniyle başarısız oldu.
+Tamamlanan yanıtlar da otomatik başarı sayılmaz. Metinsel niyet üzerine
+yerel hesap yapılmaz: modelden zorunlu native function çağrısı istenir,
+gerçek MCP sonucu geldikten sonra son yanıt alınır. Testler bu yolu
+gerçek stdio MCP ile doğrular. Standart429 retry-after en fazla60 saniyelik
+beklemelerle üç kez yeniden denenir. Yerel başlatıcı sorular arasında
+30 saniye bekler. Sağlayıcının reasoning metadatası yeni günlüklere
+yazılmaz ve sonraki istemlere gönderilmez. Gerçek yeniden deneme gerekir.

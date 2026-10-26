@@ -24,7 +24,8 @@ def main():
         return 2
     child=dict(os.environ,GPOWER_MODEL=model,GPOWER_ENDPOINT=endpoint,GPOWER_API_KEY=key)
     print("10 sentetik soru gercek model ve MCP ile denenecek; servis kullanim ucreti olabilir.")
-    result=subprocess.run([sys.executable,"-m","gpower_clone.agent.evaluate","--run-live"],cwd=root,env=child)
+    print("Ucretsiz kota icin sorular arasinda 30 saniye beklenir. Yaklasik 5-10 dakika surebilir.")
+    result=subprocess.run([sys.executable,"-m","gpower_clone.agent.evaluate","--run-live","--delay","30"],cwd=root,env=child)
     child.pop("GPOWER_API_KEY",None)
     print("Rapor: logs/agent_evaluation.json; cagrilar: logs/agent_calls.jsonl")
     print("Gercek GUI ajan kaydi alinmadan GUI/MCP token kazanci hesaplanamaz.")

@@ -4,6 +4,8 @@ test_no_key_no_provider_call (test_agent.AgentTests.test_no_key_no_provider_call
                               --synthetic-case
 python.exe -m unittest: error: Set API key in GPOWER_API_KEY/OPENAI_API_KEY and model in --model/GPOWER_MODEL; no provider call was made
 ok
+test_rate_limit_retries_without_exposing_provider_body (test_agent.AgentTests.test_rate_limit_retries_without_exposing_provider_body) ... ok
+test_textual_tool_intent_requires_real_mcp_execution (test_agent.AgentTests.test_textual_tool_intent_requires_real_mcp_execution) ... ok
 test_missing_config_produces_no_metrics (test_agent_evaluation.AgentEvaluationTests.test_missing_config_produces_no_metrics) ... ok
 test_mock_scoring_all_public_synthetic_questions (test_agent_evaluation.AgentEvaluationTests.test_mock_scoring_all_public_synthetic_questions) ... ok
 test_null_oracle_is_unknown_not_success (test_agent_evaluation.AgentEvaluationTests.test_null_oracle_is_unknown_not_success) ... ok
@@ -30,6 +32,6 @@ test_validation (test_engine.EngineTests.test_validation) ... ok
 test_real_stdio_handshake_list_call_cli_parity (test_mcp_contract.MCPContractTests.test_real_stdio_handshake_list_call_cli_parity) ... ok
 
 ----------------------------------------------------------------------
-Ran 26 tests in 16.960s
+Ran 28 tests in 17.514s
 
 OK

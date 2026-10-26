@@ -2,7 +2,7 @@
   "date": "2026-10-26",
   "version": "1.1.0rc4",
   "contract_version": "1.0.0",
-  "software_tests": 26,
+  "software_tests": 28,
   "software_tests_failed": 0,
   "mcp_parity": {
     "passed": 33,
@@ -22,7 +22,7 @@
   "original_screenshots_supplied": true,
   "binary_shipped": false,
   "github_written": true,
-  "source_sha256": "2b862ad4ed603bfe4de57cb44cc329d0d84e80ac6241a2c0f209b6bcc69a6d9f",
+  "source_sha256": "b87d7be6f3d89d63d74b505b555881dd6502d73ca9c3a2cbbb5946919e475214",
   "demo_seconds": 60,
   "demo_is_screen_recording": false,
   "windows_exe_launcher": "Blocked by AppControl4551; security settings unchanged",
@@ -59,8 +59,9 @@
   "orc011_replayed": true,
   "final_audit_report": "docs/FINAL_AUDIT.md",
   "live_evaluation_attempt": {
-    "completed": 0,
-    "failed": 10,
-    "classification": "Transport/setup failure; no valid model-accuracy estimate"
+    "completed": 3,
+    "failed": 7,
+    "classification": "Four non-native textual tool intents; three HTTP429 failures; completed responses also require correctness review",
+    "successful_certification": false
   }
 }

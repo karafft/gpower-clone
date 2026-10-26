@@ -6,7 +6,9 @@ import json
 import os
 from pathlib import Path
 import sys
+import time
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
@@ -19,11 +21,23 @@ Eksik veya belirsiz bilgi varsa sor; sessiz varsayılan kullanma. 'Orta etki' gi
 bağımsız t için d=0.5 önerisini varsayım olarak açıkla ve onay iste, sonra çağır.
 Kuyruk ve grup oranını tahmin etme. Araç hatasını dürüstçe açıkla. G*Power eşdeğerliği kanıtlanmış deme.
 Hasta kimlikleri veya gerçek kişi verileri isteme; yalnız sentetik/kimliksiz tasarım bilgisi kullan."""
+SYSTEM += """\nTest ailesi etiketleri: bağımsız iki grup=t2-indep; eşleştirilmiş önce/sonra=t-paired;
+üç veya daha fazla bağımsız grup için tek yönlü ANOVA=anova-oneway.
+Desteklenmeyen ama tanımlanabilen aileye ambiguous deme; yalnız gerçekten belirsiz tasarım ambiguous olur.
+Hesap için gerçek API tool_calls/function çağrısı üret. Metin içinde tool/arguments yazmak araç çağrısı değildir.
+Araç sonucu gelmeden sayı hesaplama veya sonuç onayı isteme. Açık sayısal girdiler tekrar onay gerektirmez."""
 
-def complete(messages, tools, endpoint, model, key):
-    body = {"model": model, "messages": messages, "tools": tools, "tool_choice": "auto"}
+def complete(messages, tools, endpoint, model, key, tool_choice="auto"):
+    body = {"model": model, "messages": messages, "tools": tools, "tool_choice": tool_choice}
     request = Request(endpoint, data=json.dumps(body).encode(), headers={"Content-Type":"application/json", "Authorization":"Bearer "+key, "User-Agent":"gpower-clone/1.1.0rc4"}, method="POST")
-    with urlopen(request, timeout=60) as response: return json.load(response)
+    for attempt in range(4):
+        try:
+            with urlopen(request, timeout=60) as response: return json.load(response)
+        except HTTPError as exc:
+            if exc.code != 429 or attempt == 3: raise
+            try: wait=float(exc.headers.get("retry-after",60))
+            except (ValueError,TypeError,AttributeError): wait=60
+            time.sleep(min(60,max(1,wait)))
 
 def log_record(path, **fields):
     path = Path(path)
@@ -50,9 +64,13 @@ async def chat(args, key):
                 if question.strip() == "/quit": return
                 messages.append({"role":"user", "content":question})
                 trace=[]
+                next_tool_choice="auto"
                 for _ in range(8):
-                    response = await asyncio.to_thread(complete, messages, tools, args.endpoint, args.model, key)
-                    message = response["choices"][0]["message"]
+                    response = await asyncio.to_thread(complete, messages, tools, args.endpoint, args.model, key, next_tool_choice)
+                    next_tool_choice="auto"
+                    # Keep API-visible messages and logs; discard provider reasoning metadata.
+                    raw_message = response["choices"][0]["message"]
+                    message={k:v for k,v in raw_message.items() if k in {"role","content","tool_calls"}}
                     messages.append(message)
                     usage = response.get("usage")
                     log_record(str(Path(args.log).with_name("llm_responses.jsonl")), event="llm_response", question=question, output=message, usage=usage, provider_response_id=response.get("id"), synthetic=True)
@@ -62,7 +80,11 @@ async def chat(args, key):
                         decision=json.loads(content) if getattr(args,"structured",False) else None
                         if decision is not None:
                             if not isinstance(decision,dict) or decision.get("action") not in {"call_tool","ask_user","report_unsupported"}: raise ValueError("Invalid structured agent decision")
-                            if decision["action"]=="call_tool" and not trace: raise ValueError("Model claimed a tool call without actual execution")
+                            if decision["action"]=="call_tool" and not trace:
+                                # A declared intent is not evidence. Require an actual native call.
+                                messages.append({"role":"system","content":"Henüz araç çalıştırılmadı. Şimdi tools listesindeki power_analysis için gerçek API tool_calls çağrısını üret; ardından sonucunu okuyarak son JSON yanıtını ver."})
+                                next_tool_choice={"type":"function","function":{"name":"power_analysis"}}
+                                continue
                         print(content)
                         break
                     for index, call in enumerate(calls):

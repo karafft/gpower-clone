@@ -7,9 +7,31 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-from gpower_clone.agent.agent import chat, main
+from urllib.error import HTTPError
+from gpower_clone.agent.agent import chat, main, complete
 
 class AgentTests(unittest.TestCase):
+    def test_rate_limit_retries_without_exposing_provider_body(self):
+        with patch("gpower_clone.agent.agent.urlopen",side_effect=[HTTPError("https://example.invalid",429,"private",{"retry-after":"2"},None),io.BytesIO(b'{"choices":[]}')]),patch("gpower_clone.agent.agent.time.sleep") as sleep:
+            self.assertEqual(complete([],[],"https://example.invalid","mock","not-real"),{"choices":[]})
+            sleep.assert_called_once_with(2)
+
+    def test_textual_tool_intent_requires_real_mcp_execution(self):
+        args_json=json.dumps(dict(test="t2-indep",mode="post-hoc",tails=1,d=.5,alpha=.05,n1=88,n2=88))
+        responses=[
+            {"choices":[{"message":{"role":"assistant","content":json.dumps({"action":"call_tool","label":"t2-indep","message":"intent only"}),"reasoning":"not retained"}}]},
+            {"choices":[{"message":{"role":"assistant","content":None,"tool_calls":[{"id":"real1","type":"function","function":{"name":"power_analysis","arguments":args_json}}]}}]},
+            {"choices":[{"message":{"role":"assistant","content":json.dumps({"action":"call_tool","label":"t2-indep","message":"done"})}}]},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            args=argparse.Namespace(question="synthetic explicit case",endpoint="https://example.invalid",model="mock-only",log=str(Path(folder)/"calls.jsonl"),structured=True)
+            with patch("gpower_clone.agent.agent.complete",side_effect=responses) as provider,redirect_stdout(io.StringIO()):
+                result=asyncio.run(chat(args,"mock-key"))
+            self.assertEqual(len(result["tool_calls"]),1)
+            self.assertAlmostEqual(result["tool_calls"][0]["tool_output"]["power"],.9514254482775332)
+            self.assertEqual(provider.call_args_list[1].args[5],{"type":"function","function":{"name":"power_analysis"}})
+            self.assertNotIn('"reasoning"',(Path(folder)/"llm_responses.jsonl").read_text())
+
     def test_no_key_no_provider_call(self):
         with patch.dict("os.environ", {}, clear=True), patch("gpower_clone.agent.agent.complete") as provider, redirect_stdout(io.StringIO()):
             with self.assertRaises(SystemExit) as result:
