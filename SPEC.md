@@ -71,7 +71,8 @@ Statik bulgunun tam kaynak/hash ve sınırlamaları docs/REA_STATIC_FINDINGS.md'
 
 [REA-STATIC-002/005/007] Verilen alpha ve power alanlarında
 1e-7<=değer<=0.9999999; a-priori ratio için0.01<=ratio<=100 uçlar dahil
-aralıkları uygulanır. Sözleşme içinde olup bu gözlenen aralıkların dışında
+aralıkları uygulanır. Bu alpha/power sınırları girdiler içindir; ters çözümden
+üretilen alpha/power çıktıları aynı aralığa zorlanmaz. Sözleşme içinde olup bu gözlenen aralıkların dışında
 kalan girdiler de OUT_OF_RANGE olur. Testler uçların hemen iki yanını kapsar.
 
 [Arama sınırı] En büyük çift toplam2.147.483.646. Bu büyüklük statik
@@ -81,13 +82,13 @@ Bu sınırda hedefe ulaşılamazsa NO_SOLUTION.
 ## Diğer modlar
 
 Post-hoc verilen N ile yukarıdaki gücü hesaplar.
-Criterion verilen delta ve hedef güce karşı c eşiğini çözer; alpha=t.sf(c)*tails.
-Compromise beta/alpha=q kökünü çözer; beta=1-power, alpha=t.sf(c)*tails.
+Criterion verilen delta ve hedef güce karşı c eşiğini çözer; alpha=t.sf(c,df)*tails.
+Compromise beta/alpha=q kökünü çözer; beta=1-power, alpha=t.sf(c,df)*tails.
 Sensitivity sabit alpha ve N ile hedef gücü veren delta>=0 kökünü çözer;
 d=delta/sqrt(n1*n2/(n1+n2)).
 
 [Matematiksel açıklama; uçta yeni GUI gözlemi yok] Sensitivity power<alpha
-ise nonnegative etkiyle çözüm yok; eşitlikte delta=d=0 ve normal c,df döner.
+ise doğrulama INCONSISTENT, field=power üretir; eşitlikte delta=d=0 ve normal c,df döner.
 Yakın değerler eşitliğe yuvarlanmaz.
 
 [Mühendislik kararı] Ters çözüm aramalarında delta/eşik büyüklük korumaları
@@ -103,3 +104,52 @@ testinden ayrıdır. Gizli kapının geçildiği bu belgeyle iddia edilmez.
 
 Temiz uygulama oturumuna yalnız davranış şartnamesi ve sınır ekleri verildi;
 ham DOCX, binary, ekran görüntüsü veya oracle sonuç raporları açılmadı.
+
+## Türler, hata alanları ve sayısal korumalar
+
+`tails`, `n1`, `n2` gerçek tam sayı olmalıdır; bool kabul edilmez.
+CLI metninde `2` geçerli, `2.0` ve `2e0` bu alanlarda INVALID_VALUE’dur.
+API/MCP JSON girdisinde de `2.0` float olduğu için reddedilir. Diğer sayılar
+sonlu int/float veya noktalı ondalık/bilimsel sayı metni olabilir; virgüllü
+ondalık, NaN ve Infinity reddedilir. Zorunlu çıktı alanlarından df/n1/n2/n_total
+JSON int’tir; diğer sayısal çıktılar tam double hassasiyetle serileştirilir.
+
+| Durum | code | field |
+|---|---|---|
+| Zorunlu alan yok | MISSING_PARAM | Eksik alanın adı |
+| Bilinmeyen veya moda ilgisiz alan | UNKNOWN_PARAM | Alanın adı |
+| Sayısal tür/biçim hatası veya CLI’de yinelenen alan | INVALID_VALUE | Alanın adı |
+| Geçerli biçim, izin verilen aralığın dışında | OUT_OF_RANGE | Alanın adı |
+| A-priori/sensitivity power<alpha | INCONSISTENT | power |
+| Desteklenmeyen test/mod | UNSUPPORTED | test veya mode |
+| A-priori tahsis sonunda bir grup<2 | NO_SOLUTION | ratio |
+| Arama koruması içinde hedefe ulaşılamadı | NO_SOLUTION | power veya beta_alpha_ratio |
+| Beklenmeyen çalışma zamanı hatası | INTERNAL_ERROR | null |
+
+Hata JSON’u error açıklaması, code ve field içerir. Açıklamanın birebir
+G*Power hata metni olduğu iddia edilmez. Birden fazla hatalı alan varsa bütün
+hataların birlikte listelenmesi veya belirli bir öncelik sırası garanti edilmez.
+NO_SOLUTION sayısal backend/arama korumasından da doğabilir; G*Power’ın aynı
+noktada mutlaka hata verdiğinin kanıtı değildir.
+
+Sürekli a-priori çözüm uygulamada [4, üst braket] aralığında Brent yöntemiyle,
+xtol=1e-10 ve en çok300 iterasyonla aranır. Sensitivity ve eşik kökleri
+xtol=1e-12 kullanır. Çift yönlü criterion/compromise için c>=0, tek yönlüde
+negatif c mümkündür. Bu çözücü seçimleri mühendislik kararlarıdır; özgün
+programın aynı iterasyonları yaptığı iddiası değildir.
+
+## Tekrarlanabilir kabul örnekleri
+
+| Kaynak | Girdi özeti | Beklenen gözlem |
+|---|---|---|
+| ORC-011-REPLAY | tails=2,d=.5,alpha=.05,power=.8,ratio=.5 | n1=96,n2=48,N=144 |
+| NEW-VAL-002 | tails=2,d=.95,alpha=.02,power=.93,ratio=.4 | n1=59,n2=23,N=82,actual_power=.9295480 |
+| ORC-046/048 | power=alpha=.05; diğer kaynak girdileri sabit | Eşitlik kabulü,2+2 kişi |
+| ORC-050/059 | Negatif d / kesirli n1 | GUI başarısı; CLI sözleşme gereği reddeder |
+
+[REA] kaynakları: [statik bulgular](docs/REA_STATIC_FINDINGS.md),
+[GUI bulguları](docs/REA_GUI_FINDINGS.md), [Sude görsel kontrolü](docs/SUDE_GORSEL_KONTROLU.md).
+İlgili girdilerin tamamı ve gözlenen çıktılar oracle kayıtlarında bulunur.
+[Okunabilir kabul senaryoları](features/t2_indep.feature) ile tests/ altındaki
+otomatik kontroller aynı motoru sınar; feature dosyası otomatik Gherkin
+çalıştırıcısı kullanıldığı iddiası değildir. [Güncel rapor](REPORT.md).
