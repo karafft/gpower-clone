@@ -1,9 +1,13 @@
 {
   "version": "1.1.0rc4",
   "contract_version": "1.0.0",
-  "source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1",
+  "source_sha256": "dd64b6107669765d6f6bc82df14ffd1ac68173cf535558903f5a426efbd490b0",
   "source_algorithm": "sorted src/**/*.py then pyproject.toml; relative path bytes+NUL+file bytes",
   "validation_role": "development/regression; not hidden-gate certificate",
-  "repo_written": false,
-  "live_llm_calls": 0
+  "repo_written": true,
+  "live_llm_calls": 0,
+  "previous_source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1",
+  "audit_revision": "2026-10-26-final",
+  "source_change": "Turkish agent instruction encoding repaired; numerical engine unchanged",
+  "numerical_core_sha256": "5a218faa8dac1972f37fb7d1b264aad87d12f0f5e36519e15cd52eb0c06d236a"
 }

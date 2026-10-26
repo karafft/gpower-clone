@@ -27,6 +27,7 @@ class AgentTests(unittest.TestCase):
                 asyncio.run(chat(args,"mock-key"))
             self.assertIn("synthetic mock answer",output.getvalue())
             history=provider.call_args_list[1].args[0]
+            self.assertIn("Türkçe",history[0]["content"])
             self.assertTrue(any(x["role"]=="tool" for x in history))
             records=[json.loads(x) for x in log.read_text(encoding="utf-8").splitlines()]
             calls=records

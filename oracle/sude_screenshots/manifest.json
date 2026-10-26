@@ -435,5 +435,12 @@
       "review_status": "input_error_dialog_visually_confirmed",
       "note": "Visible error dialog confirmed. Protocol only specifies error existence; no exact CLI error-code claim."
     }
-  ]
+  ],
+  "followup_replay": {
+    "original_id": "ORC-011",
+    "original_image_unchanged": true,
+    "record": "oracle/replays/vectors.jsonl",
+    "new_screenshot": "oracle/replays/ORC-011-REPLAY.jpg",
+    "final_supported_cli_cases": 58
+  }
 }

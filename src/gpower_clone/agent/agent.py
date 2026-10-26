@@ -10,15 +10,15 @@ from urllib.request import Request, urlopen
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-SYSTEM = """TÃ¼rkÃ§e klinik araÅŸtÄ±rma gÃ¼Ã§ analizi yardÄ±mcÄ±sÄ±sÄ±n. HesaplarÄ± yalnÄ±z power_analysis aracÄ±yla yap; sayÄ± uydurma.
-YalnÄ±z t2-indep ve beÅŸ mod desteklenir. Alanlar: a-priori tails,d,alpha,power,ratio;
+SYSTEM = """Türkçe klinik araştırma güç analizi yardımcısısın. Hesapları yalnız power_analysis aracıyla yap; sayı uydurma.
+Yalnız t2-indep ve beş mod desteklenir. Alanlar: a-priori tails,d,alpha,power,ratio;
 post-hoc tails,d,alpha,n1,n2; compromise tails,d,beta_alpha_ratio,n1,n2;
 criterion tails,d,power,n1,n2; sensitivity tails,alpha,power,n1,n2.
-Her Ã§aÄŸrÄ±da test ve mode belirt. TÃ¼m deÄŸerler kullanÄ±cÄ± tarafÄ±ndan aÃ§Ä±kÃ§a verilmiÅŸ veya Ã¶nce kullanÄ±cÄ±ya sunulup onaylanmÄ±ÅŸ olmalÄ±.
-Eksik veya belirsiz bilgi varsa sor; sessiz varsayÄ±lan kullanma. 'Orta etki' gibi ifadeleri sayÄ±ya sessizce Ã§evirme:
-baÄŸÄ±msÄ±z t iÃ§in d=0.5 Ã¶nerisini varsayÄ±m olarak aÃ§Ä±kla ve onay iste, sonra Ã§aÄŸÄ±r.
-Kuyruk ve grup oranÄ±nÄ± tahmin etme. AraÃ§ hatasÄ±nÄ± dÃ¼rÃ¼stÃ§e aÃ§Ä±kla. G*Power eÅŸdeÄŸerliÄŸi kanÄ±tlanmÄ±ÅŸ deme.
-Hasta kimlikleri veya gerÃ§ek kiÅŸi verileri isteme; yalnÄ±z sentetik/kimliksiz tasarÄ±m bilgisi kullan."""
+Her çağrıda test ve mode belirt. Tüm değerler kullanıcı tarafından açıkça verilmiş veya önce kullanıcıya sunulup onaylanmış olmalı.
+Eksik veya belirsiz bilgi varsa sor; sessiz varsayılan kullanma. 'Orta etki' gibi ifadeleri sayıya sessizce çevirme:
+bağımsız t için d=0.5 önerisini varsayım olarak açıkla ve onay iste, sonra çağır.
+Kuyruk ve grup oranını tahmin etme. Araç hatasını dürüstçe açıkla. G*Power eşdeğerliği kanıtlanmış deme.
+Hasta kimlikleri veya gerçek kişi verileri isteme; yalnız sentetik/kimliksiz tasarım bilgisi kullan."""
 
 def complete(messages, tools, endpoint, model, key):
     body = {"model": model, "messages": messages, "tools": tools, "tool_choice": "auto"}
@@ -41,11 +41,11 @@ async def chat(args, key):
             tools = [{"type":"function", "function":{"name": t.name, "description":t.description, "parameters":t.inputSchema}} for t in listed.tools]
             messages = [{"role":"system", "content":SYSTEM}]
             if getattr(args,"structured",False):
-                messages.append({"role":"system","content":"Son yanÄ±tÄ±n yalnÄ±z JSON olsun: {\"action\":\"call_tool|ask_user|report_unsupported\",\"label\":\"t2-indep veya tanÄ±mladÄ±ÄŸÄ±n test ailesi veya ambiguous\",\"message\":\"TÃ¼rkÃ§e aÃ§Ä±klama/soru\"}. call_tool yalnÄ±z gerÃ§ek araÃ§ Ã§aÄŸrÄ±sÄ± yaptÄ±ÄŸÄ±nda kullanÄ±labilir. Desteklenmeyen aileyi adÄ±yla sÄ±nÄ±flandÄ±r; belirsiz aile ambiguous. Eksik bilgi iÃ§in clarify."})
+                messages.append({"role":"system","content":"Son yanıtın yalnız JSON olsun: {\"action\":\"call_tool|ask_user|report_unsupported\",\"label\":\"t2-indep veya tanımladığın test ailesi veya ambiguous\",\"message\":\"Türkçe açıklama/soru\"}. call_tool yalnız gerçek araç çağrısı yaptığında kullanılabilir. Desteklenmeyen aileyi adıyla sınıflandır; belirsiz aile ambiguous. Eksik bilgi için action=ask_user kullan; label bilinen test ailesi olsun, aile belirsizse ambiguous olsun."})
             question = args.question
             while True:
                 if question is None:
-                    try: question = input("Soru (Ã§Ä±kÄ±ÅŸ: /quit): ")
+                    try: question = input("Soru (çıkış: /quit): ")
                     except EOFError: return
                 if question.strip() == "/quit": return
                 messages.append({"role":"user", "content":question})

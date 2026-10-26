@@ -27,6 +27,11 @@ def main():
         ["tests/test_differential.py", "public_vectors.jsonl", "--report", "tests/reports/local_public.json"],
         ["tests/test_differential.py", "oracle/sude_contract_compatible_vectors.jsonl", "--require-evidence", "--report", "tests/reports/local_sude58.json"],
     ]
+    commands.extend([
+        ["tests/test_differential.py", "oracle/final_screenshot_backed58.jsonl", "--require-evidence", "--report", "tests/reports/local_screenshots.json"],
+        ["tests/test_differential.py", "oracle/new_validation/vectors.jsonl", "--require-evidence", "--report", "tests/reports/local_prospective.json"],
+        ["tools/audit_files.py"],
+    ])
     if args.scale:
         commands.append(["tools/generate_scale.py", "--output", "oracle/scale/local_statsmodels.jsonl"])
     for command in commands:

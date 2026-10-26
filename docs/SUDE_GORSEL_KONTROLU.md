@@ -1,3 +1,5 @@
+> **Son denetim:** ORC-011 yeniden G*Power’da çalıştırıldı;96+48=144 sonucu ve yeni görsel oracle/replays altında. Eski eksik PNG korunur. Yeni tamamlanmış58/58 set ve38/38 N raporu REPORT.md içinde; toplam75 görsel. Aşağıdaki inceleme ilk60 dosyayı anlatır.
+
 # Sude’nin gönderdiği 60 ekran görüntüsünün kontrolü
 
 26 Ekim2026: screenshots.zip içindeki ORC-001–060 adlı60 özgün PNG

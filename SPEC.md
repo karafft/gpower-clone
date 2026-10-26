@@ -1,96 +1,105 @@
-# YZM301 Clean Room Spesifikasyonu: t2-indep
+# t2-indep uygulama şartnamesi
 
-**Yazar:** Sude Naz Öztoprak (Analist / REA Lead)  
-**Tarih:** 25 Ekim 2026  
-**Hedef Modül:** `t2-indep` (İki Bağımsız Örneklem t-Testi)  
-**Kaynak:** G*Power 3.1.9.7 Davranışsal Analizi (Black-Box REA)  
+26 Ekim2026 son denetiminde kullanıcının tamamlama talebiyle güncellendi.
+Sude’nin özgün belgesi docs/SPEC_ORIGINAL_SUDE.md altında aynen korunur.
+Değişiklik dayanağı SPEC_ONERI.md ve bağlantılı REA kanıtlarıdır.
+Arayüz kaynağı CONTRACT1.0.0, matematik kaynağı önceki SPEC;
+inceleme ve uygulama oturumları ayrıdır. Yeni aday sürüm1.1.0rc4.
 
-Bu belge, Temiz Oda (Clean Room) kuralı gereğince G*Power kaynak kodu veya ikili kodlarına bakılmaksızın, yalnızca girdi/çıktı davranışları ve standart istatistiksel literatür temel alınarak hazırlanmıştır. Motor geliştiricisi (Merve) hesaplama mantığını bu şartnameye birebir uygun kurmalıdır.
+## Kapsam ve dış arayüz
 
----
+Yalnız iki bağımsız grup t testi, test=t2-indep. Motor analyze(mapping)
+çağrısı sonuç sözlüğü döndürür; çıktı yazmaz. CLI ve MCP aynı motoru ve
+aynı serialize işlevini kullanır. CLI stdout tek satır JSON; başarılı
+çıkış0, girdi hatası2, dahili hata1. Tam sayılar gerçek JSON int;
+ondalıklar double hassasiyetinde, elle yuvarlama yok.
 
-## 1. Genel Matematiksel Temeller ve Dağılımlar
+| Mod | test/mode dışında zorunlu girdiler | Zorunlu çıktılar |
+|---|---|---|
+| a-priori | tails,d,alpha,power,ratio | ncp,critical_t,df,n1,n2,n_total,actual_power |
+| post-hoc | tails,d,alpha,n1,n2 | ncp,critical_t,df,power |
+| compromise | tails,d,beta_alpha_ratio,n1,n2 | ncp,critical_t,df,alpha,beta,power |
+| criterion | tails,d,power,n1,n2 | ncp,critical_t,df,alpha |
+| sensitivity | tails,alpha,power,n1,n2 | ncp,critical_t,df,d |
 
-* **Kullanılacak Kütüphane:** `scipy.stats` (`t` ve `nct` fonksiyonları).
-* **Serbestlik Derecesi ($df$):**
-  $$df = n_1 + n_2 - 2$$
-  *(Her zaman tamsayı / integer).*
+Varsayılan yok. Eksik, bilinmeyen ve moda ilgisiz alan hatadır. CONTRACT
+hata kodları korunur. Girdi sayıları sonlu; tails1/2; alpha,power açık(0,1);
+ratio,d,beta_alpha_ratio pozitif; n1/n2 en az2 tam sayıdır. GUI'nin negatif d
+ve kesirli n kabul etmesi bu sözleşmeyi değiştirmez.
 
-* **Non-centrality Parametresi ($\delta$ / ncp):**
-  $$\delta = d \cdot \sqrt{\frac{n_1 \cdot n_2}{n_1 + n_2}}$$
+## Matematik
 
-* **Kritik t Değeri ($t_{crit}$):**
-  Standart t-dağılımının ters kümülatif fonksiyonu (`scipy.stats.t.ppf`):
-  * Tek yönlü (`tails = 1`): $t_{crit} = t.ppf(1 - \alpha, df)$
-  * Çift yönlü (`tails = 2`): $t_{crit} = t.ppf(1 - \alpha / 2, df)$
+df=n1+n2-2. delta=d*sqrt(n1*n2/(n1+n2)).
+c=t.isf(alpha/tails,df). Tek yönlü güç SF_nct(c,df,delta);
+çift yönlüde buna CDF_nct(-c,df,delta) eklenir.
 
-* **Güç (Power) Hesabı:**
-  Non-central t-dağılımının kümülatif dağılım fonksiyonu (`scipy.stats.nct.cdf`):
-  * Tek yönlü:
-    $$Power = 1 - nct.cdf(t_{crit}, df, \delta)$$
-  * Çift yönlü:
-    $$Power = 1 - nct.cdf(t_{crit}, df, \delta) + nct.cdf(-t_{crit}, df, \delta)$$
-  *(Tipik olarak $\beta = 1 - Power$ olarak tanımlanır).*
+[Sayısal karar] SF sonlu/geçerli değilse 1-CDF kullanılır; sol kuyruk CDF'si
+geçersizse dağılım simetrisi SF(c,df,-delta) kullanılır. Hiçbir geçerli eşdeğer
+kalmadıysa NO_SOLUTION. Yalnız1e-12 düzeyinde küçük aralık taşması[0,1]'e
+sıkıştırılır; büyük hata gizlenmez. Bu backend kararı G*Power'ın aynı
+kütüphaneyi kullandığı iddiası değildir.
 
----
+## A priori tahsis kuralı
 
-## 2. Modlara Göre Girdi, Çıktı ve Hesaplama Kuralları
+[REA-STATIC-008/009 ile desteklenen sürekli çözüm ve yuvarlama yolu]
 
-### Mod 1: `a-priori`
-* **Girdiler:** `d` (float), `alpha` (float), `power` (float), `ratio` (float, $N_2/N_1$), `tails` (int, 1 veya 2).
-* **Çıktılar:** `ncp` (float), `critical_t` (float), `df` (int), `n1` (int), `n2` (int), `n_total` (int), `actual_power` (float).
-* **Algoritma Mantığı:**
-  1. $Power(n_1, n_2) \ge target\_power$ eşitsizliğini sağlayan en küçük pozitif $n_1$ tamsayısı aranır (İkili arama / Binary search veya ardışık tarama).
-  2. Her adımda ikinci grup tamsayıya yuvarlanır: $n_2 = \lceil n_1 \cdot ratio \rceil$ (tavan/ceil).
-  3. $n_{total} = n_1 + n_2$ ve $df = n_1 + n_2 - 2$.
-  4. Bulunan optimal $n_1, n_2$ ile elde edilen net güç `actual_power` alanına atanır.
+Önce sürekli toplam x çözülür: kesirli n1=x/(1+ratio), n2=x-n1,
+df=x-2 ile güç hedefe eşitlenir. x=4'te hedef zaten sağlanıyorsa minimum
+toplam4 kullanılır. Aksi halde braket ve sürekli kök çözümü uygulanır.
+Aranan, yuvarlanmış gruplarda en küçük gücü veren N değildir.
 
-### Mod 2: `post-hoc`
-* **Girdiler:** `d` (float), `alpha` (float), `n1` (int), `n2` (int), `tails` (int, 1 veya 2).
-* **Çıktılar:** `ncp` (float), `critical_t` (float), `df` (int), `power` (float).
-* **Algoritma Mantığı:**
-  1. $df = n_1 + n_2 - 2$ hesaplanır.
-  2. Verilen $n_1, n_2, d$ ile $\delta$ (ncp) hesaplanır.
-  3. $\alpha$ ve $df$ üzerinden $t_{crit}$ belirlenir.
-  4. $nct.cdf$ ile elde edilen güç doğrudan `power` alanına atanır.
+q=x/2; q10=floor(q*1e10+0.5)/1e10; N=2*ceil(q10).
+n1=floor(N/(1+ratio)+0.5), n2=ceil(N-n1).
+abs(ratio-1)<1e-8 ve abs(n1-n2)>1e-8 ise küçük grup yalnız bir kez1 artırılır.
+Son n_total=n1+n2 ve df=n_total-2 üzerinden güç yeniden hesaplanır.
+Yuvarlama sonrası actual_power hedeften biraz küçük kalırsa ayrıca N
+optimizasyonu eklenmez. Çıktı ondalıkları bu iç yuvarlamadan bağımsızdır;
+tam double hassasiyetle yazılır.
 
-### Mod 3: `compromise`
-* **Girdiler:** `d` (float), `beta_alpha_ratio` (float, $q = \beta / \alpha$), `n1` (int), `n2` (int), `tails` (int, 1 veya 2).
-* **Çıktılar:** `ncp` (float), `critical_t` (float), `df` (int), `alpha` (float), `beta` (float), `power` (float).
-* **Algoritma Mantığı:**
-  1. $\beta / \alpha = q$ oranını ve verilen $n_1, n_2$ değerlerini sağlayacak optimal kritik eşik ($t_{crit}$) kök bulma yöntemiyle çözülür.
-  2. Bu eşiğe karşılık gelen $\alpha$ ve $\beta$ değerleri hesaplanır ($Power = 1 - \beta$).
+Küçük veya sıfır grup üreten uç tahsisler için mühendislik koruması
+belgelenir; bu uçta GUI eşdeğerliği ayrıca doğrulanmalıdır. Birkaç örneğe
+özel sabitler kullanılmaz. Tamamen aynı geliştirme setine uyum bağımsız
+doğrulama değildir. Önceki ceil-ratio ve minimal-even-power varsayımları
+bu statik bulguyla değiştirilmiştir.
 
-### Mod 4: `criterion`
-* **Girdiler:** `d` (float), `power` (float), `n1` (int), `n2` (int), `tails` (int, 1 veya 2).
-* **Çıktılar:** `ncp` (float), `critical_t` (float), `df` (int), `alpha` (float).
-* **Algoritma Mantığı:**
-  1. Hedef gücü verecek $t_{crit}$ değeri `scipy.optimize.brentq` veya ters kök bulma ile çözülür.
-  2. Bulunan $t_{crit}$ değerinden standart t dağılımı kullanılarak gereken $\alpha$ hesaplanır:
-     * Tek yönlü: $\alpha = 1 - t.cdf(t_{crit}, df)$
-     * Çift yönlü: $\alpha = 2 \cdot (1 - t.cdf(t_{crit}, df))$
+[ORC-046/048 ve REA-STATIC-001 desteği] A-priori power<alpha reddedilir;
+eşitlik kabul edilir ve normal minimum N araması yapılır.
 
-### Mod 5: `sensitivity`
-* **Girdiler:** `alpha` (float), `power` (float), `n1` (int), `n2` (int), `tails` (int, 1 veya 2).
-* **Çıktılar:** `ncp` (float), `critical_t` (float), `df` (int), `d` (float).
-* **Algoritma Mantığı:**
-  1. $\alpha$ ve $df$ ile $t_{crit}$ belirlenir.
-  2. Hedef gücü sağlayan non-centrality parametresi $\delta$ kök bulma ile bulunur.
-  3. Etki büyüklüğü tersine çözülür: $d = \delta / \sqrt{\frac{n_1 \cdot n_2}{n_1 + n_2}}$.
+[REA-STATIC-003 desteği] A-priori d>=1e-5 alt sınırı uygulanır; pozitif
+fakat daha küçük d OUT_OF_RANGE olur. Bu kural diğer modlara genellenmez.
+Statik bulgunun tam kaynak/hash ve sınırlamaları docs/REA_STATIC_FINDINGS.md'dedir.
 
----
+[REA-STATIC-002/005/007] Verilen alpha ve power alanlarında
+1e-7<=değer<=0.9999999; a-priori ratio için0.01<=ratio<=100 uçlar dahil
+aralıkları uygulanır. Sözleşme içinde olup bu gözlenen aralıkların dışında
+kalan girdiler de OUT_OF_RANGE olur. Testler uçların hemen iki yanını kapsar.
 
-## 3. Katı Tip ve Biçimlendirme Kuralları
+[Arama sınırı] En büyük çift toplam2.147.483.646. Bu büyüklük statik
+doğrulama sabitiyle uyumludur; tüm girdilerde sonuç üretme garantisi değildir.
+Bu sınırda hedefe ulaşılamazsa NO_SOLUTION.
 
-1. **JSON Tamsayı Zorunluluğu:** `df`, `n1`, `n2`, `n_total` alanları kesinlikle JSON tamsayısı (integer) olmalıdır (`128` geçerli, `128.0` geçersizdir).
-2. **Hassasiyet ve Tolerans:** Sayısal float değerleri (ncp, critical_t, actual_power, power, alpha, beta, d) en az 6-7 ondalık basamak hassasiyetle hesaplanmalı ve `ground_truth.json` ile en az $\pm 10^{-4}$ bağıl hata toleransı içinde kalmalıdır.
-3. **Standart Çıktı:** Motor veya CLI çağrıldığında `stdout`'a tek satır saf JSON basmalıdır. Debug logları `stderr`'e yönlendirilmelidir.
+## Diğer modlar
 
----
+Post-hoc verilen N ile yukarıdaki gücü hesaplar.
+Criterion verilen delta ve hedef güce karşı c eşiğini çözer; alpha=t.sf(c)*tails.
+Compromise beta/alpha=q kökünü çözer; beta=1-power, alpha=t.sf(c)*tails.
+Sensitivity sabit alpha ve N ile hedef gücü veren delta>=0 kökünü çözer;
+d=delta/sqrt(n1*n2/(n1+n2)).
 
-## 4. Akademik Atıf ve Referans
+[Matematiksel açıklama; uçta yeni GUI gözlemi yok] Sensitivity power<alpha
+ise nonnegative etkiyle çözüm yok; eşitlikte delta=d=0 ve normal c,df döner.
+Yakın değerler eşitliğe yuvarlanmaz.
 
-Bu şartnamede yer alan davranışsal analizler ve doğrulama vektörleri, Heinrich Heine Üniversitesi Düsseldorf tarafından geliştirilen **G*Power 3.1.9.7** yazılımı üzerinden kara kutu (black-box) yöntemiyle elde edilmiştir.
+[Mühendislik kararı] Ters çözüm aramalarında delta/eşik büyüklük korumaları
+1.000.000; bunlar gözlenmiş G*Power iterasyon sınırı olarak etiketlenmez.
 
-* **Yazılım Referansı:**
-  Faul, F., Erdfelder, E., Lang, A.-G., & Buchner, A. (2007). G*Power 3: A flexible statistical power analysis program for the social, behavioral, and biomedical sciences. *Behavior Research Methods*, 39, 175–191.
+## Kabul ve kanıt
+
+Tam sayılar tür ve değer olarak kesin. Ondalıklar mutlak VEYA göreli1e-6.
+Sözleşme dışı GUI başarı kayıtları ayrı tutulur, sessizce silinmez.
+Motor testleri, public sayısal örnekleri, gerçek MCP parity ve Sude gelişim
+seti ayrı raporlanır. Ajanın gerçek sağlayıcı değerlendirmesi, mock protokol
+testinden ayrıdır. Gizli kapının geçildiği bu belgeyle iddia edilmez.
+
+Temiz uygulama oturumuna yalnız davranış şartnamesi ve sınır ekleri verildi;
+ham DOCX, binary, ekran görüntüsü veya oracle sonuç raporları açılmadı.

@@ -1,3 +1,5 @@
+> **Son denetim:** ORC-011 yeni gerçek koşumla tamamlandı;96/48/toplam144. Ayrı kanıt oracle/replays/vectors.jsonl. Güncel75 görsel,58/58 kayıt ve38/38 N sonucu REPORT.md içinde. Aşağıdaki önceki aşama kayıtları tarihsel olarak korunur.
+
 > **YAYIN GÜNCELLEMESİ — 26 Ekim2026:** Kullanıcının talebiyle kaynaklar ve kanıtlar repoya eklendi. Aşağıdaki yüklenmedi/onay bekliyor notları yerel hazırlık aşamasının tarihsel kaydıdır.
 
 > **GÜNCEL — 26 Ekim, ekran görüntüleri alındı:** Sude’nin60 PNG’si

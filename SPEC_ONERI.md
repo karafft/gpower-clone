@@ -1,3 +1,5 @@
+> **Son denetim:** Bu öneri kullanıcının tamamlama talebiyle SPEC.md’ye işlendi. Eski SPEC, docs/SPEC_ORIGINAL_SUDE.md altında korunur. Aşağıdaki metin değişiklik önerisinin tarihsel kaydıdır.
+
 # t2 indep şartname güncelleme önerisi
 
 26 Ekim 2026. Mevcut Sude SPEC.md dosyasının yerine ekip onayı olmadan

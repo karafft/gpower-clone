@@ -22,14 +22,14 @@
   "original_screenshots_supplied": true,
   "binary_shipped": false,
   "github_written": true,
-  "source_sha256": "8f5f642c118aec5c30f8bc76fafb324acd9723999e8ec99a6311d94138ab79f1",
+  "source_sha256": "dd64b6107669765d6f6bc82df14ffd1ac68173cf535558903f5a426efbd490b0",
   "demo_seconds": 60,
   "demo_is_screen_recording": false,
   "windows_exe_launcher": "Blocked by AppControl4551; security settings unchanged",
   "verified_windows_alternative": "Python module and gpower-clone.cmd",
   "pending": [
     "Live provider evaluation and actual GUI/MCP token comparison",
-    "External hidden competition gate result"
+    "Team final review and instructor hidden competition gate"
   ],
   "read_first": "TESLIM_DURUMU.md",
   "prospective_gui_validation": {
@@ -44,22 +44,18 @@
     "blinded": false
   },
   "sude_screenshots": 60,
-  "total_screenshots": 74,
+  "total_screenshots": 75,
   "screenshot_target_met": true,
   "screenshot_backed_validation": {
-    "passed": 57,
-    "total": 57,
-    "N_exact": 37,
-    "N_cases": 37,
-    "incomplete_output": [
-      "ORC-011"
-    ],
-    "contract_exceptions": [
-      "ORC-050",
-      "ORC-059"
-    ]
+    "passed": 58,
+    "total": 58,
+    "N_exact": 38,
+    "N_cases": 38,
+    "original_incomplete_image_retained": true
   },
-  "optional_evidence_improvement": "Replace ORC-011 with a screenshot showing calculated output; retain original file and provenance.",
   "publication_date": "2026-10-26",
-  "publication_note": "Original source freeze and historical local reports retain pre-publication state."
+  "publication_note": "Original source freeze and historical local reports retain pre-publication state.",
+  "audit_revision": "2026-10-26-final",
+  "orc011_replayed": true,
+  "final_audit_report": "docs/FINAL_AUDIT.md"
 }
